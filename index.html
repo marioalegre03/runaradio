@@ -348,6 +348,25 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
 #modalNews .close{float:right;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer}
 #modalNews .news-src{display:inline-block;margin-top:18px;color:var(--sky);font-size:13.5px;font-weight:600}
 #modalNews .news-src:hover{text-decoration:underline}
+.news-card .art.has-img{background-size:cover;background-position:center}
+#modalNews .news-hero{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:14px;margin:0 0 16px;display:block}
+#modalNews .news-credit{font-size:11px;color:var(--muted);margin:-8px 0 14px}
+.news-react{display:flex;gap:10px;margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.09);flex-wrap:wrap}
+.react-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:var(--text);font-family:inherit;font-size:14px;cursor:pointer;transition:transform .15s,border-color .15s,background .15s}
+.react-btn:hover{transform:translateY(-2px);border-color:rgba(255,176,32,.5)}
+.react-btn.on{background:rgba(255,176,32,.18);border-color:var(--amber)}
+.react-btn .count{font-size:12.5px;font-weight:700;color:var(--muted)}
+.react-btn.on .count{color:var(--amber)}
+.news-comments{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.09)}
+.news-comments h4{font-size:14px;margin:0 0 12px}
+.comment-form{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.comment-form input,.comment-form textarea{width:100%;box-sizing:border-box;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 12px;color:var(--text);font-family:inherit;font-size:13.5px;resize:vertical}
+.comment-form input:focus,.comment-form textarea:focus{outline:none;border-color:rgba(255,176,32,.5)}
+.comment-form button{align-self:flex-end;padding:9px 18px;border:none;border-radius:999px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;color:#1d1206;background:linear-gradient(90deg,var(--amber),var(--orange))}
+.comment{border-left:2px solid rgba(255,176,32,.35);padding:6px 12px;margin-bottom:10px}
+.comment b{font-size:13px}
+.comment span{display:block;font-size:13px;color:var(--muted);line-height:1.5;margin-top:2px}
+.comments-empty{font-size:12.5px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -545,10 +564,22 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
 <div id="modalNews" role="dialog" aria-modal="true">
   <div class="card">
     <button class="close" aria-label="Cerrar">×</button>
+    <img class="news-hero" id="newsHero" alt="" style="display:none">
+    <div class="news-credit" id="newsCredit" style="display:none"></div>
     <span class="ntag" id="newsTag"></span>
     <h3 id="newsTitle"></h3>
     <div class="nbody" id="newsBody"></div>
     <a class="news-src" id="newsSrc" href="#" target="_blank" rel="noopener"></a>
+    <div class="news-react" id="newsReact"></div>
+    <div class="news-comments">
+      <h4>Comentarios</h4>
+      <form class="comment-form" id="commentForm">
+        <input type="text" id="commentName" maxlength="40" placeholder="Tu nombre" required>
+        <textarea id="commentText" rows="2" maxlength="500" placeholder="Escribe un comentario…" required></textarea>
+        <button type="submit">Comentar</button>
+      </form>
+      <div id="commentList"></div>
+    </div>
   </div>
 </div>
 
@@ -975,18 +1006,81 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
 <script>
 /* ---------- noticias ----------
    Las noticias viven en news.json (mismo directorio). Para actualizarlas basta editar ese archivo:
-   cada elemento tiene emoji, tag, titulo, teaser, cuerpo, fuente y url. */
+   cada elemento tiene emoji, tag, titulo, teaser, cuerpo, fuente y url.
+   Opcional: "imagen" (ruta local, p. ej. img/news/tema.jpg, 880x385) reemplaza al emoji en la tarjeta
+   y se muestra arriba en el popup; "credito" agrega la linea de atribucion bajo la imagen.
+   Las reacciones y los comentarios del popup se guardan solo en el navegador del visitante
+   (localStorage): la interfaz esta lista, no hay servidor detras todavia. */
 (function(){
   var grid = document.getElementById('newsGrid');
   var modal = document.getElementById('modalNews');
   if (!grid || !modal) return;
+  function slug(n){
+    return (n.titulo || 'noticia').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,60) || 'noticia';
+  }
+  function leerLS(k, fallback){
+    try { var v = JSON.parse(localStorage.getItem(k)); return v == null ? fallback : v; } catch(e){ return fallback; }
+  }
+  function escribirLS(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+  var REACCIONES = [['like','\ud83d\udc4d'],['love','\u2764\ufe0f'],['wow','\ud83d\ude2e']];
+  var noticiaActual = null;
+  function pintarReacciones(){
+    var k = 'rr-react-' + slug(noticiaActual);
+    var st = leerLS(k, {like:0, love:0, wow:0, mine:null});
+    var box = document.getElementById('newsReact');
+    box.innerHTML = '';
+    REACCIONES.forEach(function(r){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'react-btn' + (st.mine === r[0] ? ' on' : '');
+      b.innerHTML = '<span>' + r[1] + '</span><span class="count">' + (st[r[0]] || 0) + '</span>';
+      b.addEventListener('click', function(){
+        if (st.mine === r[0]){ st[r[0]] = Math.max(0, (st[r[0]] || 0) - 1); st.mine = null; }
+        else { if (st.mine) st[st.mine] = Math.max(0, (st[st.mine] || 0) - 1); st[r[0]] = (st[r[0]] || 0) + 1; st.mine = r[0]; }
+        escribirLS(k, st); pintarReacciones();
+      });
+      box.appendChild(b);
+    });
+  }
+  function pintarComentarios(){
+    var list = document.getElementById('commentList');
+    var items = leerLS('rr-comments-' + slug(noticiaActual), []);
+    list.innerHTML = items.length ? '' : '<p class="comments-empty">Sé la primera persona en comentar.</p>';
+    items.slice().reverse().forEach(function(c){
+      var d = document.createElement('div'); d.className = 'comment';
+      var b = document.createElement('b'); b.textContent = c.name || 'Anónimo';
+      var t = document.createElement('span'); t.textContent = c.text || '';
+      d.appendChild(b); d.appendChild(t); list.appendChild(d);
+    });
+  }
+  document.getElementById('commentForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!noticiaActual) return;
+    var name = document.getElementById('commentName').value.trim();
+    var text = document.getElementById('commentText').value.trim();
+    if (!name || !text) return;
+    var k = 'rr-comments-' + slug(noticiaActual);
+    var items = leerLS(k, []);
+    items.push({name: name, text: text, ts: Date.now()});
+    escribirLS(k, items);
+    document.getElementById('commentText').value = '';
+    pintarComentarios();
+  });
   function abrirNoticia(n){
+    noticiaActual = n;
+    var hero = document.getElementById('newsHero');
+    var credit = document.getElementById('newsCredit');
+    if (n.imagen){ hero.src = n.imagen; hero.alt = n.titulo || ''; hero.style.display = 'block'; }
+    else { hero.style.display = 'none'; hero.removeAttribute('src'); }
+    if (n.imagen && n.credito){ credit.textContent = n.credito; credit.style.display = 'block'; }
+    else { credit.style.display = 'none'; credit.textContent = ''; }
     document.getElementById('newsTag').textContent = n.tag || 'Noticia';
     document.getElementById('newsTitle').textContent = n.titulo || '';
     document.getElementById('newsBody').textContent = n.cuerpo || '';
     var src = document.getElementById('newsSrc');
     if (n.url){ src.textContent = 'Fuente: ' + (n.fuente || n.url); src.href = n.url; src.style.display = 'inline-block'; }
     else { src.style.display = 'none'; src.removeAttribute('href'); }
+    pintarReacciones();
+    pintarComentarios();
     modal.style.display = 'grid';
   }
   function render(items){
@@ -998,7 +1092,9 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
     items.forEach(function(n){
       var card = document.createElement('article');
       card.className = 'news-card';
-      var art = document.createElement('div'); art.className = 'art'; art.textContent = n.emoji || '📰';
+      var art = document.createElement('div'); art.className = 'art';
+      if (n.imagen){ art.classList.add('has-img'); art.style.backgroundImage = "url('" + n.imagen + "')"; }
+      else { art.textContent = n.emoji || '📰'; }
       var body = document.createElement('div'); body.className = 'body';
       var tag = document.createElement('span'); tag.className = 'news-tag'; tag.textContent = n.tag || 'Noticia';
       var b = document.createElement('b'); b.textContent = n.titulo || '';
