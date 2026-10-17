@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche.",
   "days": {
     "lun": [
@@ -482,6 +482,129 @@
         "end": "23:05",
         "name": "La Hora Nacional",
         "desc": "Solo domingos 22:00",
+        "tag": "Programa"
+      }
+    ]
+  },
+  "overrides": {
+    "2026-10-17": [
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "02:00",
+        "end": "05:00",
+        "name": "Mi Aire",
+        "desc": "Stream remoto (ya existe en Zeno)",
+        "tag": "Música"
+      },
+      {
+        "start": "05:00",
+        "end": "05:30",
+        "name": "Picus Show Especial",
+        "desc": "Solo hoy",
+        "tag": "Especial"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Estilo Libre",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "12:10",
+        "end": "13:00",
+        "name": "Atravesando Decadas",
+        "desc": "Hoy termina 13:00",
+        "tag": "Programa"
+      },
+      {
+        "start": "13:00",
+        "end": "13:30",
+        "name": "Picus Show Especial",
+        "desc": "Solo hoy",
+        "tag": "Especial"
+      },
+      {
+        "start": "13:30",
+        "end": "14:10",
+        "name": "Sentidos",
+        "desc": "Hoy empieza 13:30",
+        "tag": "Programa"
+      },
+      {
+        "start": "14:10",
+        "end": "15:10",
+        "name": "Encuentro Tropical",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "15:10",
+        "end": "16:10",
+        "name": "America y su Folclore",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "16:10",
+        "end": "17:10",
+        "name": "Zona de Fuego",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "17:10",
+        "end": "18:10",
+        "name": "KM de Rock",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "18:10",
+        "end": "18:40",
+        "name": "Mujer Patagonia",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Rock un Viaje",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Gigantes Gentiles",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Salida de Copas",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "22:00",
+        "end": "01:00",
+        "name": "Romanticos en la Noche",
+        "desc": "",
         "tag": "Programa"
       }
     ]
