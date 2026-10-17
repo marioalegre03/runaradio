@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-17T00:40:00-06:00",
+  "actualizado": "2026-10-17T06:00:00-06:00",
   "items": [
     {
       "emoji": "🛼",
@@ -11,40 +11,49 @@
       "url": "https://los40.com.mx/2026/10/16/soy-luna-el-ultimo-show-se-transmitira-en-vivo-cuando-y-donde-verlo/"
     },
     {
-      "emoji": "🤠",
+      "emoji": "🎺",
+      "tag": "Música",
+      "titulo": "Los Ángeles Azules y Daniella Spalla reinventan Lejos de la ciudad",
+      "teaser": "La agrupación de Iztapalapa y la cantante argentina estrenan una versión del tema con fusión de pop y cumbia.",
+      "cuerpo": "Lejos de la ciudad, el tema que Daniella Spalla estrenó en diciembre de 2024 junto a Camilo, tiene una nueva versión con Los Ángeles Azules. Se estrenó el 15 de octubre y mantiene la esencia romántica del original, ahora con un ritmo más cercano a la cumbia.\n\nSpalla ha contado que la idea surgió al imaginar cómo sonaría la canción adaptada a la cumbia; tras presentarla a la agrupación, tardaron en coincidir en agendas para grabarla. La cantante vive un gran momento: está nominada al Latin Grammy por su álbum Amorio y abrió el concierto de Michael Bublé en Guadalajara.\n\nLos Ángeles Azules, por su parte, celebran 50 años de trayectoria con actividades especiales, entre ellas un concierto en Monterrey y un reconocimiento en Puerto Vallarta.",
+      "fuente": "LOS40 México",
+      "url": "https://los40.com.mx/2026/10/17/daniella-spalla-y-los-angeles-azules-lanzan-una-nueva-version-de-lejos-de-la-ciudad/"
+    },
+    {
+      "emoji": "🌧️",
+      "tag": "Estrenos",
+      "titulo": "Ryan Castro y Eddie Santiago unen generaciones en Lluvia (Awoo)",
+      "teaser": "El reguetonero colombiano y la leyenda de la salsa romántica encabezan los estrenos de la semana, junto a Andrés Cepeda y Maluma.",
+      "cuerpo": "Ryan Castro se unió a Eddie Santiago para presentar Lluvia (Awoo), una nueva versión del clásico de la salsa romántica que Santiago lanzó originalmente en 1986. La colaboración mezcla el sonido urbano de Castro con las melodías de la versión original, en la que participa el propio Santiago.\n\nTambién destacan entre los estrenos de la semana Tengo Ganas 2.0 - Versión Bachata, el reencuentro musical de Andrés Cepeda y Maluma con videoclip grabado en Medellín, y ETDK 2, el nuevo álbum de 13 canciones del artista de trap Kris R.\n\nOtros lanzamientos de estos días incluyen a Tate McRae, Dei V, Pablo Alborán con Gilberto Santa Rosa, Pedro Capó y Gente de Zona con Elena Rose.",
+      "fuente": "BluRadio",
+      "url": "https://www.bluradio.com/entretenimiento/kris-r-ryan-castro-y-andres-cepeda-lideran-los-estrenos-musicales-de-la-semana-so35"
+    },
+    {
+      "emoji": "💃",
+      "tag": "Música",
+      "titulo": "Gian Marco se pone salsero con su nuevo álbum Bajo la Manga",
+      "teaser": "El cantautor peruano estrena su disco número 19, su primera incursión de lleno en la salsa, días después de entrar al Salón de la Fama de los Compositores Latinos.",
+      "cuerpo": "Gian Marco estrenó el 15 de octubre Bajo la Manga, su álbum número 19 y su primera incursión completa en la salsa. El disco reúne seis composiciones inéditas y una nueva lectura de Si Me Tenías, uno de los temas emblemáticos de su carrera.\n\nEl lanzamiento llega en una semana especial: el 14 de octubre fue incorporado al Salón de la Fama de los Compositores Latinos en Miami, en una ceremonia donde compartió honores con Sergio George y Kike Santander.\n\nTras 35 años de trayectoria, el peruano planea una gira por Estados Unidos de 12 fechas que arrancaría en abril de 2027.",
+      "fuente": "Los Angeles Times en español",
+      "url": "https://www.latimes.com/espanol/entretenimiento/articulo/2026-10-16/gian-marco-apuesta-por-la-salsa-en-un-album-que-no-abandona-la-diversidad"
+    },
+    {
+      "emoji": "🏆",
+      "tag": "Premios",
+      "titulo": "Premios Billboard Latinos 2026: fecha, cartel y cómo verlos",
+      "teaser": "La gala se transmite en vivo el 22 de octubre desde Miami, con Peso Pluma como máximo finalista y actuaciones de Ozuna, Tito Double P, Manuel Turizo y más.",
+      "cuerpo": "Los Premios Billboard de la Música Latina 2026 se transmitirán en vivo el 22 de octubre a través de Telemundo y Peacock desde el James L. Knight Center de Miami, con Carmen Villalobos y Javier Poza como conductores.\n\nPeso Pluma lidera la lista de finalistas con 17 menciones, seguido por Tito Double P con 15, Fuerza Regida con 12, Karol G con nueve y Bad Bunny con siete. Entre los artistas que actuarán están Ozuna, Carlos Rivera, Manuel Turizo, Pablo Alborán, Xavi y Yahritza y Su Esencia; Becky G, Lupillo Rivera y Ryan Castro estarán entre los presentadores.\n\nHabrá cuatro premios especiales: Cristian Castro recibirá el Premio Trayectoria Artística, Fuerza Regida el de Vanguardia, Rosalía el del Salón de la Fama y Rubén Blades el de Ícono.",
+      "fuente": "Billboard",
+      "url": "https://www.billboard.com/espanol/noticias/premios-billboard-musica-latina-2026-como-ver-actuaciones-1236356585/"
+    },
+    {
+      "emoji": "🎃",
       "tag": "Conciertos",
-      "titulo": "Edén Muñoz canta hoy en la Plaza de Toros de CDMX",
-      "teaser": "Segunda de dos noches del Como en los viejos tiempos Tour en la capital, con invitados especiales.",
-      "cuerpo": "Edén Muñoz se presenta el viernes 16 y el sábado 17 de octubre en la Plaza de Toros de la Ciudad de México, como parte de su gira Como en los viejos tiempos Tour.\n\nEl cantante adelantó en entrevista que lo acompañarán invitados como Yuridia, Emmanuel y Alfredo Olivas, y se rumora que Cristian Castro podría aparecer para interpretar Osadía, aunque esa participación no está confirmada.",
-      "fuente": "SDP Noticias",
-      "url": "https://www.sdpnoticias.com/espectaculos/musica/concierto-de-eden-munoz-en-la-plaza-de-toros-setlist-y-telonero-para-el-16-y-17-de-octubre/"
-    },
-    {
-      "emoji": "🎤",
-      "tag": "Música",
-      "titulo": "Jesse Huerta anuncia su primer álbum en solitario",
-      "teaser": "Tras la pausa de Jesse y Joy, el cantante mexicano presenta el proyecto Jesse and the Supernovas y el disco Sombrero.",
-      "cuerpo": "Jesse Huerta lanzará Sombrero, su primer álbum como solista, bajo el nombre Jesse and the Supernovas. El anuncio llega después de que en septiembre comunicara una pausa en Jesse y Joy, el dúo que forma con su hermana.\n\nEl primer tema oficial, Interestelar, estará disponible el 21 de octubre. Antes publicó Génesis, un sencillo instrumental en tres movimientos.\n\nEl disco saldrá a través de su propio sello, Nebulosa Records, con un acuerdo de distribución global con Virgin Records. Huerta cumplirá los compromisos vigentes con el dúo hasta el 5 de diciembre.",
-      "fuente": "El Nacional",
-      "url": "https://www.elnacional.com/2026/10/jesse-huerta-anuncia-album-en-solitario-tras-pausa-con-jesse-y-joy/"
-    },
-    {
-      "emoji": "🌴",
-      "tag": "Música",
-      "titulo": "Hoy es la iHeartRadio Fiesta Latina 2026 en Miami",
-      "teaser": "Myke Towers, Blessd, Farruko y Manuel Turizo encabezan el cartel de este sábado en el Kaseya Center.",
-      "cuerpo": "La iHeartRadio Fiesta Latina 2026 se celebra este sábado 17 de octubre en el Kaseya Center de Miami, en su decimotercera edición.\n\nEl cartel incluye a Myke Towers, Blessd, Farruko, Manuel Turizo, Eladio Carrión, FloyyMenor, Greeicy y Alleh, entre otros.\n\nEn la ceremonia, Lin-Manuel Miranda recibirá el premio Corazón Latino 2026 por su trabajo artístico y su labor a favor de la comunidad latina. El evento se transmite por las estaciones latinas de iHeartRadio en Estados Unidos.",
-      "fuente": "iHeartMedia",
-      "url": "https://www.iheartmedia.com/press/myke-towers-blessd-farruko-manuel-turizo-eladio-carrion-floyymenor-greeicy-alleh-and-rey-tony"
-    },
-    {
-      "emoji": "🎬",
-      "tag": "Música",
-      "titulo": "Miley Cyrus vuelve a encabezar un show propio en el Hollywood Bowl",
-      "teaser": "La cantante abrió en Los Ángeles una serie de conciertos llamada Bass Persuades, su primer espectáculo como estelar en años.",
-      "cuerpo": "Miley Cyrus inició el viernes por la noche sus conciertos Miley: Bass Persuades - Live at the Hollywood Bowl, en el famoso recinto de Los Ángeles. Es su primera presentación como artista estelar en años, fuera de festivales.\n\nLa cantante, que en esta etapa se presenta simplemente como Miley, anunció estos shows junto con su nuevo álbum Bass Persuades. Su última gira completa había sido la de Bangerz, en 2014.",
-      "fuente": "Variety",
-      "url": "https://variety.com/2026/music/news/miley-cyrus-setlist-hollywood-bowl-los-angeles-1236914492/"
+      "titulo": "Festival Ruido Joven 2026: conciertos gratis en Chapultepec",
+      "teaser": "Renee, Jota Moore, Silver Rose y Exael Salcedo tocan gratis el 31 de octubre en el PARCUR, con concurso de disfraces y ambiente de Día de Muertos.",
+      "cuerpo": "El festival Ruido Joven regresa con su cuarta edición el sábado 31 de octubre al Parque de Cultura Urbana (PARCUR), en la tercera sección del Bosque de Chapultepec, en la Ciudad de México. La entrada es libre para todas las edades y no se necesita boleto.\n\nLos shows en vivo correrán por cuenta de Renee, Jota Moore (exvocalista de Wiplash), Silver Rose (el proyecto de Carla Sariñana de Ruido Rosa) y Exael Salcedo. La jornada combina Halloween, Día de Muertos y el primer aniversario del festival, con concurso de disfraces abierto a todos los asistentes.\n\nAdemás de los conciertos, más de 120 bandas y artistas independientes mexicanos tendrán presencia en el bazar de mercancía, en lo que la organización describe como la edición más grande hasta ahora. El evento arranca a las 10:00 am.",
+      "fuente": "Infobae",
+      "url": "https://www.infobae.com/mexico/2026/10/17/renee-jota-moore-y-silver-rose-daran-conciertos-gratuitos-en-el-festival-ruido-joven-2026-donde-y-cuando-sera/"
     }
   ]
 }
