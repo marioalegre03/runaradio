@@ -164,6 +164,10 @@ section.block{max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,90px) clamp(
 .hcard .cov{width:100%;aspect-ratio:1;border-radius:12px;background:#11142a center/cover;margin-bottom:10px}
 .hcard .s{font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hcard .a{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize}
+.hcard .cov{position:relative}
+.hcard.live{border-color:rgba(34,211,238,.6)}
+.hcard .live-badge{position:absolute;left:8px;bottom:8px;background:rgba(255,46,136,.92);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 8px;border-radius:999px;text-transform:uppercase}
+.hcard.empty{opacity:.55}
 
 /* programación */
 .sched{display:flex;flex-direction:column;gap:12px}
@@ -466,9 +470,20 @@ var URL_STREAMING = 'https://stream.zeno.fm/uakskhmgszcuv';
 var API_URL = 'https://api.zeno.fm/mounts/metadata/subscribe/uakskhmgszcuv';
 var DEFAULT_COVER = 'img/cover.png';
 
-var audio = new Audio(URL_STREAMING);
-audio.preload = 'none';
-audio.volume = 0.8;
+var audio = null;
+
+// Crea el elemento de audio. crossOrigin va ANTES del src: si se pone después
+// de cargar, el stream queda "no aprobado por CORS" y al pasarlo por Web Audio
+// (visualizador) Chrome/Safari lo silencian aunque parezca reproducirse.
+function makeAudio(){
+  var a = new Audio();
+  a.crossOrigin = 'anonymous';
+  a.preload = 'none';
+  a.src = URL_STREAMING;
+  a.volume = 0.8;
+  a.addEventListener('error', onAudioError);
+  return a;
+}
 
 var songEl = document.getElementById('currentSong');
 var artistEl = document.getElementById('currentArtist');
@@ -481,6 +496,11 @@ var historyList = document.getElementById('historyList');
 
 var currentTrack = { artist: '', song: '' };
 var played = [];
+var HISTORY_KEY = 'runaHistory';
+try {
+  var saved = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+  if (Array.isArray(saved)) played = saved.filter(function(t){ return t && t.song; }).slice(0, 8);
+} catch (e) { played = []; }
 var toastTimer = null;
 
 function toast(msg){
@@ -517,7 +537,7 @@ document.getElementById('volume').addEventListener('input', function(e){
 });
 
 var errorCount = 0;
-audio.addEventListener('error', function(){
+function onAudioError(){
   if (document.body.classList.contains('playing') || busy){
     errorCount++;
     if (errorCount >= 5){
@@ -531,26 +551,48 @@ audio.addEventListener('error', function(){
       }, 3000);
     }
   }
-});
+}
+audio = makeAudio();
 
 /* ---------- visualizador ---------- */
 var vizStarted = false;
+var analyser = null, analyserData = null, actxRef = null;
 function startVisualizer(){
   if (vizStarted) return;
   vizStarted = true;
   var canvas = document.getElementById('visualizer');
   var ctx = canvas.getContext('2d');
-  var analyser = null, data = null;
   try {
     var AC = window.AudioContext || window.webkitAudioContext;
     var actx = new AC();
-    audio.crossOrigin = 'anonymous';
-    var src = actx.createMediaElementSource(audio);
-    analyser = actx.createAnalyser();
-    analyser.fftSize = 128;
-    src.connect(analyser);
-    analyser.connect(actx.destination);
-    data = new Uint8Array(analyser.frequencyBinCount);
+    if (actx.resume) actx.resume();
+    var srcNode = actx.createMediaElementSource(audio);
+    var an = actx.createAnalyser();
+    an.fftSize = 128;
+    srcNode.connect(an);
+    an.connect(actx.destination);
+    analyser = an; actxRef = actx;
+    analyserData = new Uint8Array(an.frequencyBinCount);
+    // Autoprueba: si el contexto quedó suspendido o la señal sale en ceros
+    // (p. ej. CORS no aprobado o Safari con MediaElementSource), el oyente
+    // no escucharía nada. En ese caso soltamos Web Audio y reconectamos el
+    // stream en un elemento limpio para que el audio salga directo.
+    setTimeout(function(){
+      if (!analyser || audio.paused) return;
+      analyser.getByteFrequencyData(analyserData);
+      var sum = 0;
+      for (var i = 0; i < analyserData.length; i++) sum += analyserData[i];
+      if (actxRef.state !== 'running' || sum === 0){
+        try { srcNode.disconnect(); an.disconnect(); } catch (e) {}
+        if (actxRef.close) actxRef.close();
+        analyser = null; actxRef = null; analyserData = null;
+        var old = audio;
+        audio = makeAudio();
+        audio.volume = old.volume;
+        try { old.pause(); old.removeAttribute('src'); old.load(); } catch (e) {}
+        audio.play().then(function(){ setPlayingUI(true); }).catch(function(){});
+      }
+    }, 3000);
   } catch (e) { analyser = null; }
   function draw(){
     requestAnimationFrame(draw);
@@ -560,9 +602,13 @@ function startVisualizer(){
     var bars = 42, gap = 4, bw = (w - gap*(bars-1)) / bars;
     for (var i=0;i<bars;i++){
       var v;
-      if (analyser && !audio.paused){
-        analyser.getByteFrequencyData(data);
-        v = data[Math.floor(i * data.length / bars)] / 255;
+      if (analyser && analyserData && !audio.paused){
+        analyser.getByteFrequencyData(analyserData);
+        v = analyserData[Math.floor(i * analyserData.length / bars)] / 255;
+      } else if (!audio.paused){
+        // Animación decorativa mientras no hay analizador (o tras el fallback)
+        var t = Date.now();
+        v = 0.18 + 0.55 * Math.abs(Math.sin(t/280 + i*1.7)) * Math.abs(Math.sin(t/610 + i*0.9));
       } else {
         v = 0.06 + 0.05 * Math.sin(Date.now()/600 + i);
       }
@@ -571,7 +617,8 @@ function startVisualizer(){
       grad.addColorStop(0,'#22d3ee'); grad.addColorStop(1,'#ff2e88');
       ctx.fillStyle = grad;
       ctx.beginPath();
-      ctx.roundRect(i*(bw+gap), h-bh, bw, bh, 3);
+      if (ctx.roundRect) { ctx.roundRect(i*(bw+gap), h-bh, bw, bh, 3); }
+      else { ctx.rect(i*(bw+gap), h-bh, bw, bh); }
       ctx.fill();
     }
   }
@@ -587,25 +634,44 @@ function refreshUI(artist, song){
   songEl.classList.add('flip'); artistEl.classList.add('flip');
   document.title = (song ? song + ' · ' : '') + 'Runaradio en vivo';
 }
+function saveHistory(){
+  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(played.slice(0, 8))); } catch (e) {}
+}
 function pushHistory(artist, song, cover){
   if (!song) return;
   if (played.length && played[0].song === song && played[0].artist === artist) return;
-  played.unshift({ artist: artist, song: song, cover: cover });
+  played.unshift({ artist: artist, song: song, cover: cover, at: Date.now() });
   if (played.length > 8) played.pop();
+  saveHistory();
   renderHistory();
+}
+function makeCard(t, live){
+  var card = document.createElement('div');
+  card.className = 'hcard' + (live ? ' live' : '');
+  card.innerHTML = '<div class="cov" style="background-image:url(\'' + String(t.cover || DEFAULT_COVER).replace(/'/g,'') + '\')">' +
+    (live ? '<span class="live-badge">Sonando ahora</span>' : '') + '</div>' +
+    '<div class="s"></div><div class="a"></div>';
+  card.querySelector('.s').textContent = t.song;
+  card.querySelector('.a').textContent = t.artist || 'Runaradio';
+  return card;
 }
 function renderHistory(){
   historyList.innerHTML = '';
+  // La que suena ahora va primero, para que la sección nunca arranque vacía
+  if (currentTrack.song) historyList.appendChild(makeCard(currentTrack, true));
   played.forEach(function(t){
-    var card = document.createElement('div');
-    card.className = 'hcard';
-    card.innerHTML = '<div class="cov" style="background-image:url(\'' + t.cover.replace(/'/g,'') + '\')"></div>' +
-      '<div class="s"></div><div class="a"></div>';
-    card.querySelector('.s').textContent = t.song;
-    card.querySelector('.a').textContent = t.artist || 'Runaradio';
-    historyList.appendChild(card);
+    if (currentTrack.song && t.song === currentTrack.song && t.artist === currentTrack.artist) return;
+    historyList.appendChild(makeCard(t, false));
   });
+  if (!historyList.children.length){
+    var empty = document.createElement('div');
+    empty.className = 'hcard empty';
+    empty.innerHTML = '<div class="cov" style="background-image:url(\'' + DEFAULT_COVER + '\')"></div>' +
+      '<div class="s">Aún sin historial</div><div class="a">Quédate escuchando…</div>';
+    historyList.appendChild(empty);
+  }
 }
+renderHistory();
 
 /* carátula vía Deezer (JSONP, sin clave) */
 function getCover(artist, song, cb){
@@ -632,9 +698,11 @@ function onTrack(artist, song){
   if (currentTrack.song){ pushHistory(currentTrack.artist, currentTrack.song, currentTrack.cover || DEFAULT_COVER); }
   currentTrack = { artist: artist, song: song, cover: DEFAULT_COVER };
   refreshUI(artist, song);
+  renderHistory();
   getCover(artist, song, function(cover){
     currentTrack.cover = cover;
     vinylEl.style.backgroundImage = 'url("' + cover + '")';
+    renderHistory();
   });
 }
 
@@ -647,7 +715,7 @@ function processEvent(raw){
     var artist = '', song = t;
     var idx = t.indexOf(' - ');
     if (idx > -1){ artist = t.slice(0, idx).trim(); song = t.slice(idx + 3).trim(); }
-    onTrack(artist.toLowerCase(), song);
+    onTrack(artist, song);
   } catch (e) {}
 }
 var esCurrent = null;
