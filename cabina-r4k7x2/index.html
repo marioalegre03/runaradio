@@ -1,1 +1,390 @@
-Panel Runaradio (contenido se reemplaza)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'unsafe-inline'; img-src https: data: blob:; connect-src https://saqyplbhhojyzusarkzq.supabase.co; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'">
+<title>Panel · Runaradio</title>
+<style>
+:root{--bg:#0a0e1d;--panel:#11162b;--line:rgba(255,255,255,.09);--text:#eef1ff;--muted:#9aa3c0;--accent:#ff5a3c;--ok:#34d399;--danger:#f87171}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;min-height:100vh}
+header{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:5;flex-wrap:wrap}
+header h1{font-size:17px;font-weight:700}
+header .dot{width:9px;height:9px;border-radius:50%;background:var(--ok)}
+header .sp{flex:1}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:9px 14px;font-size:13.5px;font-weight:600;cursor:pointer}
+.btn.sec{background:rgba(255,255,255,.08);color:var(--text)}
+.btn.danger{background:rgba(248,113,113,.15);color:var(--danger)}
+.btn.sm{padding:5px 10px;font-size:12px;border-radius:8px}
+.btn:disabled{opacity:.5;cursor:default}
+nav.tabs{display:flex;gap:6px;padding:12px 20px 0;flex-wrap:wrap}
+nav.tabs button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 15px;font-size:13px;cursor:pointer;font-family:inherit}
+nav.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+main{padding:18px 20px 60px;max-width:1060px;margin:0 auto}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
+.row{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.row .grow{flex:1;min-width:200px}
+h2{font-size:15px;margin-bottom:10px}
+.meta{font-size:12px;color:var(--muted)}
+.pill{display:inline-block;font-size:10.5px;font-weight:700;border-radius:999px;padding:2px 8px;letter-spacing:.4px}
+.pill.pub{background:rgba(52,211,153,.16);color:var(--ok)}
+.pill.draft{background:rgba(154,163,192,.16);color:var(--muted)}
+.pill.urg{background:rgba(248,113,113,.2);color:var(--danger)}
+label{display:block;font-size:12px;color:var(--muted);margin:10px 0 4px}
+input[type=text],input[type=email],input[type=password],input[type=url],textarea,select{width:100%;background:#0c1124;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:10px 12px;font-size:14px;font-family:inherit;outline:none}
+textarea{min-height:120px;resize:vertical}
+input:focus,textarea:focus{border-color:var(--accent)}
+.checks{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.checks label{display:flex;align-items:center;gap:7px;margin:0;font-size:13px;color:var(--text)}
+.checks input{width:16px;height:16px;accent-color:var(--accent)}
+.msg-item{border-bottom:1px solid var(--line);padding:10px 0;display:flex;gap:10px;align-items:flex-start}
+.msg-item:last-child{border-bottom:0}
+.msg-item .txt{flex:1;min-width:180px;font-size:14px;word-break:break-word}
+.empty{color:var(--muted);text-align:center;padding:30px 0;font-size:14px}
+#loginWrap{max-width:380px;margin:12vh auto 0}
+#loginWrap .card{padding:26px}
+#loginWrap h1{font-size:20px;margin-bottom:4px}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+.alert{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.35);color:#fecaca;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px;display:none}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#1c2440;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:10px 18px;font-size:13.5px;z-index:50;display:none;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.imgprev{max-width:180px;border-radius:10px;margin-top:8px;display:none}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.toolbar input{max-width:260px}
+@media(max-width:640px){main{padding:14px 12px 60px}.msg-item{flex-direction:column;gap:6px}}
+</style>
+</head>
+<body>
+<div id="loginWrap">
+  <div class="card">
+    <h1>Panel Runaradio</h1>
+    <p class="meta" style="margin-bottom:14px">Acceso solo para administración</p>
+    <form id="loginForm">
+      <label for="lemail">Correo</label>
+      <input type="email" id="lemail" autocomplete="username" required>
+      <label for="lpass">Contraseña</label>
+      <input type="password" id="lpass" autocomplete="current-password" required>
+      <div style="margin-top:16px"><button class="btn" type="submit" id="lbtn" style="width:100%">Entrar</button></div>
+    </form>
+    <div class="alert" id="lerr"></div>
+    <p class="note">Acceso restringido. Los intentos fallidos se registran y el acceso se bloquea temporalmente tras varios fallos.</p>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+<header>
+  <span class="dot"></span>
+  <h1>Panel Runaradio</h1>
+  <span class="sp"></span>
+  <span class="meta" id="whoami"></span>
+  <button class="btn sec sm" id="btnSalir">Salir</button>
+</header>
+<nav class="tabs">
+  <button data-tab="noticias" class="on">Noticias</button>
+  <button data-tab="chat">Chat</button>
+  <button data-tab="comentarios">Comentarios</button>
+  <button data-tab="peticiones">Peticiones</button>
+</nav>
+<main>
+  <section id="tab-noticias">
+    <div class="toolbar">
+      <button class="btn" id="btnNueva">+ Nueva noticia</button>
+      <input type="text" id="buscaNews" placeholder="Buscar noticia…">
+    </div>
+    <div id="newsList"></div>
+    <div class="card" id="newsFormCard" style="display:none;margin-top:14px">
+      <h2 id="nfTitle">Nueva noticia</h2>
+      <input type="hidden" id="nfId">
+      <label>Título *</label><input type="text" id="nfTitulo" maxlength="200">
+      <label>Sección / etiqueta</label><input type="text" id="nfTag" maxlength="40" placeholder="Música, Espectáculos, Guanajuato…">
+      <div class="row">
+        <div style="width:110px"><label>Emoji</label><input type="text" id="nfEmoji" maxlength="8" placeholder="🎵"></div>
+        <div class="grow"><label>Resumen (teaser)</label><input type="text" id="nfTeaser" maxlength="300"></div>
+      </div>
+      <label>Cuerpo de la nota *</label><textarea id="nfCuerpo" maxlength="8000"></textarea>
+      <div class="row">
+        <div class="grow"><label>Fuente (nombre)</label><input type="text" id="nfFuente" maxlength="120" placeholder="Billboard, Los 40…"></div>
+        <div class="grow"><label>URL de la fuente</label><input type="url" id="nfUrl" maxlength="500" placeholder="https://…"></div>
+      </div>
+      <label>Imagen (URL) — o súbela abajo</label><input type="url" id="nfImagen" maxlength="500" placeholder="https://…">
+      <div class="row" style="align-items:center;margin-top:8px">
+        <input type="file" id="nfFile" accept="image/*" style="font-size:12.5px;color:var(--muted)">
+        <button class="btn sec sm" id="btnUpload" type="button">Subir imagen</button>
+        <span class="meta" id="upStatus"></span>
+      </div>
+      <img class="imgprev" id="nfPrev" alt="">
+      <label>Crédito de la imagen</label><input type="text" id="nfCredito" maxlength="160" placeholder="Foto: …">
+      <div class="checks">
+        <label><input type="checkbox" id="nfPub" checked> Publicada (visible)</label>
+        <label><input type="checkbox" id="nfUrg"> 🔴 Urgente (sale destacada)</label>
+      </div>
+      <div class="row" style="margin-top:16px">
+        <button class="btn" id="btnGuardar">Publicar / Guardar</button>
+        <button class="btn sec" id="btnCancelar">Cancelar</button>
+      </div>
+    </div>
+  </section>
+  <section id="tab-chat" style="display:none">
+    <div class="toolbar"><button class="btn sec sm" id="btnChatReload">Actualizar</button><span class="meta">Últimos 100 mensajes</span></div>
+    <div class="card" id="chatList"></div>
+  </section>
+  <section id="tab-comentarios" style="display:none">
+    <div class="toolbar"><button class="btn sec sm" id="btnComReload">Actualizar</button><span class="meta">Últimos 200 comentarios</span></div>
+    <div class="card" id="comList"></div>
+  </section>
+  <section id="tab-peticiones" style="display:none">
+    <div class="toolbar"><button class="btn sec sm" id="btnReqReload">Actualizar</button><span class="meta">Últimas 200 peticiones</span></div>
+    <div class="card" id="reqList"></div>
+  </section>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+'use strict';
+var SUPABASE_URL = 'https://saqyplbhhojyzusarkzq.supabase.co';
+var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhcXlwbGJoaG9qeXp1c2Fya3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyNDU4MjYsImV4cCI6MjEwNzgyMTgyNn0.OxhwQoRvQjoJXqTp30miW7LeRqNO6B-EHSKCJ-EZwQ8';
+var ADMIN_UID = 'db9350a6-3410-4cd1-bd5a-1de310a3d9f8';
+var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ var d=document.createElement('span'); d.textContent=s==null?'':String(s); return d.innerHTML; }
+function toast(m){ var t=$('toast'); t.textContent=m; t.style.display='block'; clearTimeout(t._h); t._h=setTimeout(function(){ t.style.display='none'; }, 3200); }
+function fecha(ts){ try { return new Date(ts).toLocaleString('es-MX',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}); } catch(e){ return ''; } }
+function slug(t){ return (t||'noticia').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,60) || 'noticia'; }
+
+/* ---------- login con bloqueo anti fuerza bruta ---------- */
+var LK='rr-admin-lock', FK='rr-admin-fails';
+function lockState(){
+  var until=+(localStorage.getItem(LK)||0);
+  if (until>Date.now()) return Math.ceil((until-Date.now())/60000);
+  return 0;
+}
+function loginError(m){ var e=$('lerr'); e.textContent=m; e.style.display='block'; }
+$('loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  $('lerr').style.display='none';
+  var mins=lockState();
+  if (mins>0){ loginError('Demasiados intentos. Espera '+mins+' min e inténtalo de nuevo.'); return; }
+  var btn=$('lbtn'); btn.disabled=true; btn.textContent='Entrando…';
+  sb.auth.signInWithPassword({email:$('lemail').value.trim(), password:$('lpass').value}).then(function(r){
+    btn.disabled=false; btn.textContent='Entrar';
+    if (r.error){
+      var f=+(localStorage.getItem(FK)||0)+1;
+      localStorage.setItem(FK, f);
+      if (f>=5){ localStorage.setItem(LK, Date.now()+15*60*1000); localStorage.setItem(FK, 0); loginError('Demasiados intentos. Acceso bloqueado 15 minutos.'); }
+      else loginError('Correo o contraseña incorrectos ('+f+'/5).');
+      return;
+    }
+    if (!r.data.user || r.data.user.id!==ADMIN_UID){
+      sb.auth.signOut();
+      loginError('Esta cuenta no tiene acceso al panel.');
+      return;
+    }
+    localStorage.removeItem(FK); localStorage.removeItem(LK);
+    entrar(r.data.user);
+  });
+});
+
+function entrar(user){
+  $('whoami').textContent=user.email;
+  $('loginWrap').style.display='none';
+  $('app').style.display='block';
+  cargarNoticias();
+}
+$('btnSalir').addEventListener('click', function(){ sb.auth.signOut().then(function(){ location.reload(); }); });
+
+sb.auth.getSession().then(function(r){
+  var u=r.data.session && r.data.session.user;
+  if (u && u.id===ADMIN_UID) entrar(u);
+});
+sb.auth.onAuthStateChange(function(ev, ses){
+  if (!ses) { $('app').style.display='none'; $('loginWrap').style.display='block'; }
+});
+
+/* ---------- tabs ---------- */
+document.querySelectorAll('nav.tabs button').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('nav.tabs button').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on');
+    ['noticias','chat','comentarios','peticiones'].forEach(function(t){ $('tab-'+t).style.display = (t===b.dataset.tab)?'block':'none'; });
+    if (b.dataset.tab==='chat') cargarChat();
+    if (b.dataset.tab==='comentarios') cargarComentarios();
+    if (b.dataset.tab==='peticiones') cargarPeticiones();
+  });
+});
+
+/* ---------- noticias ---------- */
+var NEWS=[];
+function cargarNoticias(){
+  sb.from('news_items').select('*').order('created_at',{ascending:false}).then(function(r){
+    if (r.error){ toast('Error al cargar noticias: '+r.error.message); return; }
+    NEWS=r.data||[]; pintarNoticias();
+  });
+}
+function pintarNoticias(){
+  var q=($('buscaNews').value||'').toLowerCase();
+  var list=$('newsList'); list.innerHTML='';
+  var items=NEWS.filter(function(n){ return !q || (n.titulo||'').toLowerCase().indexOf(q)>=0 || (n.tag||'').toLowerCase().indexOf(q)>=0; });
+  if (!items.length){ list.innerHTML='<p class="empty">Sin noticias.</p>'; return; }
+  items.forEach(function(n){
+    var c=document.createElement('div'); c.className='card';
+    var pills = (n.published?'<span class="pill pub">PUBLICADA</span>':'<span class="pill draft">BORRADOR</span>') + (n.urgente?' <span class="pill urg">URGENTE</span>':'');
+    c.innerHTML='<div class="row"><div class="grow">'+pills+' <b>'+esc(n.titulo)+'</b><div class="meta">'+esc(n.tag||'Noticia')+' · '+fecha(n.created_at)+'</div></div>'+
+      '<button class="btn sec sm" data-a="edit">Editar</button>'+
+      '<button class="btn sec sm" data-a="toggle">'+(n.published?'Despublicar':'Publicar')+'</button>'+
+      '<button class="btn danger sm" data-a="del">Borrar</button></div>';
+    c.querySelector('[data-a=edit]').addEventListener('click', function(){ editar(n); });
+    c.querySelector('[data-a=toggle]').addEventListener('click', function(){
+      sb.from('news_items').update({published:!n.published, updated_at:new Date().toISOString()}).eq('id',n.id).then(function(r){
+        if (r.error) toast('Error: '+r.error.message); else { toast(n.published?'Despublicada':'¡Publicada! Ya sale en el sitio.'); cargarNoticias(); }
+      });
+    });
+    c.querySelector('[data-a=del]').addEventListener('click', function(){
+      if (!confirm('¿Borrar "'+n.titulo+'"? Esto no se puede deshacer.')) return;
+      sb.from('news_items').delete().eq('id',n.id).then(function(r){
+        if (r.error) toast('Error: '+r.error.message); else { toast('Noticia borrada.'); cargarNoticias(); }
+      });
+    });
+    list.appendChild(c);
+  });
+}
+$('buscaNews').addEventListener('input', pintarNoticias);
+function limpiarForm(){
+  $('nfId').value=''; $('nfTitulo').value=''; $('nfTag').value=''; $('nfEmoji').value='';
+  $('nfTeaser').value=''; $('nfCuerpo').value=''; $('nfFuente').value=''; $('nfUrl').value='';
+  $('nfImagen').value=''; $('nfCredito').value=''; $('nfPub').checked=true; $('nfUrg').checked=false;
+  $('nfPrev').style.display='none'; $('upStatus').textContent=''; $('nfFile').value='';
+}
+$('btnNueva').addEventListener('click', function(){ limpiarForm(); $('nfTitle').textContent='Nueva noticia'; $('newsFormCard').style.display='block'; $('nfTitulo').focus(); });
+$('btnCancelar').addEventListener('click', function(){ $('newsFormCard').style.display='none'; });
+function editar(n){
+  $('nfId').value=n.id; $('nfTitulo').value=n.titulo||''; $('nfTag').value=n.tag||''; $('nfEmoji').value=n.emoji||'';
+  $('nfTeaser').value=n.teaser||''; $('nfCuerpo').value=n.cuerpo||''; $('nfFuente').value=n.fuente||'';
+  $('nfUrl').value=n.url||''; $('nfImagen').value=n.imagen||''; $('nfCredito').value=n.credito||'';
+  $('nfPub').checked=!!n.published; $('nfUrg').checked=!!n.urgente;
+  if (n.imagen){ $('nfPrev').src=n.imagen; $('nfPrev').style.display='block'; } else $('nfPrev').style.display='none';
+  $('nfTitle').textContent='Editar noticia';
+  $('newsFormCard').style.display='block'; window.scrollTo(0,document.body.scrollHeight);
+}
+$('btnUpload').addEventListener('click', function(){
+  var f=$('nfFile').files[0];
+  if (!f){ toast('Elige un archivo primero.'); return; }
+  if (f.size>5*1024*1024){ toast('La imagen pasa de 5 MB.'); return; }
+  var st=$('upStatus'); st.textContent='Subiendo…'; $('btnUpload').disabled=true;
+  var ext=(f.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';
+  var path='news/'+Date.now()+'-'+Math.random().toString(36).slice(2,8)+'.'+ext;
+  sb.storage.from('news-media').upload(path, f, {cacheControl:'3600', upsert:false}).then(function(r){
+    $('btnUpload').disabled=false;
+    if (r.error){ st.textContent='Error: '+r.error.message; return; }
+    var pub=sb.storage.from('news-media').getPublicUrl(path);
+    $('nfImagen').value=pub.data.publicUrl;
+    $('nfPrev').src=pub.data.publicUrl; $('nfPrev').style.display='block';
+    st.textContent='Subida ✓';
+  });
+});
+$('btnGuardar').addEventListener('click', function(){
+  var titulo=$('nfTitulo').value.trim(), cuerpo=$('nfCuerpo').value.trim();
+  if (!titulo || !cuerpo){ toast('Título y cuerpo son obligatorios.'); return; }
+  var id=$('nfId').value || slug(titulo);
+  var row={
+    id:id, titulo:titulo, tag:$('nfTag').value.trim()||'Noticia', emoji:$('nfEmoji').value.trim()||'📰',
+    teaser:$('nfTeaser').value.trim(), cuerpo:cuerpo, fuente:$('nfFuente').value.trim(),
+    url:$('nfUrl').value.trim(), imagen:$('nfImagen').value.trim(), credito:$('nfCredito').value.trim(),
+    published:$('nfPub').checked, urgente:$('nfUrg').checked, updated_at:new Date().toISOString()
+  };
+  $('btnGuardar').disabled=true;
+  var q = $('nfId').value
+    ? sb.from('news_items').update(row).eq('id', $('nfId').value)
+    : sb.from('news_items').upsert(row, {onConflict:'id'});
+  q.then(function(r){
+    $('btnGuardar').disabled=false;
+    if (r.error){ toast('Error: '+r.error.message); return; }
+    toast(row.published ? '¡Publicada! Ya está en el sitio.' : 'Guardada como borrador.');
+    $('newsFormCard').style.display='none'; cargarNoticias();
+  });
+});
+
+/* ---------- chat ---------- */
+function cargarChat(){
+  sb.from('chat_messages').select('*').order('created_at',{ascending:false}).limit(100).then(function(r){
+    var list=$('chatList');
+    if (r.error){ list.innerHTML='<p class="empty">Error: '+esc(r.error.message)+'</p>'; return; }
+    if (!r.data.length){ list.innerHTML='<p class="empty">Sin mensajes.</p>'; return; }
+    list.innerHTML='';
+    r.data.forEach(function(m){
+      var d=document.createElement('div'); d.className='msg-item';
+      d.innerHTML='<div class="txt"><b>'+esc(m.nickname||'Oyente')+'</b> <span class="meta">'+fecha(m.created_at)+'</span><br>'+esc(m.message)+'</div>';
+      var b=document.createElement('button'); b.className='btn danger sm'; b.textContent='Borrar';
+      b.addEventListener('click', function(){
+        if (!confirm('¿Borrar este mensaje?')) return;
+        sb.from('chat_messages').delete().eq('id',m.id).then(function(rr){
+          if (rr.error) toast('Error: '+rr.error.message); else { toast('Mensaje borrado.'); cargarChat(); }
+        });
+      });
+      d.appendChild(b); list.appendChild(d);
+    });
+  });
+}
+$('btnChatReload').addEventListener('click', cargarChat);
+
+/* ---------- comentarios ---------- */
+function cargarComentarios(){
+  sb.from('news_comments').select('*').order('created_at',{ascending:false}).limit(200).then(function(r){
+    var list=$('comList');
+    if (r.error){ list.innerHTML='<p class="empty">Error: '+esc(r.error.message)+'</p>'; return; }
+    if (!r.data.length){ list.innerHTML='<p class="empty">Sin comentarios.</p>'; return; }
+    list.innerHTML='';
+    r.data.forEach(function(m){
+      var d=document.createElement('div'); d.className='msg-item';
+      d.innerHTML='<div class="txt"><b>'+esc(m.name||'Anónimo')+'</b> <span class="meta">en '+esc(m.news_id)+' · '+fecha(m.created_at)+'</span><br>'+esc(m.body)+'</div>';
+      var b=document.createElement('button'); b.className='btn danger sm'; b.textContent='Borrar';
+      b.addEventListener('click', function(){
+        if (!confirm('¿Borrar este comentario?')) return;
+        sb.from('news_comments').delete().eq('id',m.id).then(function(rr){
+          if (rr.error) toast('Error: '+rr.error.message); else { toast('Comentario borrado.'); cargarComentarios(); }
+        });
+      });
+      d.appendChild(b); list.appendChild(d);
+    });
+  });
+}
+$('btnComReload').addEventListener('click', cargarComentarios);
+
+/* ---------- peticiones ---------- */
+function cargarPeticiones(){
+  sb.from('song_requests').select('*').order('created_at',{ascending:false}).limit(200).then(function(r){
+    var list=$('reqList');
+    if (r.error){ list.innerHTML='<p class="empty">Error: '+esc(r.error.message)+'</p>'; return; }
+    if (!r.data.length){ list.innerHTML='<p class="empty">Sin peticiones.</p>'; return; }
+    list.innerHTML='';
+    r.data.forEach(function(m){
+      var d=document.createElement('div'); d.className='msg-item';
+      d.innerHTML='<div class="txt"><b>'+esc(m.song)+'</b> <span class="meta">— '+esc(m.name)+' · '+fecha(m.created_at)+(m.atendida?' · <span class="pill pub">ATENDIDA</span>':'')+'</span></div>';
+      var w=document.createElement('div'); w.style.whiteSpace='nowrap';
+      var t=document.createElement('button'); t.className='btn sec sm'; t.textContent=m.atendida?'Reabrir':'Atendida';
+      t.addEventListener('click', function(){
+        sb.from('song_requests').update({atendida:!m.atendida}).eq('id',m.id).then(function(rr){
+          if (rr.error) toast('Error: '+rr.error.message); else cargarPeticiones();
+        });
+      });
+      var b=document.createElement('button'); b.className='btn danger sm'; b.textContent='Borrar';
+      b.addEventListener('click', function(){
+        if (!confirm('¿Borrar esta petición?')) return;
+        sb.from('song_requests').delete().eq('id',m.id).then(function(rr){
+          if (rr.error) toast('Error: '+rr.error.message); else cargarPeticiones();
+        });
+      });
+      w.appendChild(t); w.appendChild(document.createTextNode(' ')); w.appendChild(b);
+      d.appendChild(w); list.appendChild(d);
+    });
+  });
+}
+$('btnReqReload').addEventListener('click', cargarPeticiones);
+})();
+</script>
+</body>
+</html>
