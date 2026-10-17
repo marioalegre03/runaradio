@@ -711,12 +711,8 @@ function getCover(artist, song, cb){
   setTimeout(function(){ if (window[cbName]){ delete window[cbName]; cb(DEFAULT_COVER); } }, 8000);
 }
 
-var trackStartedAt = 0;
-var showingCommercials = false;
 function onTrack(artist, song){
   if (artist === currentTrack.artist && song === currentTrack.song) return;
-  trackStartedAt = Date.now();
-  showingCommercials = false;
   if (currentTrack.song){ pushHistory(currentTrack.artist, currentTrack.song, currentTrack.cover || DEFAULT_COVER); }
   currentTrack = { artist: artist, song: song, cover: DEFAULT_COVER };
   refreshUI(artist, song);
@@ -752,20 +748,6 @@ function connect(){
 }
 connect();
 setInterval(function(){ if (!gotMeta) connect(); }, 12000);
-
-/* ---------- comerciales: si el mismo "tema" dura mucho más que una canción, es bloque comercial ---------- */
-var COMMERCIAL_AFTER_MS = 6 * 60 * 1000;
-function showCommercials(){
-  showingCommercials = true;
-  songEl.textContent = 'Comerciales';
-  artistEl.textContent = 'Runaradio · volvemos enseguida';
-  deckCard.style.backgroundImage = 'url("' + DEFAULT_COVER + '")';
-  document.title = 'Comerciales · Runaradio en vivo';
-}
-setInterval(function(){
-  if (!currentTrack.song || !trackStartedAt || showingCommercials) return;
-  if (Date.now() - trackStartedAt > COMMERCIAL_AFTER_MS) showCommercials();
-}, 15000);
 </script>
 <script>
 /* ---------- programación semanal (data-driven: schedule.json) ---------- */
