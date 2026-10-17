@@ -32,6 +32,20 @@
         "tag": "Noticias"
       },
       {
+        "start": "13:00",
+        "end": "15:00",
+        "name": "Productoramg",
+        "desc": "Playlist",
+        "tag": "Música"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio",
+        "desc": "Don Quijote de la Mancha (lectura)",
+        "tag": "Programa"
+      },
+      {
         "start": "19:00",
         "end": "20:00",
         "name": "Turismo Cero",
@@ -81,6 +95,20 @@
         "name": "Noticias News",
         "desc": "Flash informativo",
         "tag": "Noticias"
+      },
+      {
+        "start": "13:00",
+        "end": "15:00",
+        "name": "Productoramg",
+        "desc": "Playlist",
+        "tag": "Música"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio",
+        "desc": "Leyendas de Becquer",
+        "tag": "Programa"
       },
       {
         "start": "19:00",
@@ -134,6 +162,20 @@
         "tag": "Noticias"
       },
       {
+        "start": "13:00",
+        "end": "15:00",
+        "name": "Productoramg",
+        "desc": "Playlist",
+        "tag": "Música"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio",
+        "desc": "Cuentos de Edgar Allan Poe",
+        "tag": "Programa"
+      },
+      {
         "start": "19:00",
         "end": "20:00",
         "name": "Top 5 Latinoamerica",
@@ -185,6 +227,20 @@
         "tag": "Noticias"
       },
       {
+        "start": "13:00",
+        "end": "15:00",
+        "name": "Productoramg",
+        "desc": "Playlist",
+        "tag": "Música"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio",
+        "desc": "Las cien mejores poesias",
+        "tag": "Programa"
+      },
+      {
         "start": "19:00",
         "end": "20:00",
         "name": "Musica de Mas Internacional",
@@ -234,6 +290,20 @@
         "name": "Noticias News",
         "desc": "Flash informativo",
         "tag": "Noticias"
+      },
+      {
+        "start": "13:00",
+        "end": "15:00",
+        "name": "Productoramg",
+        "desc": "Playlist",
+        "tag": "Música"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio",
+        "desc": "Lazarillo de Tormes y cuentos fantasticos",
+        "tag": "Programa"
       },
       {
         "start": "19:00",
@@ -306,6 +376,13 @@
         "name": "Atravesando Decadas",
         "desc": "",
         "tag": "Programa"
+      },
+      {
+        "start": "13:00",
+        "end": "15:00",
+        "name": "Productoramg",
+        "desc": "Playlist",
+        "tag": "Música"
       },
       {
         "start": "13:10",
