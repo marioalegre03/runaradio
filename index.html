@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Runaradio en vivo — Estación Kus Medios</title>
+    <meta name="description" content="Runaradio en vivo: música latina y pop desde Irapuato, Guanajuato. Más que música, compañía. Escucha la señal de Estación Kus Medios con carátula, letra e historial.">
+    <meta name="keywords" content="runaradio, radio en vivo, irapuato, estacion kus medios, radio online, música latina, zeno fm">
+    <link rel="canonical" href="https://estacionkusmedios.org/runaradio">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Runaradio en vivo — Estación Kus Medios">
+    <meta property="og:description" content="Escucha Runaradio en vivo: música latina y pop desde Irapuato, Guanajuato. Más que música, compañía.">
+    <meta property="og:url" content="https://estacionkusmedios.org/runaradio">
+    <meta property="og:image" content="https://estacionkusmedios.org/runaradio/img/cover.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0b0e13">
+    <link rel="icon" type="image/png" href="img/cover.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div class="bg" aria-hidden="true">
+        <div id="bgCover"></div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <button type="button" id="installPwaBtn" class="install-btn" hidden>
+        <i class="fa fa-download"></i> Instalar app
+    </button>
+
+    <main class="app">
+        <header class="masthead">
+            <span id="radioName">Radio Player</span>
+        </header>
+
+        <section class="player">
+            <div class="artwork cover-album">
+                <div id="currentCoverArt"></div>
+            </div>
+
+            <div class="player-info">
+                <span class="live-badge"><span class="live-dot"></span> EN VIVO</span>
+                <h1 id="currentSong" class="text-uppercase">Canción</h1>
+                <h2 id="currentArtist" class="text-capitalize">Artista</h2>
+
+                <div class="controls">
+                    <div class="control-cluster">
+                        <div class="volume-wrap volume-control">
+                            <button type="button" class="ctrl-btn volume-toggle" aria-label="Volume" title="Volume">
+                                <i class="fa fa-volume-up"></i>
+                            </button>
+                            <div class="volume-popover" hidden>
+                                <input type="range" id="volume" step="1" min="0" max="100" value="80" aria-label="Volume">
+                                <span class="vol-value"><span id="volIndicator">80</span>%</span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="play-btn" onclick="togglePlay()" aria-label="Reproducir o pausar">
+                            <i id="playerButton" class="fa fa-play"></i>
+                        </button>
+
+                        <button type="button" class="ctrl-btn lyrics" title="Letra de la canción" aria-label="Letra de la canción">
+                            <i class="fa fa-music"></i>
+                        </button>
+                    </div>
+                    <span id="buttonPlay" class="sr-only" aria-live="polite">PLAY</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="historic hidden">
+            <h2 class="section-title">Escuchadas recientemente</h2>
+            <div class="history-list" id="historicSong">
+                <article>
+                    <div class="cover-historic" id="cover-historic-1"></div>
+                    <div class="music-info">
+                        <div class="song">Canción</div>
+                        <div class="artist">Artista</div>
+                    </div>
+                </article>
+                <article>
+                    <div class="cover-historic" id="cover-historic-2"></div>
+                    <div class="music-info">
+                        <div class="song">Canción</div>
+                        <div class="artist">Artista</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalLyrics" role="dialog" aria-modal="true" aria-labelledby="lyricsSong" aria-hidden="true">
+        <div class="modal-card">
+            <header>
+                <h3 id="lyricsSong">Letra</h3>
+                <button type="button" class="modal-close" aria-label="Cerrar">
+                    <i class="fa fa-times"></i>
+                </button>
+            </header>
+            <div id="lyric"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+        // Modal de letra (substitui o modal do Bootstrap; o script.js sinaliza
+        // que há letra disponível colocando data-toggle no botão .lyrics)
+        (function () {
+            var modal = document.getElementById('modalLyrics');
+            var openButton = document.querySelector('.lyrics');
+
+            function closeModal() {
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+            }
+
+            openButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                if (!openButton.hasAttribute('data-toggle')) return; // sem letra disponível
+                modal.style.display = 'flex';
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
+            });
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) closeModal();
+            });
+            modal.querySelector('.modal-close').addEventListener('click', closeModal);
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') closeModal();
+            });
+        })();
+
+        // Popover de volume (abre no clique do botão circular, fecha ao clicar fora)
+        (function () {
+            var wrap = document.querySelector('.volume-wrap');
+            var toggle = document.querySelector('.volume-toggle');
+            var popover = document.querySelector('.volume-popover');
+            if (!wrap || !toggle || !popover) return;
+
+            toggle.addEventListener('click', function () {
+                popover.hidden = !popover.hidden;
+            });
+            document.addEventListener('click', function (event) {
+                if (!wrap.contains(event.target)) popover.hidden = true;
+            });
+        })();
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

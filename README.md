@@ -1,0 +1,192 @@
+# Runaradio Player (fork)
+
+Esta es la versión de **Runaradio** (Estación Kus Medios, Irapuato, México) del
+[RadioPlayer-ZenoRadio](https://github.com/jailsonsb2/RadioPlayer-ZenoRadio) de jailsonsb2,
+licenciado bajo AGPL-3.0 (ver LICENSE; los avisos de licencia se conservan).
+
+Cambios respecto al original (2026-10-16):
+- Nombre de la estación: Runaradio (`RADIO_NAME` en js/script.js).
+- Stream propio: https://stream.zeno.fm/uakskhmgszcuv y API de metadata de Zeno correspondiente.
+- Interfaz traducida del portugués al español (textos visibles y aria-labels).
+- manifest.json, título y meta tags de index.html con la marca Runaradio.
+- Logo de la estación como carátula por defecto (img/cover.png).
+
+---
+
+# 🎵 Radio Player Zeno.FM — Free HTML5 Web Radio Player
+
+[![Live Demo](https://img.shields.io/badge/▶_Live_Demo-online-brightgreen)](https://jailsonsb2.github.io/RadioPlayer-ZenoRadio/)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
+[![No API Key](https://img.shields.io/badge/API_key-not_required-orange)](#)
+
+**[▶ Try the live demo](https://jailsonsb2.github.io/RadioPlayer-ZenoRadio/)** — a full-page **HTML5 radio player for Zeno.FM** streams (Icecast/Shoutcast/Azuracast supported too): now playing metadata via Zeno's SSE API, album art, song lyrics, recently played history and installable **PWA**.
+
+> 🇧🇷 **Player de rádio Zeno FM para o seu site — grátis e sem chave de API.** Mostra a música tocando agora com capa do álbum, letra da música e histórico. É só editar duas linhas no script e hospedar em qualquer servidor (ou de graça na Vercel/Netlify/GitHub Pages).
+
+A modern, dependency-free "now playing" radio player: the album art of the current song becomes a blurred full-page backdrop, with glass-style circular controls on top. No Bootstrap, no jQuery — just HTML, CSS and vanilla JavaScript.
+
+* Current song with animated transitions and live metadata (Zeno Radio SSE or Azuracast polling)
+* Cover art of the current song ([Deezer API](https://developers.deezer.com/login?redirect=/api))
+* Lyrics of the current song via [lyrics.ovh](https://lyrics.ovh) with [LRCLIB](https://lrclib.net) fallback — no API key required, with request caching
+* History of recently played songs (option to show or hide)
+* Smooth volume fade in/out on play/pause (no audio "pop")
+* Loading spinner while the stream buffers
+* Automatic reconnection with backoff when the network drops
+* Volume as a circular button with a slider popover (desktop; on mobile the hardware buttons rule)
+* Media Session integration (lock screen / notification controls with artwork)
+* Responsive design — mobile-first single column, side-by-side layout on desktop
+* Progressive Web App (PWA) with an "Install app" button when the browser allows it
+* Azuracast support
+
+## Demo Screenshots
+
+![Demo Screenshot](https://i.imgur.com/RYrH0BM.jpg)
+
+
+
+## How do I set up this player for my radio?
+
+Open The [Script.js](https://github.com/jailsonsb2/RadioPlayer-ZenoRadio/blob/main/js/script.js) file and edit the lines Below.
+
+```javascript
+// RADIO NAME
+const RADIO_NAME = 'Your Radio Name';
+
+// Change Stream URL Zeno Radio Here.
+const URL_STREAMING = 'https://stream.zeno.fm/yn65fsaurfhvv';
+
+// You can find the mount point in the Broadcast Settings.
+// To generate the Zeno Radio API link from the mount point,
+// exclude the '/source' part and append the remaining mount point to the base URL of the API.
+// For example, if the mount point is 'yn65fsaurfhvv/source',
+// the API link will be 'https://api.zeno.fm/mounts/metadata/subscribe/yn65fsaurfhvv'.
+
+const url = 'https://api.zeno.fm/mounts/metadata/subscribe/yn65fsaurfhvv';
+
+// Variable to control history display: true = display / false = hides
+let showHistory = true; 
+
+ ```
+
+## Azuracast
+
+For Azuracast there is a ready-made page: [index_azura.html](index_azura.html) (deploy it as-is or rename it to `index.html`). Just edit the constants at the top of [js/script_azura.js](js/script_azura.js) — `RADIO_NAME`, `URL_STREAMING` and `API_URL` pointing to your `/api/nowplaying/<station>` endpoint.
+
+Because the Azuracast API is richer, this version shows extras that the Zeno version can't:
+
+* **Up next** — the next song in the queue (`playing_next`), shown as a pill under the player controls
+* **Full history with artwork** — up to 4 recently played songs, with covers coming straight from the Azuracast API (no Deezer lookups needed)
+
+ ## Change Logo.
+
+ Open The img folder and add your logo named "cover.png"
+
+ ## Zeno Radio API Now Playing.
+
+To generate the Zeno Radio API link from the mount point,
+exclude the '/source' part and append the remaining mount point to the base URL of the API.
+You can find the mount point in the Broadcast Settings.
+For example, if the mount point is 'yn65fsaurfhvv/source',
+the API link will be 'https://api.zeno.fm/mounts/metadata/subscribe/yn65fsaurfhvv'.
+
+![Demo Screenshot](https://i.imgur.com/8F61uyD.jpg)
+
+## Customizing the Look
+
+All the design tokens live at the top of [css/style.css](css/style.css) as CSS variables — change the accent color, surfaces and radius in one place:
+
+```css
+:root {
+    --accent: #00e1e7;   /* accent color (slider, live dot glow, focus rings) */
+    --bg: #0b0e13;       /* page background */
+    --surface: rgba(255, 255, 255, 0.06);  /* glass surfaces */
+    --border: rgba(255, 255, 255, 0.12);   /* glass borders */
+    --radius: 20px;      /* card corner radius */
+}
+```
+
+ ## Installation
+Just put the files in your server or use Free Hosting
+
+
+
+## Free Hosting
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jailsonsb2/RadioPlayer-ZenoRadio)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jailsonsb2/RadioPlayer-ZenoRadio)
+
+### Progressive Web App (PWA) Support
+
+Now you can install the Radio Player as a Progressive Web App (PWA) to your device for an enhanced experience! When the browser signals that installation is available, an "Install app" button appears (top-right on desktop, bottom of the screen on mobile).
+
+**Note:** after deploying an update, the service worker cache version in `service-worker.js` (`CACHE_NAME`) should be bumped so returning visitors get the new files.
+
+### Configuring Radio Name and Colors
+
+To configure the name of your radio and the colors used in the Progressive Web App (PWA), you need to edit the `manifest.json` file:
+
+1. Open the `manifest.json` file in your project.
+2. Locate the `"name"` field and replace `'Your Radio Name'` with the name of your radio.
+3. If desired, you can also customize the `"background_color"` and `"theme_color"` fields to match your radio's branding colors.
+
+Here's an example:
+
+```json
+{
+  "name": "Your Radio Name",
+  "short_name": "Radio Player",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0b0e13",  // Customize this color to match your branding
+  "theme_color": "#0b0e13",       // Customize this color to match your branding
+  "icons": [
+    {
+      "src": "img/cover.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
+```
+
+## Supported Hosting Types
+* Zeno Radio
+* Azuracast
+
+## Supported API/Data Sources
+* Deezer (cover art)
+* lyrics.ovh + LRCLIB (lyrics)
+* Azuracast
+
+## Keyboard Controls 
+* `M` - mute/unmute
+* `P` and `space` - play/pause
+* `arrow up` and `arrow down` - increase/decrease volume
+* `0 to 9` - volume percent
+
+
+## Related Projects
+
+More free radio players from the same author:
+
+| Project | Style |
+|---|---|
+| [**RadioPlayer**](https://github.com/jailsonsb2/RadioPlayer) | Full-page player for **any stream** (free now-playing API, YouTube clip mode) |
+| [**Radioplayer_api**](https://github.com/jailsonsb2/Radioplayer_api) | Multi-station player with **3 switchable layouts** |
+| [**bottom_radioplayer**](https://github.com/jailsonsb2/bottom_radioplayer) | **Bottom-bar component** — the audio never stops while visitors navigate |
+| [**metadados**](https://github.com/jailsonsb2/metadados) | The free **now playing API** (ICY metadata + iTunes + YouTube clips) |
+
+## Feedback
+
+If you have any feedback, please reach out to me at contato@jailson.es
+
+---
+
+## ⚖️ License
+
+This project is licensed under the **GNU AGPL-3.0** (see [LICENSE](LICENSE)): you are free to use, modify and redistribute it — including commercially — provided derivative works remain open source and keep the original copyright notices, **even when offered only as a hosted/network service**.
+
+**Closed-source / commercial licensing:** to embed this code in a proprietary product without AGPL obligations, a separate commercial license is available — contact [contato@jailson.es](mailto:contato@jailson.es).
+
+Copyright (C) 2024-2026 Jailson Bezerra ([@jailsonsb2](https://github.com/jailsonsb2))
