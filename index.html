@@ -867,7 +867,11 @@ function renderSchedule(){
   var data = window.SCHEDULE_DATA || SCHEDULE_FALLBACK;
   var list = document.getElementById('schedList');
   list.innerHTML = '';
-  var slots = (data.days && data.days[activeDay]) || data[activeDay] || [];
+  var now = new Date();
+  var isToday = activeDay === DAY_KEYS[(now.getDay() + 6) % 7];
+  var isoToday = now.getFullYear() + '-' + ('0' + (now.getMonth()+1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
+  var ov = (isToday && data.overrides) ? data.overrides[isoToday] : null;
+  var slots = (ov && ov.length) ? ov : ((data.days && data.days[activeDay]) || data[activeDay] || []);
   if (!slots.length){
     var empty = document.createElement('div');
     empty.className = 'slot';
@@ -875,8 +879,6 @@ function renderSchedule(){
     list.appendChild(empty);
     return;
   }
-  var now = new Date();
-  var isToday = activeDay === DAY_KEYS[(now.getDay() + 6) % 7];
   var nowMin = now.getHours()*60 + now.getMinutes();
   slots.forEach(function(s){
     var on = isToday && isOnAir(s, nowMin);
@@ -1017,4 +1019,4 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
 })();
 </script>
 </body>
-</html>
+  </html>
