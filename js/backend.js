@@ -207,3 +207,78 @@
     obs.observe(modal, {attributes:true, attributeFilter:['style']});
   })();
 })();
+
+/* ================= NOTICIAS DESDE LA BASE DE DATOS =================
+   Las noticias se publican desde el panel administrativo (tabla news_items).
+   Si la base no responde o no hay noticias publicadas, se conserva el
+   contenido estatico de news.json que ya pinto el script inline. */
+(function(){
+  if (!window.supabase || !window.supabase.createClient) return;
+  var sb = window.supabase.createClient('https://saqyplbhhojyzusarkzq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhcXlwbGJoaG9qeXp1c2Fya3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyNDU4MjYsImV4cCI6MjEwNzgyMTgyNn0.OxhwQoRvQjoJXqTp30miW7LeRqNO6B-EHSKCJ-EZwQ8');
+  var grid = document.getElementById('newsGrid');
+  var modal = document.getElementById('modalNews');
+  if (!grid || !modal) return;
+
+  function pintar(items){
+    grid.innerHTML = '';
+    items.forEach(function(n){
+      var card = document.createElement('article');
+      card.className = 'news-card';
+      if (n.urgente) card.style.cssText = 'border-color:rgba(248,113,113,.55);box-shadow:0 0 0 1px rgba(248,113,113,.35)';
+      var art = document.createElement('div'); art.className = 'art';
+      if (n.imagen){ art.classList.add('has-img'); art.style.backgroundImage = "url('" + n.imagen + "')"; }
+      else { art.textContent = n.emoji || '\u{1F4F0}'; }
+      var body = document.createElement('div'); body.className = 'body';
+      if (n.urgente){
+        var u = document.createElement('span');
+        u.textContent = '\u{1F534} URGENTE';
+        u.style.cssText = 'display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.6px;color:#f87171;margin-bottom:4px';
+        body.appendChild(u);
+      }
+      var tag = document.createElement('span'); tag.className = 'news-tag'; tag.textContent = n.tag || 'Noticia';
+      var b = document.createElement('b'); b.textContent = n.titulo || '';
+      var t = document.createElement('span'); t.className = 'teaser'; t.textContent = n.teaser || '';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'news-more'; btn.textContent = 'Ver más';
+      btn.addEventListener('click', function(){
+        var hero = document.getElementById('newsHero');
+        var credit = document.getElementById('newsCredit');
+        if (n.imagen){ hero.src = n.imagen; hero.alt = n.titulo || ''; hero.style.display = 'block'; }
+        else { hero.style.display = 'none'; hero.removeAttribute('src'); }
+        if (n.imagen && n.credito){ credit.textContent = n.credito; credit.style.display = 'block'; }
+        else { credit.style.display = 'none'; credit.textContent = ''; }
+        document.getElementById('newsTag').textContent = (n.urgente ? '\u{1F534} URGENTE · ' : '') + (n.tag || 'Noticia');
+        document.getElementById('newsTitle').textContent = n.titulo || '';
+        document.getElementById('newsBody').textContent = n.cuerpo || '';
+        var src = document.getElementById('newsSrc');
+        if (n.url){ src.textContent = 'Fuente: ' + (n.fuente || n.url); src.href = n.url; src.style.display = 'inline-block'; }
+        else { src.style.display = 'none'; src.removeAttribute('href'); }
+        modal.style.display = 'grid';
+      });
+      body.appendChild(tag); body.appendChild(b); body.appendChild(t); body.appendChild(btn);
+      card.appendChild(art); card.appendChild(body);
+      grid.appendChild(card);
+    });
+  }
+
+  var ultimos = null;
+  function cargar(){
+    sb.from('news_items').select('id,emoji,tag,titulo,teaser,cuerpo,fuente,url,imagen,credito,urgente,created_at')
+      .eq('published', true).order('created_at', {ascending:false}).limit(60)
+      .then(function(r){
+        if (r.error || !r.data || !r.data.length) return; // conserva news.json
+        var items = r.data.slice().sort(function(a, b){ return (b.urgente?1:0)-(a.urgente?1:0); });
+        ultimos = items;
+        pintar(items);
+      });
+  }
+  cargar();
+  /* Si el script inline termino de pintar news.json despues que la base, reaplicar una vez. */
+  setTimeout(function(){
+    if (!ultimos || !ultimos.length) return;
+    var first = grid.querySelector('.news-card b');
+    if (first && first.textContent !== ultimos[0].titulo) pintar(ultimos);
+  }, 2500);
+  /* Refresca al volver a la pestana y cada 3 min (noticias urgentes). */
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) cargar(); });
+  setInterval(cargar, 180000);
+})();
