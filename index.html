@@ -297,10 +297,73 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
   font-size:14px;transition:transform .35s;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .toast.show{transform:translateX(-50%) translateY(0)}
 </style>
+
+<style>
+/* ===== HALLOWEEN (temporada: borra este bloque y el div .halloween-deco despues de Halloween) ===== */
+.halloween-deco{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.halloween-deco::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(700px 420px at 6% 102%, rgba(147,51,234,.16), transparent 60%),
+  radial-gradient(620px 380px at 98% -2%, rgba(255,122,0,.12), transparent 55%)}
+.hw{position:absolute;display:inline-block;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
+.hw-pumpkin{font-size:52px;bottom:4%;right:3%;animation:hwFloat 6s ease-in-out infinite}
+.hw-ghost{font-size:42px;top:22%;left:2.5%;opacity:.85;animation:hwFloat 7.5s ease-in-out infinite reverse}
+.hw-spider{font-size:28px;top:110px;right:14%;animation:hwSpider 9s ease-in-out infinite}
+.hw-spider::before{content:'';position:absolute;left:50%;bottom:100%;width:1px;height:110px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.35))}
+.hw-web{font-size:84px;top:-12px;opacity:.45}
+.hw-web.wl{left:-14px}
+.hw-web.wr{right:-14px;transform:scaleX(-1)}
+.hw-bat{font-size:24px;top:14%;left:-10%;animation:hwFly 19s linear infinite}
+.hw-bat.b2{font-size:18px;top:32%;animation-duration:27s;animation-delay:-13s;opacity:.75}
+@keyframes hwFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes hwSpider{0%,100%{transform:translateY(0)}50%{transform:translateY(26px)}}
+@keyframes hwFly{to{left:110%}}
+@media(max-width:640px){
+  .hw-pumpkin{font-size:38px}
+  .hw-ghost{display:none}
+  .hw-spider{display:none}
+  .hw-web{font-size:58px}
+  .hw-bat{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hw{animation:none !important}
+}
+
+/* ===== noticias ===== */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
+.news-card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.news-card:hover{transform:translateY(-6px);border-color:rgba(255,176,32,.5)}
+.news-card .art{aspect-ratio:16/7;display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,var(--navy-2),#3b1d63)}
+.news-card .body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.news-tag{align-self:flex-start;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(255,122,0,.15);color:var(--amber)}
+.news-card b{font-size:16px;line-height:1.35}
+.news-card .teaser{font-size:13px;color:var(--muted);line-height:1.55;flex:1}
+.news-more{margin-top:8px;align-self:flex-start;padding:10px 20px;border:none;border-radius:999px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;color:#1d1206;background:linear-gradient(90deg,var(--amber),var(--orange));transition:transform .2s,filter .2s}
+.news-more:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.news-empty{color:var(--muted);font-size:14px}
+#modalNews{position:fixed;inset:0;z-index:80;display:none;place-items:center;background:rgba(3,5,14,.78);backdrop-filter:blur(6px);padding:20px}
+#modalNews .card{max-width:560px;width:100%;max-height:78vh;overflow:auto;background:var(--navy-1);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px}
+#modalNews h3{margin-bottom:6px;font-size:21px;line-height:1.3}
+#modalNews .ntag{display:inline-block;margin-bottom:14px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(255,122,0,.15);color:var(--amber)}
+#modalNews .nbody{font-size:14.5px;line-height:1.7;color:var(--muted);white-space:pre-wrap}
+#modalNews .close{float:right;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer}
+#modalNews .news-src{display:inline-block;margin-top:18px;color:var(--sky);font-size:13.5px;font-weight:600}
+#modalNews .news-src:hover{text-decoration:underline}
+</style>
 </head>
 <body>
 
 <div class="bg" aria-hidden="true"></div>
+
+<!-- HALLOWEEN (temporada: borra este div y su CSS despues de Halloween) -->
+<div class="halloween-deco" aria-hidden="true">
+  <span class="hw hw-web wl">🕸️</span>
+  <span class="hw hw-web wr">🕸️</span>
+  <span class="hw hw-bat">🦇</span>
+  <span class="hw hw-bat b2">🦇</span>
+  <span class="hw hw-ghost">👻</span>
+  <span class="hw hw-spider">🕷️</span>
+  <span class="hw hw-pumpkin">🎃</span>
+</div>
 
 <header>
   <a class="brand" href="#">
@@ -311,6 +374,7 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
     <a href="#recientes">Recientes</a>
     <a href="#programacion">Programación</a>
     <a href="#podcasts">Podcasts</a>
+    <a href="#noticias">Noticias</a>
     <a href="#chat">Chat</a>
     <a href="#pide">Pide tu canción</a>
   </nav>
@@ -416,6 +480,12 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
   </div>
 </section>
 
+<section class="block reveal" id="noticias">
+  <h2 class="sec-title">Noticias <i>Runa</i></h2>
+  <p class="sec-sub">Música, espectáculos y redes sociales. Toca «Ver más» para leer la nota completa con su fuente.</p>
+  <div class="news-grid" id="newsGrid"><p class="news-empty">Cargando noticias…</p></div>
+</section>
+
 <section class="block reveal" id="chat">
   <h2 class="sec-title">Chat <i>en vivo</i></h2>
   <p class="sec-sub">Saluda a la cabina y a otros oyentes mientras suena la música.</p>
@@ -470,6 +540,16 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
     <svg id="miniIcoPlay" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
     <svg id="miniIcoPause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
   </button>
+</div>
+
+<div id="modalNews" role="dialog" aria-modal="true">
+  <div class="card">
+    <button class="close" aria-label="Cerrar">×</button>
+    <span class="ntag" id="newsTag"></span>
+    <h3 id="newsTitle"></h3>
+    <div class="nbody" id="newsBody"></div>
+    <a class="news-src" id="newsSrc" href="#" target="_blank" rel="noopener"></a>
+  </div>
 </div>
 
 <div id="modalLyrics" role="dialog" aria-modal="true">
@@ -888,6 +968,53 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
   window.location.href = 'mailto:cushmediagroup@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   toast('Abriendo tu correo para enviar la petición…');
 });
+</script>
+
+<script>
+/* ---------- noticias ----------
+   Las noticias viven en news.json (mismo directorio). Para actualizarlas basta editar ese archivo:
+   cada elemento tiene emoji, tag, titulo, teaser, cuerpo, fuente y url. */
+(function(){
+  var grid = document.getElementById('newsGrid');
+  var modal = document.getElementById('modalNews');
+  if (!grid || !modal) return;
+  function abrirNoticia(n){
+    document.getElementById('newsTag').textContent = n.tag || 'Noticia';
+    document.getElementById('newsTitle').textContent = n.titulo || '';
+    document.getElementById('newsBody').textContent = n.cuerpo || '';
+    var src = document.getElementById('newsSrc');
+    if (n.url){ src.textContent = 'Fuente: ' + (n.fuente || n.url); src.href = n.url; src.style.display = 'inline-block'; }
+    else { src.style.display = 'none'; src.removeAttribute('href'); }
+    modal.style.display = 'grid';
+  }
+  function render(items){
+    grid.innerHTML = '';
+    if (!items || !items.length){
+      grid.innerHTML = '<p class="news-empty">Muy pronto tendremos noticias aquí.</p>';
+      return;
+    }
+    items.forEach(function(n){
+      var card = document.createElement('article');
+      card.className = 'news-card';
+      var art = document.createElement('div'); art.className = 'art'; art.textContent = n.emoji || '📰';
+      var body = document.createElement('div'); body.className = 'body';
+      var tag = document.createElement('span'); tag.className = 'news-tag'; tag.textContent = n.tag || 'Noticia';
+      var b = document.createElement('b'); b.textContent = n.titulo || '';
+      var t = document.createElement('span'); t.className = 'teaser'; t.textContent = n.teaser || '';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'news-more'; btn.textContent = 'Ver más';
+      btn.addEventListener('click', function(){ abrirNoticia(n); });
+      body.appendChild(tag); body.appendChild(b); body.appendChild(t); body.appendChild(btn);
+      card.appendChild(art); card.appendChild(body);
+      grid.appendChild(card);
+    });
+  }
+  fetch('news.json?ts=' + Date.now()).then(function(r){ if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+    .then(function(data){ render(data && data.items); })
+    .catch(function(){ grid.innerHTML = '<p class="news-empty">No pudimos cargar las noticias. Intenta más tarde.</p>'; });
+  modal.addEventListener('click', function(e){ if (e.target === modal) modal.style.display = 'none'; });
+  modal.querySelector('.close').addEventListener('click', function(){ modal.style.display = 'none'; });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') modal.style.display = 'none'; });
+})();
 </script>
 </body>
 </html>
