@@ -1,67 +1,489 @@
 {
   "updated": "2026-10-16",
-  "note": "Parrilla semanal de Runaradio. Formato 24h, hora del centro de Mexico. Si end <= start, el bloque cruza medianoche. DATOS PROVISIONALES: la parrilla final la define Estacion Kus Medios.",
+  "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche.",
   "days": {
     "lun": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "10:00", "name": "Amanecer Runa", "desc": "Lo mejor para empezar el dia con energia.", "tag": "Musica" },
-      { "start": "10:00", "end": "13:00", "name": "Exitos Sin Parar", "desc": "Puros hits latinos y pop, uno tras otro.", "tag": "Musica" },
-      { "start": "13:00", "end": "16:00", "name": "La Hora del Lunch", "desc": "Rolitas suaves para acompanar la comida.", "tag": "Musica" },
-      { "start": "16:00", "end": "19:00", "name": "Tardes Runa", "desc": "Variedad, dedicatorias y ambiente.", "tag": "Variedad" },
-      { "start": "19:00", "end": "22:00", "name": "Lo Mas Pedido", "desc": "Tus peticiones al aire.", "tag": "En vivo" },
-      { "start": "22:00", "end": "24:00", "name": "Noches de Romance", "desc": "Baladas y bachata para cerrar el dia.", "tag": "Musica" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Buenas Noticias",
+        "desc": "Edicion casi diaria",
+        "tag": "Noticias"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "13:30",
+        "name": "Noticias News",
+        "desc": "Flash informativo",
+        "tag": "Noticias"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Turismo Cero",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Leyendas del Rock",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Ecos del Alma",
+        "desc": "",
+        "tag": "Programa"
+      }
     ],
     "mar": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "10:00", "name": "Amanecer Runa", "desc": "Lo mejor para empezar el dia con energia.", "tag": "Musica" },
-      { "start": "10:00", "end": "13:00", "name": "Exitos Sin Parar", "desc": "Puros hits latinos y pop, uno tras otro.", "tag": "Musica" },
-      { "start": "13:00", "end": "16:00", "name": "La Hora del Lunch", "desc": "Rolitas suaves para acompanar la comida.", "tag": "Musica" },
-      { "start": "16:00", "end": "19:00", "name": "Tardes Runa", "desc": "Variedad, dedicatorias y ambiente.", "tag": "Variedad" },
-      { "start": "19:00", "end": "22:00", "name": "Lo Mas Pedido", "desc": "Tus peticiones al aire.", "tag": "En vivo" },
-      { "start": "22:00", "end": "24:00", "name": "Noches de Romance", "desc": "Baladas y bachata para cerrar el dia.", "tag": "Musica" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Buenas Noticias",
+        "desc": "Edicion casi diaria",
+        "tag": "Noticias"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "13:30",
+        "name": "Noticias News",
+        "desc": "Flash informativo",
+        "tag": "Noticias"
+      },
+      {
+        "start": "19:00",
+        "end": "19:45",
+        "name": "Kilometro Cero",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "La Historia del Blues",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Cafe, Amigos y Musica",
+        "desc": "",
+        "tag": "Programa"
+      }
     ],
     "mie": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "10:00", "name": "Amanecer Runa", "desc": "Lo mejor para empezar el dia con energia.", "tag": "Musica" },
-      { "start": "10:00", "end": "13:00", "name": "Exitos Sin Parar", "desc": "Puros hits latinos y pop, uno tras otro.", "tag": "Musica" },
-      { "start": "13:00", "end": "16:00", "name": "La Hora del Lunch", "desc": "Rolitas suaves para acompanar la comida.", "tag": "Musica" },
-      { "start": "16:00", "end": "19:00", "name": "Tardes Runa", "desc": "Variedad, dedicatorias y ambiente.", "tag": "Variedad" },
-      { "start": "19:00", "end": "22:00", "name": "Lo Mas Pedido", "desc": "Tus peticiones al aire.", "tag": "En vivo" },
-      { "start": "22:00", "end": "24:00", "name": "Noches de Romance", "desc": "Baladas y bachata para cerrar el dia.", "tag": "Musica" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Buenas Noticias",
+        "desc": "Edicion casi diaria",
+        "tag": "Noticias"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "13:30",
+        "name": "Noticias News",
+        "desc": "Flash informativo",
+        "tag": "Noticias"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Top 5 Latinoamerica",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "El Sonido Soul",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Mosaico Musical",
+        "desc": "",
+        "tag": "Programa"
+      }
     ],
     "jue": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "10:00", "name": "Amanecer Runa", "desc": "Lo mejor para empezar el dia con energia.", "tag": "Musica" },
-      { "start": "10:00", "end": "13:00", "name": "Exitos Sin Parar", "desc": "Puros hits latinos y pop, uno tras otro.", "tag": "Musica" },
-      { "start": "13:00", "end": "16:00", "name": "La Hora del Lunch", "desc": "Rolitas suaves para acompanar la comida.", "tag": "Musica" },
-      { "start": "16:00", "end": "19:00", "name": "Tardes Runa", "desc": "Variedad, dedicatorias y ambiente.", "tag": "Variedad" },
-      { "start": "19:00", "end": "22:00", "name": "Lo Mas Pedido", "desc": "Tus peticiones al aire.", "tag": "En vivo" },
-      { "start": "22:00", "end": "24:00", "name": "Noches de Romance", "desc": "Baladas y bachata para cerrar el dia.", "tag": "Musica" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Buenas Noticias",
+        "desc": "Edicion casi diaria",
+        "tag": "Noticias"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "13:30",
+        "name": "Noticias News",
+        "desc": "Flash informativo",
+        "tag": "Noticias"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Musica de Mas Internacional",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "El Rock en el Tiempo",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Guardian de los Cielos",
+        "desc": "",
+        "tag": "Programa"
+      }
     ],
     "vie": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "10:00", "name": "Amanecer Runa", "desc": "Lo mejor para empezar el dia con energia.", "tag": "Musica" },
-      { "start": "10:00", "end": "13:00", "name": "Exitos Sin Parar", "desc": "Puros hits latinos y pop, uno tras otro.", "tag": "Musica" },
-      { "start": "13:00", "end": "16:00", "name": "La Hora del Lunch", "desc": "Rolitas suaves para acompanar la comida.", "tag": "Musica" },
-      { "start": "16:00", "end": "19:00", "name": "Tardes Runa", "desc": "Variedad, dedicatorias y ambiente.", "tag": "Variedad" },
-      { "start": "19:00", "end": "22:00", "name": "Lo Mas Pedido", "desc": "Tus peticiones al aire.", "tag": "En vivo" },
-      { "start": "22:00", "end": "24:00", "name": "Noche de Jazz", "desc": "Smooth jazz para cerrar la semana. Frecuencia Smooth Jazz.", "tag": "Programa" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Buenas Noticias",
+        "desc": "Edicion casi diaria",
+        "tag": "Noticias"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "13:30",
+        "name": "Noticias News",
+        "desc": "Flash informativo",
+        "tag": "Noticias"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Flashback",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Versiones",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Retro Music",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "name": "Noche de Jazz",
+        "desc": "Contenido: Frecuencia Smooth Jazz",
+        "tag": "Programa"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "name": "Tribal",
+        "desc": "",
+        "tag": "Programa"
+      }
     ],
     "sab": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "10:00", "name": "Sabado Runa", "desc": "La mejor mezcla para arrancar el fin de semana.", "tag": "Musica" },
-      { "start": "10:00", "end": "14:00", "name": "Exitos Sin Parar", "desc": "Puros hits latinos y pop, uno tras otro.", "tag": "Musica" },
-      { "start": "14:00", "end": "19:00", "name": "Tarde de Clasicos", "desc": "Los clasicos que nunca pasan de moda.", "tag": "Musica" },
-      { "start": "19:00", "end": "24:00", "name": "Noche Runa", "desc": "Puro ambiente para tu sabado.", "tag": "Musica" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "02:00",
+        "end": "05:00",
+        "name": "Mi Aire",
+        "desc": "Stream remoto (ya existe en Zeno)",
+        "tag": "Música"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Estilo Libre",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "12:10",
+        "end": "13:10",
+        "name": "Atravesando Decadas",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "13:10",
+        "end": "14:10",
+        "name": "Sentidos",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "14:10",
+        "end": "15:10",
+        "name": "Encuentro Tropical",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "15:10",
+        "end": "16:10",
+        "name": "America y su Folclore",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "16:10",
+        "end": "17:10",
+        "name": "Zona de Fuego",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "17:10",
+        "end": "18:10",
+        "name": "KM de Rock",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "18:10",
+        "end": "18:40",
+        "name": "Mujer Patagonia",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Rock un Viaje",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Gigantes Gentiles",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Salida de Copas",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "22:00",
+        "end": "01:00",
+        "name": "Romanticos en la Noche",
+        "desc": "",
+        "tag": "Programa"
+      }
     ],
     "dom": [
-      { "start": "00:00", "end": "06:00", "name": "Runa Non-Stop", "desc": "Musica continua toda la madrugada.", "tag": "Musica" },
-      { "start": "06:00", "end": "13:00", "name": "Domingo Runa", "desc": "Musica suave para la manana del domingo.", "tag": "Musica" },
-      { "start": "13:00", "end": "15:00", "name": "Viajero Frecuente", "desc": "Destinos, tips y cultura para recorrer el mundo.", "tag": "Programa" },
-      { "start": "15:00", "end": "19:00", "name": "Tarde Runa", "desc": "Variedad musical para tu domingo.", "tag": "Musica" },
-      { "start": "19:00", "end": "22:00", "name": "Lo Mas Pedido", "desc": "Tus peticiones al aire.", "tag": "En vivo" },
-      { "start": "22:00", "end": "23:00", "name": "La Hora Nacional", "desc": "La musica y las voces de Mexico, cada domingo.", "tag": "Programa" },
-      { "start": "23:00", "end": "24:00", "name": "Noches de Romance", "desc": "Baladas y bachata para cerrar el dia.", "tag": "Musica" }
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "02:00",
+        "end": "05:00",
+        "name": "Mi Aire",
+        "desc": "Stream remoto (ya existe en Zeno)",
+        "tag": "Música"
+      },
+      {
+        "start": "09:00",
+        "end": "10:10",
+        "name": "El Mundo en 60 Minutos",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "10:10",
+        "end": "11:10",
+        "name": "El Arcon del Rock",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "11:10",
+        "end": "12:10",
+        "name": "El Programa Nuestro de Cada Dia",
+        "desc": "El Himno de las 12:00 interrumpe el cierre",
+        "tag": "Programa"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "14:45",
+        "name": "Viajero Frecuente",
+        "desc": "VIAJERO 538",
+        "tag": "Programa"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "name": "Viejitos Chotos",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Estacion Musical",
+        "desc": "",
+        "tag": "Música"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "name": "Momentos de Romance",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "name": "La Hora de la Salsa Romantica",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Noches de Romance",
+        "desc": "",
+        "tag": "Música"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Historia de un Idolo",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Boleros y Algo Mas",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "22:00",
+        "end": "23:05",
+        "name": "La Hora Nacional",
+        "desc": "Solo domingos 22:00",
+        "tag": "Programa"
+      }
     ]
   }
 }
