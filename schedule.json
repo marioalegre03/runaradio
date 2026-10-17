@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-17",
-  "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche.",
+  "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
   "days": {
     "lun": [
       {
@@ -34,7 +34,7 @@
       {
         "start": "13:00",
         "end": "15:00",
-        "name": "Productoramg",
+        "name": "Productora MG",
         "desc": "Playlist",
         "tag": "Música"
       },
@@ -99,7 +99,7 @@
       {
         "start": "13:00",
         "end": "15:00",
-        "name": "Productoramg",
+        "name": "Productora MG",
         "desc": "Playlist",
         "tag": "Música"
       },
@@ -113,7 +113,7 @@
       {
         "start": "19:00",
         "end": "19:45",
-        "name": "Kilometro Cero",
+        "name": "Kilómetro Cero",
         "desc": "",
         "tag": "Programa"
       },
@@ -127,7 +127,7 @@
       {
         "start": "21:00",
         "end": "22:00",
-        "name": "Cafe, Amigos y Musica",
+        "name": "Café, Amigos y Música",
         "desc": "",
         "tag": "Programa"
       }
@@ -164,7 +164,7 @@
       {
         "start": "13:00",
         "end": "15:00",
-        "name": "Productoramg",
+        "name": "Productora MG",
         "desc": "Playlist",
         "tag": "Música"
       },
@@ -229,7 +229,7 @@
       {
         "start": "13:00",
         "end": "15:00",
-        "name": "Productoramg",
+        "name": "Productora MG",
         "desc": "Playlist",
         "tag": "Música"
       },
@@ -243,7 +243,7 @@
       {
         "start": "19:00",
         "end": "20:00",
-        "name": "Musica de Mas Internacional",
+        "name": "Música de Más Internacional",
         "desc": "",
         "tag": "Programa"
       },
@@ -294,7 +294,7 @@
       {
         "start": "13:00",
         "end": "15:00",
-        "name": "Productoramg",
+        "name": "Productora MG",
         "desc": "Playlist",
         "tag": "Música"
       },
@@ -373,14 +373,14 @@
       {
         "start": "12:10",
         "end": "13:10",
-        "name": "Atravesando Decadas",
+        "name": "Atravesando Décadas",
         "desc": "",
         "tag": "Programa"
       },
       {
         "start": "13:00",
         "end": "15:00",
-        "name": "Productoramg",
+        "name": "Productora MG",
         "desc": "Playlist",
         "tag": "Música"
       },
@@ -450,7 +450,7 @@
       {
         "start": "22:00",
         "end": "01:00",
-        "name": "Romanticos en la Noche",
+        "name": "Románticos en la Noche",
         "desc": "",
         "tag": "Programa"
       }
@@ -480,14 +480,14 @@
       {
         "start": "10:10",
         "end": "11:10",
-        "name": "El Arcon del Rock",
+        "name": "El Arcón del Rock",
         "desc": "",
         "tag": "Programa"
       },
       {
         "start": "11:10",
         "end": "12:10",
-        "name": "El Programa Nuestro de Cada Dia",
+        "name": "El Programa Nuestro de Cada Día",
         "desc": "El Himno de las 12:00 interrumpe el cierre",
         "tag": "Programa"
       },
@@ -515,7 +515,7 @@
       {
         "start": "16:00",
         "end": "17:00",
-        "name": "Estacion Musical",
+        "name": "Estación Musical",
         "desc": "",
         "tag": "Música"
       },
@@ -529,7 +529,7 @@
       {
         "start": "18:00",
         "end": "19:00",
-        "name": "La Hora de la Salsa Romantica",
+        "name": "La Hora de la Salsa Romántica",
         "desc": "",
         "tag": "Programa"
       },
@@ -543,14 +543,14 @@
       {
         "start": "20:00",
         "end": "21:00",
-        "name": "Historia de un Idolo",
+        "name": "Historia de un Ídolo",
         "desc": "",
         "tag": "Programa"
       },
       {
         "start": "21:00",
         "end": "22:00",
-        "name": "Boleros y Algo Mas",
+        "name": "Boleros y Algo Más",
         "desc": "",
         "tag": "Programa"
       },
@@ -603,7 +603,7 @@
       {
         "start": "12:10",
         "end": "13:00",
-        "name": "Atravesando Decadas",
+        "name": "Atravesando Décadas",
         "desc": "Hoy termina 13:00",
         "tag": "Programa"
       },
@@ -680,10 +680,204 @@
       {
         "start": "22:00",
         "end": "01:00",
-        "name": "Romanticos en la Noche",
+        "name": "Románticos en la Noche",
         "desc": "",
         "tag": "Programa"
       }
     ]
+  },
+  "shows": {
+    "Himno Nacional": {
+      "img": "img/shows/himno-nacional.jpg",
+      "desc": "El Himno Nacional Mexicano al arranque del día y al mediodía."
+    },
+    "Buenas Noticias": {
+      "img": "img/shows/buenas-noticias.jpg",
+      "desc": "Las noticias positivas de México y el mundo, casi a diario."
+    },
+    "Noticias News": {
+      "img": "img/shows/noticias-news.jpg",
+      "desc": "El flash informativo con lo más importante del día."
+    },
+    "Productora MG": {
+      "img": "img/shows/productora-mg.jpg",
+      "desc": "La playlist de Productora MG: música continua para tu jornada."
+    },
+    "Literatura Runaradio": {
+      "img": "img/shows/literatura-runaradio.jpg",
+      "desc": "Lectura en voz alta del Quijote y los clásicos."
+    },
+    "Turismo Cero": {
+      "img": "img/shows/turismo-cero.jpg",
+      "desc": "Destinos y escapadas para viajar sin gastar de más."
+    },
+    "Leyendas del Rock": {
+      "img": "img/shows/leyendas-del-rock.jpg",
+      "desc": "Las historias detrás de las grandes leyendas del rock."
+    },
+    "Ecos del Alma": {
+      "img": "img/shows/ecos-del-alma.jpg",
+      "desc": "Música y reflexiones para cerrar el día con calma."
+    },
+    "Kilómetro Cero": {
+      "img": "img/shows/kilometro-cero.jpg",
+      "desc": "Historias de carretera: todo viaje empieza aquí."
+    },
+    "La Historia del Blues": {
+      "img": "img/shows/la-historia-del-blues.jpg",
+      "desc": "Los orígenes y las voces que hicieron grande al blues."
+    },
+    "Café, Amigos y Música": {
+      "img": "img/shows/cafe-amigos-y-musica.jpg",
+      "desc": "Charla relajada y buena música, como entre amigos."
+    },
+    "Top 5 Latinoamerica": {
+      "img": "img/shows/top-5-latinoamerica.jpg",
+      "desc": "El conteo con los cinco éxitos que mandan en Latinoamérica."
+    },
+    "El Sonido Soul": {
+      "img": "img/shows/el-sonido-soul.jpg",
+      "desc": "Soul clásico y actual: voces que llegan al alma."
+    },
+    "Mosaico Musical": {
+      "img": "img/shows/mosaico-musical.jpg",
+      "desc": "Un collage de géneros y épocas en una sola hora."
+    },
+    "Música de Más Internacional": {
+      "img": "img/shows/musica-de-mas-internacional.jpg",
+      "desc": "Los éxitos internacionales que cruzan fronteras."
+    },
+    "El Rock en el Tiempo": {
+      "img": "img/shows/el-rock-en-el-tiempo.jpg",
+      "desc": "Un recorrido por las décadas que marcaron al rock."
+    },
+    "Guardian de los Cielos": {
+      "img": "img/shows/guardian-de-los-cielos.jpg",
+      "desc": "Música y reflexiones con un mensaje de esperanza."
+    },
+    "Flashback": {
+      "img": "img/shows/flashback.jpg",
+      "desc": "Los éxitos que marcaron generaciones, de regreso al aire."
+    },
+    "Versiones": {
+      "img": "img/shows/versiones.jpg",
+      "desc": "Covers y versiones sorprendentes de canciones que conoces."
+    },
+    "Retro Music": {
+      "img": "img/shows/retro-music.jpg",
+      "desc": "Los clásicos que no pasan de moda, en clave retro."
+    },
+    "Noche de Jazz": {
+      "img": "img/shows/noche-de-jazz.jpg",
+      "desc": "Smooth jazz para la noche del viernes, con Frecuencia Smooth Jazz."
+    },
+    "Tribal": {
+      "img": "img/shows/tribal.jpg",
+      "desc": "Percusiones y ritmo tribal para encender la noche."
+    },
+    "Mi Aire": {
+      "img": "img/shows/mi-aire.jpg",
+      "desc": "La selección musical del fin de semana, al aire contigo."
+    },
+    "Estilo Libre": {
+      "img": "img/shows/estilo-libre.jpg",
+      "desc": "Un espacio sin guion: música y plática en estilo libre."
+    },
+    "Atravesando Décadas": {
+      "img": "img/shows/atravesando-decadas.jpg",
+      "desc": "Un viaje musical por las décadas que te hicieron bailar."
+    },
+    "Sentidos": {
+      "img": "img/shows/sentidos.jpg",
+      "desc": "Música para sentir: un recorrido por los sentidos."
+    },
+    "Encuentro Tropical": {
+      "img": "img/shows/encuentro-tropical.jpg",
+      "desc": "Salsa, cumbia y sabor tropical para bailar."
+    },
+    "America y su Folclore": {
+      "img": "img/shows/america-y-su-folclore.jpg",
+      "desc": "Las raíces y el folclore musical del continente."
+    },
+    "Zona de Fuego": {
+      "img": "img/shows/zona-de-fuego.jpg",
+      "desc": "Puro ritmo caliente para prender el sábado."
+    },
+    "KM de Rock": {
+      "img": "img/shows/km-de-rock.jpg",
+      "desc": "Kilómetros de rock sin escalas."
+    },
+    "Mujer Patagonia": {
+      "img": "img/shows/mujer-patagonia.jpg",
+      "desc": "Historias, música y cultura con acento del sur."
+    },
+    "Rock un Viaje": {
+      "img": "img/shows/rock-un-viaje.jpg",
+      "desc": "El rock como viaje: sus mejores épocas en una hora."
+    },
+    "Gigantes Gentiles": {
+      "img": "img/shows/gigantes-gentiles.jpg",
+      "desc": "Los gigantes de la música y sus historias."
+    },
+    "Salida de Copas": {
+      "img": "img/shows/salida-de-copas.jpg",
+      "desc": "El ambiente musical para la salida de copas del sábado."
+    },
+    "Románticos en la Noche": {
+      "img": "img/shows/romanticos-en-la-noche.jpg",
+      "desc": "Romanticismo puro para la noche del sábado."
+    },
+    "El Mundo en 60 Minutos": {
+      "img": "img/shows/el-mundo-en-60-minutos.jpg",
+      "desc": "Lo que pasa en el mundo, contado en una hora."
+    },
+    "El Arcón del Rock": {
+      "img": "img/shows/el-arcon-del-rock.jpg",
+      "desc": "El arcón donde se guardan los tesoros del rock."
+    },
+    "El Programa Nuestro de Cada Día": {
+      "img": "img/shows/el-programa-nuestro-de-cada-dia.jpg",
+      "desc": "El programa de todos: música y compañía de domingo."
+    },
+    "Viajero Frecuente": {
+      "img": "img/shows/viajero-frecuente.jpg",
+      "desc": "Con Viajero 538: destinos, tips y música para viajeros."
+    },
+    "Viejitos Chotos": {
+      "img": "img/shows/viejitos-chotos.jpg",
+      "desc": "Humor y personajes para amenizar el domingo."
+    },
+    "Estación Musical": {
+      "img": "img/shows/estacion-musical.jpg",
+      "desc": "La estación musical del domingo: puros éxitos sin pausa."
+    },
+    "Momentos de Romance": {
+      "img": "img/shows/momentos-de-romance.jpg",
+      "desc": "Baladas y momentos de romance para la tarde."
+    },
+    "La Hora de la Salsa Romántica": {
+      "img": "img/shows/la-hora-de-la-salsa-romantica.jpg",
+      "desc": "Sesenta minutos de salsa romántica, corazón."
+    },
+    "Noches de Romance": {
+      "img": "img/shows/noches-de-romance.jpg",
+      "desc": "Música romántica para acompañar la noche del domingo."
+    },
+    "Historia de un Ídolo": {
+      "img": "img/shows/historia-de-un-idolo.jpg",
+      "desc": "La vida y obra de un ídolo de la música, cada semana."
+    },
+    "Boleros y Algo Más": {
+      "img": "img/shows/boleros-y-algo-mas.jpg",
+      "desc": "Boleros de siempre y un poco más para bohemios."
+    },
+    "La Hora Nacional": {
+      "img": "img/shows/la-hora-nacional.jpg",
+      "desc": "El clásico programa oficial de la radio mexicana."
+    },
+    "Picus Show Especial": {
+      "img": "img/shows/picus-show-especial.jpg",
+      "desc": "Especial en vivo: solo por hoy."
+    }
   }
 }

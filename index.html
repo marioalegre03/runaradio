@@ -169,19 +169,28 @@ section.block{max-width:1160px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(
   box-shadow:0 6px 20px rgba(47,107,255,.35)}
 .day-tab.today:not(.active){border-color:rgba(255,122,0,.5);color:var(--amber)}
 .day-tab .hoy{display:inline-block;margin-left:6px;font-size:9.5px;letter-spacing:.1em;vertical-align:2px;opacity:.85}
-.sched{display:flex;flex-direction:column;gap:10px}
-.slot{display:grid;grid-template-columns:130px 1fr auto;gap:18px;align-items:center;
-  background:var(--card);border:1px solid var(--line);border-radius:16px;
-  padding:16px 22px;transition:transform .25s,border-color .25s}
+.sched{display:flex;flex-direction:column;gap:12px}
+.slot{display:grid;grid-template-columns:88px 1fr;gap:18px;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:14px 18px;transition:transform .25s,border-color .25s}
 .slot:hover{transform:translateX(6px);border-color:rgba(79,195,255,.4)}
-.slot .time{font-weight:700;font-size:14.5px;color:var(--sky);letter-spacing:.03em}
-.slot .show b{display:block;font-size:16px}
-.slot .show span{font-size:13px;color:var(--muted)}
-.slot .tag{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.07);color:var(--muted);white-space:nowrap}
+.slot .thumb{width:88px;height:88px;border-radius:14px;position:relative;overflow:hidden;
+  display:grid;place-items:center;background:var(--navy-1)}
+.slot .thumb i{font-style:normal;font-family:'Sora';font-weight:800;font-size:24px;
+  letter-spacing:.03em;color:rgba(255,255,255,.92);text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.slot .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot .slot-body{min-width:0}
+.slot .slot-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.slot .time{font-weight:700;font-size:13.5px;color:var(--sky);letter-spacing:.03em}
+.slot .tag{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.07);color:var(--muted);white-space:nowrap}
+.slot .show b{display:block;font-size:16.5px;margin-bottom:2px}
+.slot .show span{font-size:13px;color:var(--muted);line-height:1.45;display:block}
 .slot.onair{border-color:rgba(255,122,0,.55);background:linear-gradient(90deg,rgba(255,122,0,.13),rgba(47,107,255,.09))}
 .slot.onair .tag{background:rgba(255,122,0,.18);color:var(--amber)}
-@media(max-width:640px){.slot{grid-template-columns:1fr;gap:5px;padding:16px 18px}}
+.slot.onair .thumb{box-shadow:0 0 0 2px rgba(255,122,0,.45)}
+@media(max-width:640px){.slot{grid-template-columns:64px 1fr;gap:13px;padding:12px 14px}
+.slot .thumb{width:64px;height:64px;border-radius:12px}.slot .thumb i{font-size:19px}}
 .sched-note{margin-top:18px;font-size:12.5px;color:var(--muted)}
 
 /* podcasts */
@@ -911,23 +920,55 @@ function renderSchedule(){
   if (!slots.length){
     var empty = document.createElement('div');
     empty.className = 'slot';
-    empty.innerHTML = '<div class="show"><b>Parrilla por confirmar</b><span>La programación de este día se actualizará pronto.</span></div><div class="tag">Radio</div>';
+    empty.innerHTML = '<div class="thumb"><i>R</i></div><div class="slot-body"><div class="slot-top"><span class="tag">Radio</span></div>' +
+      '<div class="show"><b>Parrilla por confirmar</b><span>La programación de este día se actualizará pronto.</span></div></div>';
+    empty.querySelector('.thumb').style.background = gradFor('Runaradio');
     list.appendChild(empty);
     return;
   }
   var nowMin = now.getHours()*60 + now.getMinutes();
   slots.forEach(function(s){
     var on = isToday && isOnAir(s, nowMin);
+    var meta = showMeta(s.name) || {};
     var el = document.createElement('div');
     el.className = 'slot' + (on ? ' onair' : '');
     var endLabel = s.end === '24:00' ? '00:00' : s.end;
-    el.innerHTML = '<div class="time">' + s.start + ' – ' + endLabel + '</div>' +
-      '<div class="show"><b></b><span></span></div>' +
-      '<div class="tag">' + (on ? '● Al aire' : (s.tag || 'Radio')) + '</div>';
+    el.innerHTML = '<div class="thumb"><i></i></div>' +
+      '<div class="slot-body"><div class="slot-top"><span class="time">' + s.start + ' – ' + endLabel + '</span>' +
+      '<span class="tag">' + (on ? '● Al aire' : (s.tag || 'Radio')) + '</span></div>' +
+      '<div class="show"><b></b><span></span></div></div>';
     el.querySelector('b').textContent = s.name;
-    el.querySelector('.show span').textContent = s.desc || '';
+    el.querySelector('.show span').textContent = meta.desc || s.desc || '';
+    var thumb = el.querySelector('.thumb');
+    thumb.style.background = gradFor(s.name);
+    thumb.querySelector('i').textContent = initials(s.name);
+    if (meta.img){
+      var im = document.createElement('img');
+      im.src = meta.img;
+      im.alt = '';
+      im.loading = 'lazy';
+      im.onerror = function(){ im.remove(); };
+      thumb.appendChild(im);
+    }
     list.appendChild(el);
   });
+}
+function showMeta(name){
+  var data = window.SCHEDULE_DATA || {};
+  return (data.shows && data.shows[name]) || null;
+}
+var SCHED_GRADS = [['#2f6bff','#4fc3ff'],['#ff7a00','#ffb020'],['#7c3aed','#c084fc'],['#0ea5e9','#22d3ee'],
+  ['#e11d48','#fb7185'],['#059669','#34d399'],['#d946ef','#f0abfc'],['#f59e0b','#b45309']];
+function gradFor(name){
+  var h = 0;
+  for (var i = 0; i < name.length; i++) h = (h*31 + name.charCodeAt(i)) >>> 0;
+  var g = SCHED_GRADS[h % SCHED_GRADS.length];
+  return 'linear-gradient(135deg,' + g[0] + ',' + g[1] + ')';
+}
+function initials(name){
+  var w = name.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).filter(Boolean);
+  var s = (w[0] ? w[0].charAt(0) : 'R') + (w.length > 1 ? w[1].charAt(0) : '');
+  return s.toUpperCase();
 }
 fetch('schedule.json').then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
   if (j) window.SCHEDULE_DATA = j;
