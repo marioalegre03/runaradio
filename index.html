@@ -363,6 +363,7 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
 #modalNews .news-src{display:inline-block;margin-top:18px;color:var(--sky);font-size:13.5px;font-weight:600}
 #modalNews .news-src:hover{text-decoration:underline}
 .news-card .art.has-img{background-size:cover;background-position:center}
+#modalNews .nbody figure.nmedia{margin:14px 0}#modalNews .nbody figure.nmedia img{width:100%;border-radius:12px;display:block}#modalNews .nbody .nvideo{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}#modalNews .nbody .nvideo iframe{position:absolute;inset:0;width:100%;height:100%;border:0}#modalNews .nbody figcaption{font-size:11px;color:var(--muted);margin-top:6px;white-space:normal}
 #modalNews .news-hero{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:14px;margin:0 0 16px;display:block}
 #modalNews .news-credit{font-size:11px;color:var(--muted);margin:-8px 0 14px}
 .news-react{display:flex;gap:10px;margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.09);flex-wrap:wrap}
@@ -1128,7 +1129,7 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
     else { credit.style.display = 'none'; credit.textContent = ''; }
     document.getElementById('newsTag').textContent = n.tag || 'Noticia';
     document.getElementById('newsTitle').textContent = n.titulo || '';
-    document.getElementById('newsBody').textContent = n.cuerpo || '';
+    (window.renderNewsBody ? window.renderNewsBody(document.getElementById('newsBody'), n.cuerpo) : (document.getElementById('newsBody').textContent = n.cuerpo || ''));
     var src = document.getElementById('newsSrc');
     if (n.url){ src.textContent = 'Fuente: ' + (n.fuente || n.url); src.href = n.url; src.style.display = 'inline-block'; }
     else { src.style.display = 'none'; src.removeAttribute('href'); }
@@ -1207,6 +1208,6 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="js/backend.js?v=20261017b"></script>
+<script src="js/backend.js?v=20261018m"></script>
 </body>
   </html>

@@ -1,3 +1,40 @@
+
+/* Cuerpo de nota con medios: lineas [[img: URL | credito]] y [[yt: ID | pie]]. Sin marcas, se muestra texto plano como antes. */
+window.renderNewsBody = function(el, cuerpo){
+  el.textContent = '';
+  var txt = String(cuerpo || '');
+  if (txt.indexOf('[[') === -1){ el.textContent = txt; return; }
+  var buf = [];
+  function flush(){
+    var s = buf.join('\n').replace(/^\n+|\n+$/g, '');
+    buf = [];
+    if (!s) return;
+    var p = document.createElement('div'); p.textContent = s; el.appendChild(p);
+  }
+  txt.split('\n').forEach(function(line){
+    var m = line.match(/^\s*\[\[(img|yt):\s*([^|\]]+?)\s*(?:\|\s*(.*?))?\s*\]\]\s*$/);
+    if (!m){ buf.push(line); return; }
+    flush();
+    var fig = document.createElement('figure'); fig.className = 'nmedia';
+    if (m[1] === 'img'){
+      if (!/^https:\/\//.test(m[2])){ return; }
+      var im = document.createElement('img'); im.src = m[2]; im.loading = 'lazy'; im.alt = m[3] || ''; fig.appendChild(im);
+    } else {
+      if (!/^[\w-]{11}$/.test(m[2])){ return; }
+      var wrap = document.createElement('div'); wrap.className = 'nvideo';
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + m[2];
+      f.title = m[3] || 'Video'; f.loading = 'lazy'; f.allowFullscreen = true;
+      f.setAttribute('allow', 'accelerometer; encrypted-media; gyroscope; picture-in-picture');
+      f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      wrap.appendChild(f); fig.appendChild(wrap);
+    }
+    if (m[3]){ var c = document.createElement('figcaption'); c.textContent = m[3]; fig.appendChild(c); }
+    el.appendChild(fig);
+  });
+  flush();
+};
+
 /* Runaradio backend (Supabase Postgres): chat en vivo, reacciones, comentarios y pide tu cancion.
    La llave anon es publica por diseno; la base esta protegida con RLS (solo leer/insertar),
    limites de ritmo y filtro de palabras/enlaces del lado del servidor. */
@@ -248,7 +285,7 @@
         else { credit.style.display = 'none'; credit.textContent = ''; }
         document.getElementById('newsTag').textContent = (n.urgente ? '\u{1F534} URGENTE · ' : '') + (n.tag || 'Noticia');
         document.getElementById('newsTitle').textContent = n.titulo || '';
-        document.getElementById('newsBody').textContent = n.cuerpo || '';
+        window.renderNewsBody(document.getElementById('newsBody'), n.cuerpo);
         var src = document.getElementById('newsSrc');
         if (n.url){ src.textContent = 'Fuente: ' + (n.fuente || n.url); src.href = n.url; src.style.display = 'inline-block'; }
         else { src.style.display = 'none'; src.removeAttribute('href'); }
