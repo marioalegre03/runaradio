@@ -883,7 +883,14 @@ var DAY_NAMES = { lun:'Lunes', mar:'Martes', mie:'Miércoles', jue:'Jueves', vie
 var SCHEDULE_FALLBACK = {
   lun: [], mar: [], mie: [], jue: [], vie: [], sab: [], dom: []
 };
-var activeDay = DAY_KEYS[(new Date().getDay() + 6) % 7];
+var MX_TZ = 'America/Mexico_City';
+function mxNow(){
+  var f = new Intl.DateTimeFormat('en-US', { timeZone: MX_TZ, year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', weekday:'short', hour12:false });
+  var o = {}; f.formatToParts(new Date()).forEach(function(p){ o[p.type] = p.value; });
+  var dows = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 };
+  return { dow: dows[o.weekday], iso: o.year + '-' + o.month + '-' + o.day, min: (parseInt(o.hour,10) % 24) * 60 + parseInt(o.minute,10) };
+}
+var activeDay = DAY_KEYS[(mxNow().dow + 6) % 7];
 
 function toMin(hhmm){
   var p = String(hhmm).split(':');
@@ -898,7 +905,7 @@ function isOnAir(slot, nowMin){
 function renderDayTabs(){
   var tabs = document.getElementById('dayTabs');
   tabs.innerHTML = '';
-  var todayKey = DAY_KEYS[(new Date().getDay() + 6) % 7];
+  var todayKey = DAY_KEYS[(mxNow().dow + 6) % 7];
   DAY_KEYS.forEach(function(k){
     var b = document.createElement('button');
     b.className = 'day-tab' + (k === activeDay ? ' active' : '') + (k === todayKey ? ' today' : '');
@@ -912,9 +919,9 @@ function renderSchedule(){
   var data = window.SCHEDULE_DATA || SCHEDULE_FALLBACK;
   var list = document.getElementById('schedList');
   list.innerHTML = '';
-  var now = new Date();
-  var isToday = activeDay === DAY_KEYS[(now.getDay() + 6) % 7];
-  var isoToday = now.getFullYear() + '-' + ('0' + (now.getMonth()+1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
+  var now = mxNow();
+  var isToday = activeDay === DAY_KEYS[(now.dow + 6) % 7];
+  var isoToday = now.iso;
   var ov = (isToday && data.overrides) ? data.overrides[isoToday] : null;
   var slots = (ov && ov.length) ? ov : ((data.days && data.days[activeDay]) || data[activeDay] || []);
   if (!slots.length){
@@ -926,7 +933,7 @@ function renderSchedule(){
     list.appendChild(empty);
     return;
   }
-  var nowMin = now.getHours()*60 + now.getMinutes();
+  var nowMin = now.min;
   slots.forEach(function(s){
     var on = isToday && isOnAir(s, nowMin);
     var meta = showMeta(s.name) || {};
