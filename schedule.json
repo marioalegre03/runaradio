@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
   "days": {
     "lun": [
@@ -605,6 +605,113 @@
         "end": "00:00",
         "name": "Románticos en la Noche",
         "desc": "",
+        "tag": "Programa"
+      }
+    ],
+    "2026-10-18": [
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "02:00",
+        "end": "05:00",
+        "name": "Mi Aire",
+        "desc": "Stream remoto (ya existe en Zeno)",
+        "tag": "Música"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "name": "El Mundo en 60 Minutos",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "name": "Literatura: Don Quijote",
+        "desc": "Solo hoy",
+        "tag": "Especial"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "name": "Literatura: Bécquer",
+        "desc": "Solo hoy",
+        "tag": "Especial"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Interrumpe programacion",
+        "tag": "Oficial"
+      },
+      {
+        "start": "13:00",
+        "end": "14:45",
+        "name": "Viajero Frecuente",
+        "desc": "VIAJERO 538",
+        "tag": "Programa"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "name": "Viejitos Chotos",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Estación Musical",
+        "desc": "",
+        "tag": "Música"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "name": "Momentos de Romance",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "name": "La Hora de la Salsa Romántica",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Noches de Romance",
+        "desc": "",
+        "tag": "Música"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Historia de un Ídolo",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Boleros y Algo Más",
+        "desc": "",
+        "tag": "Programa"
+      },
+      {
+        "start": "22:00",
+        "end": "23:05",
+        "name": "La Hora Nacional",
+        "desc": "Solo domingos 22:00",
         "tag": "Programa"
       }
     ]
