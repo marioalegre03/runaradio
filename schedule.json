@@ -32,22 +32,22 @@
     "tag": "Noticias"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Turismo Cero",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "Leyendas del Rock",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Ecos del Alma",
     "desc": "",
     "tag": "Programa"
@@ -83,22 +83,22 @@
     "tag": "Noticias"
    },
    {
-    "start": "19:00",
-    "end": "19:45",
+    "start": "19:20",
+    "end": "20:05",
     "name": "Kilómetro Cero",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "La Historia del Blues",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Café, Amigos y Música",
     "desc": "",
     "tag": "Programa"
@@ -134,29 +134,29 @@
     "tag": "Noticias"
    },
    {
-    "start": "17:00",
-    "end": "19:00",
+    "start": "17:20",
+    "end": "19:20",
     "name": "Estación Musical",
     "desc": "",
     "tag": "Música"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Top 5 Latinoamerica",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "El Sonido Soul",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Mosaico Musical",
     "desc": "",
     "tag": "Programa"
@@ -192,22 +192,22 @@
     "tag": "Noticias"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Música de Más Internacional",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "El Rock en el Tiempo",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Guardian de los Cielos",
     "desc": "",
     "tag": "Programa"
@@ -243,36 +243,36 @@
     "tag": "Noticias"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Flashback",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "Versiones",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Retro Music",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "22:00",
-    "end": "23:00",
+    "start": "22:20",
+    "end": "23:20",
     "name": "Noche de Jazz",
     "desc": "Contenido: Frecuencia Smooth Jazz",
     "tag": "Programa"
    },
    {
-    "start": "23:00",
-    "end": "00:00",
+    "start": "23:20",
+    "end": "00:20",
     "name": "Tribal",
     "desc": "",
     "tag": "Programa"
@@ -287,14 +287,14 @@
     "tag": "Oficial"
    },
    {
-    "start": "02:00",
-    "end": "05:00",
+    "start": "02:20",
+    "end": "05:20",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
    },
    {
-    "start": "10:00",
+    "start": "10:20",
     "end": "12:00",
     "name": "Estilo Libre",
     "desc": "",
@@ -308,78 +308,78 @@
     "tag": "Oficial"
    },
    {
-    "start": "12:10",
-    "end": "13:10",
+    "start": "12:30",
+    "end": "13:30",
     "name": "Atravesando Décadas",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "13:10",
-    "end": "14:10",
+    "start": "13:30",
+    "end": "14:30",
     "name": "Sentidos",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "14:10",
-    "end": "15:10",
+    "start": "14:30",
+    "end": "15:30",
     "name": "Encuentro Tropical",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "15:10",
-    "end": "16:10",
+    "start": "15:30",
+    "end": "16:30",
     "name": "America y su Folclore",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "16:10",
-    "end": "17:10",
+    "start": "16:30",
+    "end": "17:30",
     "name": "Zona de Fuego",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "17:10",
-    "end": "18:10",
+    "start": "17:30",
+    "end": "18:30",
     "name": "KM de Rock",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "18:10",
-    "end": "18:40",
+    "start": "18:30",
+    "end": "19:00",
     "name": "Mujer Patagonia",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Rock un Viaje",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "Gigantes Gentiles",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Salida de Copas",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "22:00",
-    "end": "00:00",
+    "start": "22:20",
+    "end": "00:20",
     "name": "Románticos en la Noche",
     "desc": "",
     "tag": "Programa"
@@ -394,29 +394,29 @@
     "tag": "Oficial"
    },
    {
-    "start": "02:00",
-    "end": "05:00",
+    "start": "02:20",
+    "end": "05:20",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
    },
    {
-    "start": "09:00",
-    "end": "10:10",
+    "start": "09:20",
+    "end": "10:30",
     "name": "El Mundo en 60 Minutos",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "10:10",
-    "end": "11:10",
+    "start": "10:30",
+    "end": "11:30",
     "name": "El Arcón del Rock",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "11:10",
-    "end": "12:10",
+    "start": "11:30",
+    "end": "12:00",
     "name": "El Programa Nuestro de Cada Día",
     "desc": "El Himno de las 12:00 interrumpe el cierre",
     "tag": "Programa"
@@ -429,49 +429,49 @@
     "tag": "Oficial"
    },
    {
-    "start": "13:00",
-    "end": "14:45",
+    "start": "13:20",
+    "end": "15:05",
     "name": "Viajero Frecuente",
     "desc": "VIAJERO 538",
     "tag": "Programa"
    },
    {
-    "start": "15:00",
-    "end": "17:00",
+    "start": "15:20",
+    "end": "17:20",
     "name": "Viejitos Chotos",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "17:00",
-    "end": "18:00",
+    "start": "17:20",
+    "end": "18:20",
     "name": "Momentos de Romance",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "18:00",
-    "end": "19:00",
+    "start": "18:20",
+    "end": "19:20",
     "name": "La Hora de la Salsa Romántica",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Noches de Romance",
     "desc": "",
     "tag": "Música"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "Historia de un Ídolo",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
+    "start": "21:20",
     "end": "22:00",
     "name": "Boleros y Algo Más",
     "desc": "",
@@ -496,7 +496,7 @@
     "tag": "Oficial"
    },
    {
-    "start": "02:00",
+    "start": "02:20",
     "end": "05:00",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
@@ -510,7 +510,7 @@
     "tag": "Especial"
    },
    {
-    "start": "10:00",
+    "start": "10:20",
     "end": "12:00",
     "name": "Estilo Libre",
     "desc": "",
@@ -524,7 +524,7 @@
     "tag": "Oficial"
    },
    {
-    "start": "12:10",
+    "start": "12:30",
     "end": "13:00",
     "name": "Atravesando Décadas",
     "desc": "Hoy termina 13:00",
@@ -538,71 +538,71 @@
     "tag": "Especial"
    },
    {
-    "start": "13:30",
-    "end": "14:10",
+    "start": "13:50",
+    "end": "14:30",
     "name": "Sentidos",
     "desc": "Hoy empieza 13:30",
     "tag": "Programa"
    },
    {
-    "start": "14:10",
-    "end": "15:10",
+    "start": "14:30",
+    "end": "15:30",
     "name": "Encuentro Tropical",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "15:10",
-    "end": "16:10",
+    "start": "15:30",
+    "end": "16:30",
     "name": "America y su Folclore",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "16:10",
-    "end": "17:10",
+    "start": "16:30",
+    "end": "17:30",
     "name": "Zona de Fuego",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "17:10",
-    "end": "18:10",
+    "start": "17:30",
+    "end": "18:30",
     "name": "KM de Rock",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "18:10",
-    "end": "18:40",
+    "start": "18:30",
+    "end": "19:00",
     "name": "Mujer Patagonia",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Rock un Viaje",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "Gigantes Gentiles",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
-    "end": "22:00",
+    "start": "21:20",
+    "end": "22:20",
     "name": "Salida de Copas",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "22:00",
-    "end": "00:00",
+    "start": "22:20",
+    "end": "00:20",
     "name": "Románticos en la Noche",
     "desc": "",
     "tag": "Programa"
@@ -617,14 +617,14 @@
     "tag": "Oficial"
    },
    {
-    "start": "02:00",
-    "end": "05:00",
+    "start": "02:20",
+    "end": "05:20",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
    },
    {
-    "start": "09:00",
+    "start": "09:20",
     "end": "10:00",
     "name": "El Mundo en 60 Minutos",
     "desc": "",
@@ -652,49 +652,49 @@
     "tag": "Oficial"
    },
    {
-    "start": "13:00",
-    "end": "14:45",
+    "start": "13:20",
+    "end": "15:05",
     "name": "Viajero Frecuente",
     "desc": "VIAJERO 538",
     "tag": "Programa"
    },
    {
-    "start": "15:00",
-    "end": "17:00",
+    "start": "15:20",
+    "end": "17:20",
     "name": "Viejitos Chotos",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "17:00",
-    "end": "18:00",
+    "start": "17:20",
+    "end": "18:20",
     "name": "Momentos de Romance",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "18:00",
-    "end": "19:00",
+    "start": "18:20",
+    "end": "19:20",
     "name": "La Hora de la Salsa Romántica",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "19:00",
-    "end": "20:00",
+    "start": "19:20",
+    "end": "20:20",
     "name": "Noches de Romance",
     "desc": "",
     "tag": "Música"
    },
    {
-    "start": "20:00",
-    "end": "21:00",
+    "start": "20:20",
+    "end": "21:20",
     "name": "Historia de un Ídolo",
     "desc": "",
     "tag": "Programa"
    },
    {
-    "start": "21:00",
+    "start": "21:20",
     "end": "22:00",
     "name": "Boleros y Algo Más",
     "desc": "",
