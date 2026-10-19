@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-18",
- "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
+ "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio. Cada programa se muestra con su duracion (~40 min) y un bloque de Comerciales (~20 min) al terminar.",
  "days": {
   "lun": [
    {
@@ -33,24 +33,45 @@
    },
    {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Turismo Cero",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "Leyendas del Rock",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Ecos del Alma",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "mar": [
@@ -91,17 +112,31 @@
    },
    {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "La Historia del Blues",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Café, Amigos y Música",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "mie": [
@@ -135,31 +170,73 @@
    },
    {
     "start": "17:00",
-    "end": "19:00",
+    "end": "17:40",
     "name": "Estación Musical",
     "desc": "",
     "tag": "Música"
    },
    {
+    "start": "17:40",
+    "end": "18:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "18:00",
+    "end": "18:40",
+    "name": "Estación Musical",
+    "desc": "",
+    "tag": "Música"
+   },
+   {
+    "start": "18:40",
+    "end": "19:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Top 5 Latinoamerica",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "El Sonido Soul",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Mosaico Musical",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "jue": [
@@ -193,24 +270,45 @@
    },
    {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Música de Más Internacional",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "El Rock en el Tiempo",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Guardian de los Cielos",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "vie": [
@@ -244,38 +342,73 @@
    },
    {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Flashback",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "Versiones",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Retro Music",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "22:00",
-    "end": "23:00",
+    "end": "22:40",
     "name": "Noche de Jazz",
     "desc": "Contenido: Frecuencia Smooth Jazz",
     "tag": "Programa"
    },
    {
+    "start": "22:40",
+    "end": "23:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "23:00",
-    "end": "00:00",
+    "end": "23:40",
     "name": "Tribal",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "23:40",
+    "end": "24:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "sab": [
@@ -288,17 +421,73 @@
    },
    {
     "start": "02:00",
-    "end": "05:00",
+    "end": "02:40",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
    },
    {
+    "start": "02:40",
+    "end": "03:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "03:00",
+    "end": "03:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "03:40",
+    "end": "04:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "04:00",
+    "end": "04:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "04:40",
+    "end": "05:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "10:00",
-    "end": "12:00",
+    "end": "10:40",
     "name": "Estilo Libre",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "10:40",
+    "end": "11:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "11:00",
+    "end": "11:40",
+    "name": "Estilo Libre",
+    "desc": "",
+    "tag": "Programa"
+   },
+   {
+    "start": "11:40",
+    "end": "12:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "12:00",
@@ -309,45 +498,87 @@
    },
    {
     "start": "12:10",
-    "end": "13:10",
+    "end": "12:50",
     "name": "Atravesando Décadas",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "12:50",
+    "end": "13:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "13:10",
-    "end": "14:10",
+    "end": "13:50",
     "name": "Sentidos",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "13:50",
+    "end": "14:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "14:10",
-    "end": "15:10",
+    "end": "14:50",
     "name": "Encuentro Tropical",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "14:50",
+    "end": "15:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "15:10",
-    "end": "16:10",
+    "end": "15:50",
     "name": "America y su Folclore",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "15:50",
+    "end": "16:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "16:10",
-    "end": "17:10",
+    "end": "16:50",
     "name": "Zona de Fuego",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "16:50",
+    "end": "17:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "17:10",
-    "end": "18:10",
+    "end": "17:50",
     "name": "KM de Rock",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "17:50",
+    "end": "18:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "18:10",
@@ -358,31 +589,73 @@
    },
    {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Rock un Viaje",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "Gigantes Gentiles",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Salida de Copas",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "22:00",
-    "end": "00:00",
+    "end": "22:40",
     "name": "Románticos en la Noche",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "22:40",
+    "end": "23:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "23:00",
+    "end": "23:40",
+    "name": "Románticos en la Noche",
+    "desc": "",
+    "tag": "Programa"
+   },
+   {
+    "start": "23:40",
+    "end": "24:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "dom": [
@@ -395,10 +668,45 @@
    },
    {
     "start": "02:00",
-    "end": "05:00",
+    "end": "02:40",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
+   },
+   {
+    "start": "02:40",
+    "end": "03:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "03:00",
+    "end": "03:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "03:40",
+    "end": "04:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "04:00",
+    "end": "04:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "04:40",
+    "end": "05:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "09:00",
@@ -409,17 +717,31 @@
    },
    {
     "start": "10:10",
-    "end": "11:10",
+    "end": "10:50",
     "name": "El Arcón del Rock",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "10:50",
+    "end": "11:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "11:10",
-    "end": "12:10",
+    "end": "11:50",
     "name": "El Programa Nuestro de Cada Día",
     "desc": "El Himno de las 12:00 interrumpe el cierre",
     "tag": "Programa"
+   },
+   {
+    "start": "11:50",
+    "end": "12:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "12:00",
@@ -437,45 +759,101 @@
    },
    {
     "start": "15:00",
-    "end": "17:00",
+    "end": "15:40",
     "name": "Viejitos Chotos",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "15:40",
+    "end": "16:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "16:00",
+    "end": "16:40",
+    "name": "Viejitos Chotos",
+    "desc": "",
+    "tag": "Programa"
+   },
+   {
+    "start": "16:40",
+    "end": "17:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "17:00",
-    "end": "18:00",
+    "end": "17:40",
     "name": "Momentos de Romance",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "17:40",
+    "end": "18:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "18:00",
-    "end": "19:00",
+    "end": "18:40",
     "name": "La Hora de la Salsa Romántica",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "18:40",
+    "end": "19:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Noches de Romance",
     "desc": "",
     "tag": "Música"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "Historia de un Ídolo",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Boleros y Algo Más",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "22:00",
@@ -497,10 +875,45 @@
    },
    {
     "start": "02:00",
-    "end": "05:00",
+    "end": "02:40",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
+   },
+   {
+    "start": "02:40",
+    "end": "03:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "03:00",
+    "end": "03:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "03:40",
+    "end": "04:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "04:00",
+    "end": "04:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "04:40",
+    "end": "05:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "05:00",
@@ -511,10 +924,31 @@
    },
    {
     "start": "10:00",
-    "end": "12:00",
+    "end": "10:40",
     "name": "Estilo Libre",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "10:40",
+    "end": "11:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "11:00",
+    "end": "11:40",
+    "name": "Estilo Libre",
+    "desc": "",
+    "tag": "Programa"
+   },
+   {
+    "start": "11:40",
+    "end": "12:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "12:00",
@@ -546,31 +980,59 @@
    },
    {
     "start": "14:10",
-    "end": "15:10",
+    "end": "14:50",
     "name": "Encuentro Tropical",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "14:50",
+    "end": "15:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "15:10",
-    "end": "16:10",
+    "end": "15:50",
     "name": "America y su Folclore",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "15:50",
+    "end": "16:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "16:10",
-    "end": "17:10",
+    "end": "16:50",
     "name": "Zona de Fuego",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "16:50",
+    "end": "17:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "17:10",
-    "end": "18:10",
+    "end": "17:50",
     "name": "KM de Rock",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "17:50",
+    "end": "18:10",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "18:10",
@@ -581,31 +1043,73 @@
    },
    {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Rock un Viaje",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "Gigantes Gentiles",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Salida de Copas",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "22:00",
-    "end": "00:00",
+    "end": "22:40",
     "name": "Románticos en la Noche",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "22:40",
+    "end": "23:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "23:00",
+    "end": "23:40",
+    "name": "Románticos en la Noche",
+    "desc": "",
+    "tag": "Programa"
+   },
+   {
+    "start": "23:40",
+    "end": "24:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    }
   ],
   "2026-10-18": [
@@ -618,17 +1122,59 @@
    },
    {
     "start": "02:00",
-    "end": "05:00",
+    "end": "02:40",
     "name": "Mi Aire",
     "desc": "Stream remoto (ya existe en Zeno)",
     "tag": "Música"
    },
    {
+    "start": "02:40",
+    "end": "03:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "03:00",
+    "end": "03:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "03:40",
+    "end": "04:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "04:00",
+    "end": "04:40",
+    "name": "Mi Aire",
+    "desc": "Stream remoto (ya existe en Zeno)",
+    "tag": "Música"
+   },
+   {
+    "start": "04:40",
+    "end": "05:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "09:00",
-    "end": "10:00",
+    "end": "09:40",
     "name": "El Mundo en 60 Minutos",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "09:40",
+    "end": "10:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "10:00",
@@ -660,45 +1206,101 @@
    },
    {
     "start": "15:00",
-    "end": "17:00",
+    "end": "15:40",
     "name": "Viejitos Chotos",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "15:40",
+    "end": "16:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
+    "start": "16:00",
+    "end": "16:40",
+    "name": "Viejitos Chotos",
+    "desc": "",
+    "tag": "Programa"
+   },
+   {
+    "start": "16:40",
+    "end": "17:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "17:00",
-    "end": "18:00",
+    "end": "17:40",
     "name": "Momentos de Romance",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "17:40",
+    "end": "18:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "18:00",
-    "end": "19:00",
+    "end": "18:40",
     "name": "La Hora de la Salsa Romántica",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "18:40",
+    "end": "19:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "19:00",
-    "end": "20:00",
+    "end": "19:40",
     "name": "Noches de Romance",
     "desc": "",
     "tag": "Música"
    },
    {
+    "start": "19:40",
+    "end": "20:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "20:00",
-    "end": "21:00",
+    "end": "20:40",
     "name": "Historia de un Ídolo",
     "desc": "",
     "tag": "Programa"
    },
    {
+    "start": "20:40",
+    "end": "21:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
+   },
+   {
     "start": "21:00",
-    "end": "22:00",
+    "end": "21:40",
     "name": "Boleros y Algo Más",
     "desc": "",
     "tag": "Programa"
+   },
+   {
+    "start": "21:40",
+    "end": "22:00",
+    "name": "Comerciales",
+    "desc": "Pausa comercial",
+    "tag": "Comerciales"
    },
    {
     "start": "22:00",
@@ -901,6 +1503,9 @@
   "Picus Show Especial": {
    "img": "img/shows/picus-show-especial.jpg",
    "desc": "Especial en vivo: solo por hoy."
+  },
+  "Comerciales": {
+   "desc": "Pausa comercial de ~20 minutos al terminar cada programa."
   }
  }
 }
