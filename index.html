@@ -295,6 +295,8 @@ footer p{color:var(--muted);font-size:13px;margin-top:16px}
   border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:10px 14px;
   box-shadow:0 18px 50px rgba(0,0,0,.55);transition:transform .4s cubic-bezier(.2,.9,.3,1)}
 #miniPlayer.show{transform:translateX(-50%) translateY(0)}
+/* Zendesk: el boton del chat sube cuando el reproductor flotante esta visible */
+body.runa-player-on iframe#launcher{bottom:100px !important}
 #miniPlayer .mcov{width:46px;height:46px;border-radius:10px;background:var(--navy-1) center/cover;flex:0 0 auto;border:1px solid var(--line)}
 #miniPlayer .mtitle{font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #miniPlayer .martist{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -1003,6 +1005,9 @@ if ('IntersectionObserver' in window && heroEl){
   },{threshold:.15});
   heroIO.observe(heroEl);
 }
+new MutationObserver(function(){
+  document.body.classList.toggle('runa-player-on', miniPlayer.classList.contains('show'));
+}).observe(miniPlayer,{attributes:true,attributeFilter:['class']});
 miniCov.style.backgroundImage = 'url("' + DEFAULT_COVER + '")';
 
 /* ---------- letra ---------- */
