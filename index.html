@@ -139,9 +139,12 @@ body.playing .deck-card{animation:floaty 5s ease-in-out infinite}
 /* --- rediseño oct-2026: noticias destacadas --- */
 .news-feat{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-bottom:10px}
 .news-feat .news-card--big{grid-row:span 2}
-.news-feat .news-card--big .art{min-height:280px;aspect-ratio:auto;flex:unset}
+.news-feat .news-card--big .art{min-height:280px;aspect-ratio:auto;flex:1}
+.news-feat .news-card--big .body{flex:0 0 auto}
 .news-feat .news-card--big b{font-size:20px}
 .news-sub2{font-family:'Sora',sans-serif;font-size:22px;margin:30px 0 16px}
+#recientes{padding-bottom:clamp(20px,3vw,36px)}
+#noticias{padding-top:clamp(20px,3vw,36px)}
 @media(max-width:880px){
   .news-feat{grid-template-columns:1fr}
   .news-feat .news-card--big{grid-row:auto}
