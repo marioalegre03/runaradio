@@ -135,6 +135,18 @@ body.playing .play-btn::after{content:'';position:absolute;inset:-8px;border-rad
 @keyframes spin{to{transform:rotate(360deg)}}
 body.playing .deck-card{animation:floaty 5s ease-in-out infinite}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* --- rediseño oct-2026: noticias destacadas --- */
+.news-feat{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-bottom:10px}
+.news-feat .news-card--big{grid-row:span 2}
+.news-feat .news-card--big .art{min-height:280px;aspect-ratio:auto;flex:unset}
+.news-feat .news-card--big b{font-size:20px}
+.news-sub2{font-family:'Sora',sans-serif;font-size:22px;margin:30px 0 16px}
+@media(max-width:880px){
+  .news-feat{grid-template-columns:1fr}
+  .news-feat .news-card--big{grid-row:auto}
+  .news-feat .news-card--big .art{min-height:190px}
+}
 </style>
 <style>
 /* ticker */
@@ -414,10 +426,9 @@ body.runa-player-on iframe#launcher{bottom:100px !important}
     <span class="brand-name">Runa<em>radio</em><span class="brand-sub">Más que música, compañía</span></span>
   </a>
   <nav>
-    <a href="#recientes">Recientes</a>
+    <a href="#noticias">Noticias</a>
     <a href="#programacion">Programación</a>
     <a href="#podcasts">Podcasts</a>
-    <a href="#noticias">Noticias</a>
     <a href="#chat">Chat</a>
     <a href="#pide">Pide tu canción</a>
   </nav>
@@ -472,9 +483,17 @@ body.runa-player-on iframe#launcher{bottom:100px !important}
   <div class="played-scroll" id="historyList"></div>
 </section>
 
+<section class="block reveal" id="noticias">
+  <h2 class="sec-title">Lo más importante <i>hoy</i></h2>
+  <p class="sec-sub">Las noticias Runa del día, con su foto y su fuente. Toca «Ver más» para leer la nota completa.</p>
+  <div class="news-feat" id="newsFeat"></div>
+  <h3 class="news-sub2">Más noticias</h3>
+  <div class="news-grid" id="newsGrid"><p class="news-empty">Cargando noticias…</p></div>
+</section>
+
 <section class="block reveal" id="programacion">
-  <h2 class="sec-title">Programación <i>semanal</i></h2>
-  <p class="sec-sub">La parrilla completa de Runaradio. El bloque al aire se ilumina solo.</p>
+  <h2 class="sec-title">Programación de <i>hoy</i></h2>
+  <p class="sec-sub">El bloque al aire se ilumina solo. Usa las pestañas para ver la parrilla completa de la semana.</p>
   <div class="day-tabs" id="dayTabs" role="tablist"></div>
   <div class="sched" id="schedList"></div>
   <p class="sched-note">Horario del centro de México (GMT-6). La parrilla puede tener cambios de último minuto.</p>
@@ -523,10 +542,10 @@ body.runa-player-on iframe#launcher{bottom:100px !important}
   </div>
 </section>
 
-<section class="block reveal" id="noticias">
-  <h2 class="sec-title">Noticias <i>Runa</i></h2>
-  <p class="sec-sub">Música, espectáculos y redes sociales. Toca «Ver más» para leer la nota completa con su fuente.</p>
-  <div class="news-grid" id="newsGrid"><p class="news-empty">Cargando noticias…</p></div>
+
+<section class="block reveal participa-intro" id="participa">
+  <h2 class="sec-title">Participa</h2>
+  <p class="sec-sub">Saluda a cabina, pide tu canción y comenta las noticias con la comunidad.</p>
 </section>
 
 <section class="block reveal" id="chat">
@@ -1150,13 +1169,15 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
     pintarComentarios();
     modal.style.display = 'grid';
   }
+  var feat = document.getElementById('newsFeat');
   function render(items){
     grid.innerHTML = '';
+    if (feat) feat.innerHTML = '';
     if (!items || !items.length){
       grid.innerHTML = '<p class="news-empty">Muy pronto tendremos noticias aquí.</p>';
       return;
     }
-    items.forEach(function(n){
+    items.forEach(function(n, idx){
       var card = document.createElement('article');
       card.className = 'news-card';
       var art = document.createElement('div'); art.className = 'art';
@@ -1170,7 +1191,8 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
       btn.addEventListener('click', function(){ abrirNoticia(n); });
       body.appendChild(tag); body.appendChild(b); body.appendChild(t); body.appendChild(btn);
       card.appendChild(art); card.appendChild(body);
-      grid.appendChild(card);
+      if (feat && idx < 3){ card.classList.add(idx === 0 ? 'news-card--big' : 'news-card--side'); feat.appendChild(card); }
+      else { grid.appendChild(card); }
     });
   }
   fetch('news.json?ts=' + Date.now()).then(function(r){ if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
@@ -1221,7 +1243,7 @@ document.getElementById('reqForm').addEventListener('submit', function(e){
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="js/backend.js?v=20261018m"></script>
+<script src="js/backend.js?v=20261022a"></script>
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=bbf4debd-83d4-461a-af99-873a2b908d37"></script>
 </body>
   </html>

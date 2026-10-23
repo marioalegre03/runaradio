@@ -253,12 +253,14 @@ window.renderNewsBody = function(el, cuerpo){
   if (!window.supabase || !window.supabase.createClient) return;
   var sb = window.supabase.createClient('https://saqyplbhhojyzusarkzq.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhcXlwbGJoaG9qeXp1c2Fya3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyNDU4MjYsImV4cCI6MjEwNzgyMTgyNn0.OxhwQoRvQjoJXqTp30miW7LeRqNO6B-EHSKCJ-EZwQ8');
   var grid = document.getElementById('newsGrid');
+  var feat = document.getElementById('newsFeat');
   var modal = document.getElementById('modalNews');
   if (!grid || !modal) return;
 
   function pintar(items){
     grid.innerHTML = '';
-    items.forEach(function(n){
+    if (feat) feat.innerHTML = '';
+    items.forEach(function(n, idx){
       var card = document.createElement('article');
       card.className = 'news-card';
       if (n.urgente) card.style.cssText = 'border-color:rgba(248,113,113,.55);box-shadow:0 0 0 1px rgba(248,113,113,.35)';
@@ -293,7 +295,8 @@ window.renderNewsBody = function(el, cuerpo){
       });
       body.appendChild(tag); body.appendChild(b); body.appendChild(t); body.appendChild(btn);
       card.appendChild(art); card.appendChild(body);
-      grid.appendChild(card);
+      if (feat && idx < 3){ card.classList.add(idx === 0 ? 'news-card--big' : 'news-card--side'); feat.appendChild(card); }
+      else { grid.appendChild(card); }
     });
   }
 
@@ -312,7 +315,7 @@ window.renderNewsBody = function(el, cuerpo){
   /* Si el script inline termino de pintar news.json despues que la base, reaplicar una vez. */
   setTimeout(function(){
     if (!ultimos || !ultimos.length) return;
-    var first = grid.querySelector('.news-card b');
+    var first = (feat && feat.querySelector('.news-card b')) || grid.querySelector('.news-card b');
     if (first && first.textContent !== ultimos[0].titulo) pintar(ultimos);
   }, 2500);
   /* Refresca al volver a la pestana y cada 3 min (noticias urgentes). */
