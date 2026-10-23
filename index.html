@@ -974,7 +974,7 @@ function renderSchedule(){
     el.className = 'slot' + (on ? ' onair' : '');
     var endLabel = s.end === '24:00' ? '00:00' : s.end;
     el.innerHTML = '<div class="thumb"><i></i></div>' +
-      '<div class="slot-body"><div class="slot-top"><span class="time">' + s.start + ' – ' + endLabel + '</span>' +
+      '<div class="slot-body"><div class="slot-top"><span class="time">' + (s.label || (s.start + ' – ' + endLabel)) + '</span>' +
       '<span class="tag">' + (on ? '● Al aire' : (s.tag || 'Radio')) + '</span></div>' +
       '<div class="show"><b></b><span></span></div></div>';
     el.querySelector('b').textContent = s.name;
