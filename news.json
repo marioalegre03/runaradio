@@ -1,6 +1,22 @@
 {
- "actualizado": "2026-10-25T17:19:51.234696-06:00",
+ "actualizado": "2026-10-26T07:20:00+00:00",
  "items": [
+  {
+   "id": "guanajuato-paro-transportistas-marchas-lentas-26-oct",
+   "emoji": "🚛",
+   "tag": "Guanajuato",
+   "titulo": "Marchas lentas de transportistas hoy en carreteras de Irapuato, Salamanca, Silao y León",
+   "teaser": "Desde las 8:30 de la mañana de este lunes, transportistas de Guanajuato se suman al paro nacional con caravanas a baja velocidad en seis tramos carreteros; no cerrarán vialidades, pero se prevé carga vehicular.",
+   "cuerpo": "Transportistas de carga de Guanajuato se suman este lunes 26 de octubre al paro nacional del sector con movilizaciones a baja velocidad en carreteras del corredor industrial, informaron la Secretaría de Seguridad y Paz de Guanajuato y medios locales como Periódico AM, Observatorio Informativo y Periódico Correo.\n\nLas caravanas iniciaron a las 8:30 horas y abarcan seis tramos de tres carreteras del estado, con puntos en León, Silao (Puerto Interior y el entronque de Walmart Silao), Irapuato y Salamanca, principalmente sobre la carretera León-Salamanca, detalló la dependencia estatal a través de sus canales oficiales.\n\nLos líderes transportistas anunciaron que no cerrarán vialidades: las marchas serán a baja velocidad, aunque se prevé carga vehicular y posibles demoras para quienes circulen por esos tramos, reportó Periódico Correo. La movilización forma parte de un paro nacional indefinido del sector transportista, según TV4 y Cruce Libre.\n\nLas protestas continuarán mañana martes 27 con movilizaciones de organizaciones campesinas en el estado, adelantó Periódico AM, por lo que las afectaciones viales podrían extenderse un día más.\n\nFuentes: Periódico AM (https://www.am.com.mx/guanajuato/2026/10/25/transportistas-marcharan-a-baja-velocidad-en-carreteras-de-guanajuato-este-lunes-1858858.html), Observatorio Informativo (https://observatorioinformativo.com/transportistas-realizaran-marchas-lentas-en-tramos-de-la-carretera-leon-salamanca-este-lunes/) y Periódico Correo (https://periodicocorreo.com.mx/vida-publica/2026/oct/25/toma-precauciones-estas-seran-las-carreteras-afectadas-en-guanajuato-por-el-paro-de-transportistas-del-lunes-169989.html).",
+   "fuente": "Secretaría de Seguridad y Paz de Gto. / Periódico AM",
+   "url": "https://www.am.com.mx/guanajuato/2026/10/25/transportistas-marcharan-a-baja-velocidad-en-carreteras-de-guanajuato-este-lunes-1858858.html",
+   "imagen": "https://runaradio.estacionkusmedios.com/img/news/brand-paro-transportistas.jpg",
+   "credito": "Ilustración Runaradio / Estación Kus Medios",
+   "urgente": false,
+   "published": true,
+   "created_at": "2026-10-26T07:20:00+00:00",
+   "updated_at": "2026-10-26T07:20:00+00:00"
+  },
   {
    "id": "irapuato-motociclista-muere-avenida-insurgentes",
    "emoji": "🕊️",
