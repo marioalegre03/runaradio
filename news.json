@@ -2,6 +2,58 @@
   "actualizado": "2026-10-30T12:04:32.127386+00:00",
   "items": [
     {
+      "emoji": "🎤",
+      "tag": "Conciertos",
+      "titulo": "Conciertos en la CDMX hoy: Maldita Vecindad celebra 40 años",
+      "teaser": "Ska, metal, rap y K-pop en la cartelera del viernes; también hay actividades gratis de Día de Muertos en Reforma.",
+      "cuerpo": "Maldita Vecindad y los Hijos del Quinto Patio celebran sus 40 años esta noche en la Arena CDMX (21:00 horas) con el espectáculo \"Día de Muertos en la Vecindad: Ofrenda a los ancestros\", una fiesta de ska y rock con homenaje a los seres queridos que ya se fueron.\n\nLa cartelera del viernes suma a Dethklok con su \"20 Years of Brutality\" en el Circo Volador (20:30), Lng/SHT en el Pepsi Center (20:30), Taemin con su gira mundial LiMiNaL (Foro Teambro, según adn40) y La Tremenda Korte en el Foro Puebla (20:30).\n\nY si buscas plan gratis: la iluminación \"El Camino\" ya luce en Paseo de la Reforma (del Ángel a la Puerta de los Leones, hasta el 8 de noviembre), junto al Festival de Flores de Cempasúchil y el Festival Flores para mis muertos en el Museo Panteón de San Fernando (hoy de 14:00 a 19:00).",
+      "fuente": "adn40 y Excélsior",
+      "url": "https://www.adn40.mx/tiempo-libre/2026-10-30/conciertos-viernes-30-de-octubre-en-cdmx-maldita-vecindad-taemin-y-dethklok-encabezan-la-cartelera/",
+      "imagen": "https://runaradio.estacionkusmedios.com/img/news/m30-maldita.jpg",
+      "credito": "Foto: IG @malditavecindad (vía Excélsior)",
+      "id": "conciertos-hoy-viernes-maldita-vecindad-40anos",
+      "published": true
+    },
+    {
+      "emoji": "🎸",
+      "tag": "Música",
+      "titulo": "Queens of the Stone Age publica hoy su noveno álbum, 'Perfecth'",
+      "teaser": "Nueve canciones producidas por Josh Homme y Michael Shuman; el título juega con la idea de la perfección y el kintsugi.",
+      "cuerpo": "Queens of the Stone Age publicó hoy 'Perfecth', su noveno álbum de estudio, a través de Matador Records. Producido por Josh Homme y el bajista Michael Shuman, reúne nueve canciones que exploran el amor, el deseo, la pérdida y la reconstrucción personal.\n\nEl concepto del disco se inspira en el kintsugi, el arte japonés de reparar cerámica rota rellenando las grietas con oro: lo que se quebró puede volverse más bello al repararse.\n\n\"Nada en este mundo es perfecto, pero todo parece ser 'perfecth'\", explica Homme sobre el título. Grabado entre Nueva Orleans y Los Ángeles con la formación completa (Troy Van Leeuwen, Dean Fertita y Jon Theodore), ya está disponible en CD, vinilo y plataformas digitales.",
+      "fuente": "RockFM",
+      "url": "https://www.rockfm.fm/al-dia/noticias/queens-of-the-stone-age-publican-perfecth-noveno-album-estudio-escuchalo-completo-20261030_74263.html",
+      "imagen": "https://runaradio.estacionkusmedios.com/img/news/m30-qotsa.jpg",
+      "credito": "Foto: Alamy Stock Photo (vía RockFM)",
+      "id": "qotsa-perfecth-noveno-album-ya-disponible",
+      "published": true
+    },
+    {
+      "emoji": "💃",
+      "tag": "Espectáculos",
+      "titulo": "Sofi Gonet responde a las críticas de su look en los Premios Ídolo",
+      "teaser": "\"Lo que no les gusta es mi cuerpo\": la conductora mostró las marcas del corset y habló de una doble vara estética.",
+      "cuerpo": "Tras conducir los Premios Ídolo 2026, Sofía \"La Reini\" Gonet respondió en el streaming React Popstars a los comentarios sobre su vestuario: \"Siento que las críticas son más por mi cuerpo y por cómo me queda la ropa\".\n\nLa influencer mostró las marcas que el corset dejó en su espalda y cintura tras horas de gala, y planteó que la reacción sería distinta si el mismo diseño lo llevara una mujer \"muy, muy flaquita\". Julieta Poggio la respaldó en vivo: \"Para mí estabas divina\".\n\nEl atuendo, del que no se arrepiente, tuvo tres versiones para la alfombra roja, la conducción y la fiesta posterior. Su descargo abrió debate sobre los estándares estéticos en redes.",
+      "fuente": "Infobae",
+      "url": "https://www.infobae.com/teleshow/2026/10/30/lo-que-no-les-gusta-es-mi-cuerpo-el-descargo-de-sofia-gonet-tras-la-polemica-por-su-look-en-los-premios-idolo/",
+      "imagen": "https://runaradio.estacionkusmedios.com/img/news/m30-gonet.jpg",
+      "credito": "Foto: Infobae (Premios Ídolo)",
+      "id": "sofi-gonet-responde-criticas-look-premios-idolo",
+      "published": true
+    },
+    {
+      "emoji": "🎬",
+      "tag": "Cine",
+      "titulo": "'Wildwood': el stop motion más largo de la historia llega a México",
+      "teaser": "Laika estrena su filme de 140 minutos con doblaje de Javier Ibarreche, Macarena García y Natalia Téllez.",
+      "cuerpo": "'Wildwood: El bosque salvaje' llegó a los cines de México este 29 de octubre. La producción de Laika Studios, con 16 años de desarrollo, es la película en stop motion más extensa registrada: 140 minutos filmados cuadro por cuadro.\n\nEl doblaje latino suma figuras mediáticas: Javier Ibarreche como el rey bandido Brendan, Macarena García en su debut en doblaje como la protagonista Prue, Natalia Téllez como la antagonista Alexandra y Emilio Treviño (la única voz con trayectoria en doblaje) como Curtis.\n\nDistribuida por Imagem Films Mx, la apuesta busca pelear la cartelera familiar frente al dominio de la animación nacional, encabezado por 'La venganza del Charro Negro'.",
+      "fuente": "Infobae",
+      "url": "https://www.infobae.com/mexico/2026/10/30/entre-voces-mediaticas-y-la-taquilla-local-el-desafio-de-wildwood-en-los-cines-de-mexico/",
+      "imagen": "https://runaradio.estacionkusmedios.com/img/news/m30-wildwood.jpg",
+      "credito": "Foto: X @LAIKAStudios (vía Infobae)",
+      "id": "wildwood-stop-motion-mas-largo-estreno-mexico",
+      "published": true
+    },
+    {
       "id": "irapuato-campana-transporte-carga-30oct2026",
       "emoji": "🚚",
       "tag": "Irapuato",
