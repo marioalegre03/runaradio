@@ -1,6 +1,20 @@
 {
-  "actualizado": "2026-10-30T19:58:42.007824+00:00",
+  "actualizado": "2026-10-31T03:58:36.894233+00:00",
   "items": [
+    {
+      "id": "irapuato-policia-parto-bellavista-30oct2026",
+      "emoji": "🚑",
+      "tag": "Irapuato",
+      "titulo": "Policía auxilia un parto en una bodega de Bellavista, Irapuato",
+      "teaser": "Una integrante del Grupo Lobos asistió a la madre; Cruz Roja y Bomberos participaron en la atención y el traslado, según reportaron medios locales.",
+      "cuerpo": "Redacción Estación Kus Medios | 30 de octubre de 2026\n\nUna policía municipal del Grupo Lobos auxilió a una mujer durante un parto en una bodega de la colonia Bellavista, en Irapuato, durante la madrugada de este viernes 30 de octubre. La madre y el recién nacido fueron trasladados a un hospital y se reportaron en buenas condiciones de salud, de acuerdo con las coberturas de Periódico Correo y Guanajuato Informa.\n\nLa intervención comenzó con una llamada al sistema de emergencias 911. Los tripulantes de la patrulla 1890 acudieron al inmueble y encontraron a la mujer en una habitación elevada, una condición que dificultaba tanto la asistencia como su traslado.\n\n## La asistencia llegó antes del traslado\n\nSegún ambos medios, una integrante del Grupo Lobos brindó apoyo durante el nacimiento de un niño y permaneció junto a la madre hasta que llegaron los paramédicos de Cruz Roja. Correo señala que la agente aplicó conocimientos de primeros auxilios adquiridos en capacitaciones.\n\nLa atención requirió después una segunda maniobra. La ubicación de la habitación impedía sacar con facilidad a la madre y al bebé, por lo que personal de Bomberos intervino para descenderlos en una camilla. Tras esa operación, ambos pudieron ser trasladados a un hospital para recibir atención médica.\n\nLas publicaciones consultadas describen la participación de tres equipos:\n\n- Policía Municipal, que respondió al reporte y brindó la asistencia inicial.\n- Cruz Roja, cuyo personal paramédico acudió al lugar.\n- Bomberos, que apoyó en el descenso seguro desde la habitación elevada.\n\n## Una respuesta compartida en Bellavista\n\nEl caso reunió la asistencia durante el nacimiento con las maniobras necesarias para salir de un espacio de difícil acceso. El reporte de buen estado de salud corresponde a lo difundido por los medios al informar sobre la intervención; no es una valoración médica independiente de esta redacción ni una actualización hospitalaria posterior.\n\nLas fuentes no identifican el hospital receptor ni detallan la hora exacta del nacimiento. Esta nota tampoco publica los nombres de la madre o del recién nacido. La información se presenta vía las coberturas periodísticas consultadas, sin atribuir a esta redacción una entrevista directa con las personas atendidas o con los equipos de emergencia.\n\n## Fuentes y Referencias\n\nPeriódico Correo, Redacción, 30 de octubre de 2026: \"Mujer policía auxilia parto en bodega de Bellavista, Irapuato\".\nhttps://periodicocorreo.com.mx/irapuato/2026/oct/30/mujer-policia-auxilia-parto-en-bodega-de-bellavista-irapuato-170443.html\n\nGuanajuato Informa, 30 de octubre de 2026: \"¡Nació en una bodega! Mujer policía ayuda a traer al mundo a un bebé en Bellavista\".\nhttps://guanajuatoinforma.com/nacio-en-una-bodega-mujer-policia-ayuda-a-traer-al-mundo-a-un-bebe-en-bellavista/\n\nFoto: maniobras de auxilio en Bellavista, imagen publicada por Periódico Correo. La publicación no identifica al fotógrafo.",
+      "fuente": "Periódico Correo y Guanajuato Informa",
+      "url": "https://periodicocorreo.com.mx/irapuato/2026/oct/30/mujer-policia-auxilia-parto-en-bodega-de-bellavista-irapuato-170443.html",
+      "imagen": "img/news/irapuato-policia-parto-bellavista-30oct2026.jpg",
+      "credito": "Maniobras de auxilio en Bellavista. Foto publicada por Periódico Correo; sin fotógrafo identificado.",
+      "urgente": false,
+      "published": true
+    },
     {
       "id": "irapuato-balance-accidentes-moto-30oct2026",
       "emoji": "🛵",
