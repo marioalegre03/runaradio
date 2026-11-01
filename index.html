@@ -334,35 +334,6 @@ body.runa-player-on iframe#launcher{bottom:100px !important}
 </style>
 
 <style>
-/* ===== HALLOWEEN (temporada: borra este bloque y el div .halloween-deco despues de Halloween) ===== */
-.halloween-deco{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}
-.halloween-deco::before{content:'';position:absolute;inset:0;background:
-  radial-gradient(700px 420px at 6% 102%, rgba(147,51,234,.16), transparent 60%),
-  radial-gradient(620px 380px at 98% -2%, rgba(255,122,0,.12), transparent 55%)}
-.hw{position:absolute;display:inline-block;filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
-.hw-pumpkin{font-size:52px;bottom:4%;right:3%;animation:hwFloat 6s ease-in-out infinite}
-.hw-ghost{font-size:42px;top:22%;left:2.5%;opacity:.85;animation:hwFloat 7.5s ease-in-out infinite reverse}
-.hw-spider{font-size:28px;top:110px;right:14%;animation:hwSpider 9s ease-in-out infinite}
-.hw-spider::before{content:'';position:absolute;left:50%;bottom:100%;width:1px;height:110px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.35))}
-.hw-web{font-size:84px;top:-12px;opacity:.45}
-.hw-web.wl{left:-14px}
-.hw-web.wr{right:-14px;transform:scaleX(-1)}
-.hw-bat{font-size:24px;top:14%;left:-10%;animation:hwFly 19s linear infinite}
-.hw-bat.b2{font-size:18px;top:32%;animation-duration:27s;animation-delay:-13s;opacity:.75}
-@keyframes hwFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes hwSpider{0%,100%{transform:translateY(0)}50%{transform:translateY(26px)}}
-@keyframes hwFly{to{left:110%}}
-@media(max-width:640px){
-  .hw-pumpkin{font-size:38px}
-  .hw-ghost{display:none}
-  .hw-spider{display:none}
-  .hw-web{font-size:58px}
-  .hw-bat{font-size:18px}
-}
-@media(prefers-reduced-motion:reduce){
-  .hw{animation:none !important}
-}
-
 /* ===== noticias ===== */
 .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
 .news-card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
@@ -411,17 +382,6 @@ body.runa-player-on iframe#launcher{bottom:100px !important}
 <body>
 
 <div class="bg" aria-hidden="true"></div>
-
-<!-- HALLOWEEN (temporada: borra este div y su CSS despues de Halloween) -->
-<div class="halloween-deco" aria-hidden="true">
-  <span class="hw hw-web wl">🕸️</span>
-  <span class="hw hw-web wr">🕸️</span>
-  <span class="hw hw-bat">🦇</span>
-  <span class="hw hw-bat b2">🦇</span>
-  <span class="hw hw-ghost">👻</span>
-  <span class="hw hw-spider">🕷️</span>
-  <span class="hw hw-pumpkin">🎃</span>
-</div>
 
 <header>
   <a class="brand" href="#">
