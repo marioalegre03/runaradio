@@ -128,10 +128,11 @@
       },
       {
         "start": "13:00",
-        "end": "13:30",
-        "name": "Noticias News",
-        "desc": "Flash informativo",
-        "tag": "Noticias"
+        "end": "16:00",
+        "name": "News, Nuestros Artistas y Runaradio Noticias",
+        "desc": "Edición del miércoles 18 de noviembre. Bloque desde las 13:00: Noticias News (27:22), Nuestros Artistas (11:40) y Runaradio Noticias de Irapuato (46:24), en ese orden, con tandas completas. Cada audio comienza tras el anterior y la tanda que corresponda; no es una hora exacta de inicio. Cuidado con el monstruo sigue en preparación y no está programado. Literatura conserva su inicio a las 16:00.",
+        "tag": "Noticias",
+        "label": "Miércoles 18 nov · bloque 13:00–16:00"
       },
       {
         "start": "17:20",
@@ -891,6 +892,9 @@
     },
     "Reconstruyendo Fe": {
       "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro del bloque de música y tandas completas de 07:00 a 08:00. Arranque al terminar la pista o tanda anterior."
+    },
+    "News, Nuestros Artistas y Runaradio Noticias": {
+      "desc": "Edición del miércoles 18 de noviembre. Bloque desde las 13:00: Noticias News (27:22), Nuestros Artistas (11:40) y Runaradio Noticias de Irapuato (46:24), en ese orden, con tandas completas. Cada audio comienza tras el anterior y la tanda que corresponda; no es una hora exacta de inicio. Cuidado con el monstruo sigue en preparación y no está programado. Literatura conserva su inicio a las 16:00."
     }
   }
 }
