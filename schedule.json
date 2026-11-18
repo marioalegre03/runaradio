@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-11-17",
   "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
   "days": {
     "lun": [
@@ -330,23 +330,9 @@
         "tag": "Programa"
       },
       {
-        "start": "13:30",
-        "end": "14:30",
-        "name": "Sentidos",
-        "desc": "",
-        "tag": "Programa"
-      },
-      {
         "start": "14:30",
         "end": "15:30",
         "name": "Encuentro Tropical",
-        "desc": "",
-        "tag": "Programa"
-      },
-      {
-        "start": "15:30",
-        "end": "16:30",
-        "name": "America y su Folclore",
         "desc": "",
         "tag": "Programa"
       },
@@ -553,23 +539,9 @@
         "tag": "Especial"
       },
       {
-        "start": "13:50",
-        "end": "14:30",
-        "name": "Sentidos",
-        "desc": "Hoy empieza 13:30",
-        "tag": "Programa"
-      },
-      {
         "start": "14:30",
         "end": "15:30",
         "name": "Encuentro Tropical",
-        "desc": "",
-        "tag": "Programa"
-      },
-      {
-        "start": "15:30",
-        "end": "16:30",
-        "name": "America y su Folclore",
         "desc": "",
         "tag": "Programa"
       },
@@ -825,17 +797,9 @@
       "img": "img/shows/atravesando-decadas.jpg",
       "desc": "Un viaje musical por las décadas que te hicieron bailar."
     },
-    "Sentidos": {
-      "img": "img/shows/sentidos.jpg",
-      "desc": "Música para sentir: un recorrido por los sentidos."
-    },
     "Encuentro Tropical": {
       "img": "img/shows/encuentro-tropical.jpg",
       "desc": "Salsa, cumbia y sabor tropical para bailar."
-    },
-    "America y su Folclore": {
-      "img": "img/shows/america-y-su-folclore.jpg",
-      "desc": "Las raíces y el folclore musical del continente."
     },
     "Zona de Fuego": {
       "img": "img/shows/zona-de-fuego.jpg",
