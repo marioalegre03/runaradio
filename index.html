@@ -991,7 +991,7 @@ function initials(name){
   var s = (w[0] ? w[0].charAt(0) : 'R') + (w.length > 1 ? w[1].charAt(0) : '');
   return s.toUpperCase();
 }
-fetch('schedule.json?v=20261117-retirados', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+fetch('schedule.json?v=20261118-fe', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
   if (j) window.SCHEDULE_DATA = j;
   renderDayTabs(); renderSchedule();
 }).catch(function(){ renderDayTabs(); renderSchedule(); });
