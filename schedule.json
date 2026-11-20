@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-20T10:28:17.631732-06:00",
   "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
   "days": {
     "lun": [
@@ -339,13 +339,6 @@
         "tag": "Programa"
       },
       {
-        "start": "14:30",
-        "end": "15:30",
-        "name": "Encuentro Tropical",
-        "desc": "",
-        "tag": "Programa"
-      },
-      {
         "start": "16:30",
         "end": "17:30",
         "name": "Zona de Fuego",
@@ -546,13 +539,6 @@
         "name": "Picus Show Especial",
         "desc": "Solo hoy",
         "tag": "Especial"
-      },
-      {
-        "start": "14:30",
-        "end": "15:30",
-        "name": "Encuentro Tropical",
-        "desc": "",
-        "tag": "Programa"
       },
       {
         "start": "16:30",
@@ -805,10 +791,6 @@
     "Atravesando Décadas": {
       "img": "img/shows/atravesando-decadas.jpg",
       "desc": "Un viaje musical por las décadas que te hicieron bailar."
-    },
-    "Encuentro Tropical": {
-      "img": "img/shows/encuentro-tropical.jpg",
-      "desc": "Salsa, cumbia y sabor tropical para bailar."
     },
     "Zona de Fuego": {
       "img": "img/shows/zona-de-fuego.jpg",
