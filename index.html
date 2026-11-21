@@ -465,23 +465,23 @@ body.runa-player-on iframe#launcher{bottom:100px !important}
 </section>
 
 <section class="block reveal" id="nuevos-programas">
-  <h2 class="sec-title">Próximas incorporaciones a <i>Runaradio</i></h2>
-  <p class="sec-sub">Programación prevista, hora del centro de México (CDMX, UTC-6). Estrenos sujetos a aprobación de la suscripción, recepción del episodio y comprobación técnica antes de salir al aire.</p>
+  <h2 class="sec-title">Syndicast en <i>Runaradio</i></h2>
+  <p class="sec-sub">Primeras emisiones programadas. Hora del centro de México (CDMX, UTC-6). Permiso de emisión confirmado por la emisora.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
     <article style="padding:24px;border:1px solid #555;border-radius:16px;background:#171717;color:#fff">
       <h3>WARM Global Dance Radio Chart Top 20</h3>
       <p>Edición en español. Conteo semanal de música dance.</p>
-      <p><strong>Sábados a las 08:00 CDMX</strong><br>Incorporación prevista: sábado 21 de noviembre de 2026.</p>
-      <p>Duración nominal del programa: 60 minutos. Las tandas se mantienen completas; la duración final del episodio se comprobará al recibirlo.</p>
+      <p><strong>Sábado 21 de noviembre de 2026, desde las 08:00 CDMX</strong></p>
+      <p>EP072, publicada el 18 de noviembre. Programa de 58:55, una sola pasada dentro del bloque 08:00–09:45, con música y tandas completas alrededor.</p>
     </article>
     <article style="padding:24px;border:1px solid #555;border-radius:16px;background:#171717;color:#fff">
       <h3>Stereo Productions con DJ Chus</h3>
-      <p>Programa semanal de música electrónica.</p>
-      <p><strong>Domingos a las 07:00 CDMX</strong><br>Incorporación prevista: domingo 22 de noviembre de 2026.</p>
-      <p>Duración nominal del programa: 60 minutos. Las tandas se mantienen completas; la duración final del episodio se comprobará al recibirlo.</p>
+      <p>Programa semanal de música electrónica. Invitado: Silvano del Gado.</p>
+      <p><strong>Domingo 22 de noviembre de 2026, desde las 07:00 CDMX</strong></p>
+      <p>EP690, publicada el 20 de noviembre. Programa de 60:00, una sola pasada dentro del bloque 07:00–08:45, con música y tandas completas alrededor.</p>
     </article>
   </div>
-  <p class="sched-note">Si la aprobación o el audio no llegan a tiempo, se anunciará una nueva fecha. Estas fichas no significan que las suscripciones ya estén activadas ni que se haya verificado el resto de la parrilla.</p>
+  <p class="sched-note">El arranque espera el final de la pista o tanda anterior. Las ventanas incluyen margen de continuidad, no repeticiones del programa. Cada semana se renovará la edición antes de habilitar su siguiente emisión; si no hay entrega nueva verificada, no se repetirá automáticamente la anterior. Estos bloques no certifican el resto de la parrilla.</p>
 </section>
 
 <section class="block reveal" id="podcasts">
@@ -992,7 +992,7 @@ function initials(name){
   var s = (w[0] ? w[0].charAt(0) : 'R') + (w.length > 1 ? w[1].charAt(0) : '');
   return s.toUpperCase();
 }
-fetch('schedule.json?v=20261120-baja-encuentro', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+fetch('schedule.json?v=20261121-syndicast', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
   if (j) window.SCHEDULE_DATA = j;
   renderDayTabs(); renderSchedule();
 }).catch(function(){ renderDayTabs(); renderSchedule(); });
