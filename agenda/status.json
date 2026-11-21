@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T03:10:41.884665-06:00",
+  "updated_at": "2026-11-21T08:31:07.125709-06:00",
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-16",
   "coverage_through": "2027-01-10",
@@ -7,7 +7,7 @@
   "semantics": "Selection windows, not exact starts. No extra +20 min. One-date shows never expanded beyond date bounds. Client filters start/end to requested local day.",
   "stations": {
     "runa_radio": "Live Zeno windows",
-    "kusfm_joven": "Current Azure only has music continuity, spots and Himno, not restored editorial shows",
+    "kusfm_joven": "Fe restored Saturday15:00–15:45 selection window, one pass12:59; other shows remain pending. Music continuity, spots and Himno active",
     "radioaventuramx": "Current Azure only has music continuity, spots and Himno, not restored editorial shows"
   }
 }
