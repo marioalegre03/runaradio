@@ -311,11 +311,11 @@
       },
       {
         "start": "07:00",
-        "end": "08:00",
+        "end": "07:45",
         "name": "Reconstruyendo Fe",
-        "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro del bloque de música y tandas completas de 07:00 a 08:00. Arranque al terminar la pista o tanda anterior.",
+        "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro de la ventana de selección de 07:00 a 07:45. Arranque al terminar la pista o tanda anterior; música y tandas completas en el resto del bloque.",
         "tag": "Micro",
-        "label": "Sábado 07:00–08:00 · desde 21 nov"
+        "label": "Sábado 07:00–07:45 · ventana desde 21 nov"
       },
       {
         "start": "08:00",
@@ -889,7 +889,7 @@
       "desc": "Especial en vivo: solo por hoy."
     },
     "Reconstruyendo Fe": {
-      "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro del bloque de música y tandas completas de 07:00 a 08:00. Arranque al terminar la pista o tanda anterior."
+      "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro de la ventana de selección de 07:00 a 07:45. Arranque al terminar la pista o tanda anterior; música y tandas completas en el resto del bloque."
     },
     "News, Nuestros Artistas y Runaradio Noticias": {
       "desc": "Edición del miércoles 18 de noviembre. Bloque desde las 13:00: Noticias News (27:22), Nuestros Artistas (11:40) y Runaradio Noticias de Irapuato (46:24), en ese orden, con tandas completas. Cada audio comienza tras el anterior y la tanda que corresponda; no es una hora exacta de inicio. Cuidado con el monstruo sigue en preparación y no está programado. Literatura conserva su inicio a las 16:00."
