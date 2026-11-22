@@ -6,8 +6,8 @@
   "refresh": "Current task refreshes from station sources with existing 8-hour news and 03:00 controls, plus any programming change it executes.",
   "semantics": "Selection windows, not exact starts. No extra +20 min. One-date shows never expanded beyond date bounds. Client filters start/end to requested local day.",
   "stations": {
-    "runa_radio": "LHN22nov renovada: dos partes completas, una pasada22h; Boleros21nov pasa sólo esta vez al lunes23a00:15. Resto de ventanas conservadas. No se anuncia renovación LHN29nov aún.",
-    "kusfm_joven": "Fe sábado15h y LHN22nov22h restauradas, una pasada. Otras recuperaciones siguen pendientes de fuentes y programación real.",
-    "radioaventuramx": "Mujer053 sólo22nov21h y LHN22nov22h restauradas, una pasada cada una. Resto de recuperación pendiente."
+    "runa_radio": "La Hora Nacional del 22 de noviembre renovada: dos partes completas, una pasada a las 22:00. Boleros del 21 pasa sólo esta vez al lunes 23 a las 00:15. Resto de ventanas conservadas. La edición del 29 aún no está programada.",
+    "kusfm_joven": "Reconstruyendo Fe, sábados a las 15:00, y La Hora Nacional del 22 de noviembre, a las 22:00, restauradas con una pasada. Las otras recuperaciones siguen pendientes de fuentes y programación real.",
+    "radioaventuramx": "Mujer Patagonia 053, sólo el 22 de noviembre a las 21:00, y La Hora Nacional del 22 de noviembre a las 22:00, restauradas con una pasada cada una. Resto de recuperación pendiente."
   }
 }
