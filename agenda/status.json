@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-22T11:27:30.741649-06:00",
+  "updated_at": "2026-11-22T12:18:43.739349-06:00",
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-16",
   "coverage_through": "2027-01-10",
   "refresh": "Current task refreshes from station sources with existing 8-hour news and 03:00 controls, plus any programming change it executes.",
   "semantics": "Selection windows, not exact starts. No extra +20 min. One-date shows never expanded beyond date bounds. Client filters start/end to requested local day.",
   "stations": {
-    "runa_radio": "Live Zeno windows",
-    "kusfm_joven": "Fe restored Saturday15:00–15:45 selection window, one pass12:59; other shows remain pending. Music continuity, spots and Himno active",
-    "radioaventuramx": "Mujer Patagonia episodio053 recuperado sólo22nov21:00–22:00 CDMX, una pasada sin cortes, más música, spots e Himno. Recuperación de otros programas pendiente."
+    "runa_radio": "LHN22nov renovada: dos partes completas, una pasada22h; Boleros21nov pasa sólo esta vez al lunes23a00:15. Resto de ventanas conservadas. No se anuncia renovación LHN29nov aún.",
+    "kusfm_joven": "Fe sábado15h y LHN22nov22h restauradas, una pasada. Otras recuperaciones siguen pendientes de fuentes y programación real.",
+    "radioaventuramx": "Mujer053 sólo22nov21h y LHN22nov22h restauradas, una pasada cada una. Resto de recuperación pendiente."
   }
 }
