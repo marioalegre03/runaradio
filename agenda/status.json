@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-22T12:39:55.570168-06:00",
+  "updated_at": "2026-11-22T13:12:10.265635-06:00",
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-16",
   "coverage_through": "2027-01-10",
-  "refresh": "Current task refreshes from station sources with existing 8-hour news and 03:00 controls, plus any programming change it executes.",
-  "semantics": "Selection windows, not exact starts. No extra +20 min. One-date shows never expanded beyond date bounds. Client filters start/end to requested local day.",
+  "refresh": "Actualización de la programación a partir de las emisoras.",
+  "semantics": "Horarios de selección CDMX, no emisión continua de toda la ventana. Los inicios esperan pista o tanda anterior. No se agregan 20 minutos por defecto. Las emisiones de fecha única no se repiten fuera de esa fecha.",
   "stations": {
-    "runa_radio": "Viajero Frecuente 543, cuatro bloques y una pasada sólo el 22 de noviembre desde las 13:00. La Hora Nacional del 22 renovada a las 22:00. Boleros del 21 pasa sólo esta vez al lunes 23 a las 00:15. Ventanas con tandas completas, no audio continuo. Ediciones del 29 pendientes de renovación.",
-    "kusfm_joven": "Reconstruyendo Fe, sábados a las 15:00, y La Hora Nacional del 22 de noviembre, a las 22:00, restauradas con una pasada. Las otras recuperaciones siguen pendientes de fuentes y programación real.",
-    "radioaventuramx": "Mujer Patagonia 053, sólo el 22 de noviembre a las 21:00, y La Hora Nacional del 22 de noviembre a las 22:00, restauradas con una pasada cada una. Resto de recuperación pendiente."
+    "runa_radio": "Viajero543 sólo22nov13:00. La Hora Nacional22nov22:00. Boleros21nov pasa sólo esta vez al23nov00:15. Ediciones futuras pendientes de renovación.",
+    "kusfm_joven": "Salsa, Historia de un Ídolo y Momentos de Romance programados una vez el23nov. La Hora Nacional22nov22:00 y Fe mantienen sus ventanas. Otros programas siguen pendientes de recuperación.",
+    "radioaventuramx": "Salsa e Historia de un Ídolo programados una vez el23nov, Momentos de Romance una vez el24nov. Mujer Patagonia22nov21:00 y La Hora Nacional22nov22:00. Otros programas siguen pendientes de recuperación."
   }
 }
