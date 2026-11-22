@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-22T13:12:10.265635-06:00",
+  "updated_at": "2026-11-22T13:28:19.373727-06:00",
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-16",
   "coverage_through": "2027-01-10",
   "refresh": "Actualización de la programación a partir de las emisoras.",
   "semantics": "Horarios de selección CDMX, no emisión continua de toda la ventana. Los inicios esperan pista o tanda anterior. No se agregan 20 minutos por defecto. Las emisiones de fecha única no se repiten fuera de esa fecha.",
   "stations": {
-    "runa_radio": "Viajero543 sólo22nov13:00. La Hora Nacional22nov22:00. Boleros21nov pasa sólo esta vez al23nov00:15. Ediciones futuras pendientes de renovación.",
+    "runa_radio": "Sólo22nov: Viajero54313–15:45, Viejitos15:45–18:30, Momentos18:30–20:15 y Salsa20:15–22. La Hora Nacional22–23:50. Boleros23nov00:15–01:45 e Historia23nov07:30–09:30. Noches pendiente de reposición/material, no confirmada para23nov. RN21 sólo si cabe completo sin cortar ni retrasar LHN, aún no activado. Ediciones futuras pendientes de renovación.",
     "kusfm_joven": "Salsa, Historia de un Ídolo y Momentos de Romance programados una vez el23nov. La Hora Nacional22nov22:00 y Fe mantienen sus ventanas. Otros programas siguen pendientes de recuperación.",
     "radioaventuramx": "Salsa e Historia de un Ídolo programados una vez el23nov, Momentos de Romance una vez el24nov. Mujer Patagonia22nov21:00 y La Hora Nacional22nov22:00. Otros programas siguen pendientes de recuperación."
   }
