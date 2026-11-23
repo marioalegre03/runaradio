@@ -711,7 +711,7 @@
         "start": "00:00",
         "end": "00:05",
         "name": "Himno Nacional",
-        "desc": "Himno Nacional, una pasada. Hora CDMX.",
+        "desc": "Himno Nacional Mexicano. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "00:00–00:05 · ventana de selección"
       },
@@ -719,7 +719,7 @@
         "start": "00:15",
         "end": "01:45",
         "name": "Boleros y Algo Mas",
-        "desc": "Edición del 21 de noviembre, completa: 57:04. Sólo esta emisión pasa del domingo 22 al lunes 23, después del Himno de medianoche, para conservar La Hora Nacional a las 22:00 y tandas completas. Espera la pista o tanda anterior, sin cortes.",
+        "desc": "Edición del 21 de noviembre, 57:04. Emisión especial del lunes 23 después del Himno de medianoche, con comerciales.",
         "tag": "Ventana CDMX",
         "label": "00:15–01:45 · ventana de selección"
       },
@@ -727,7 +727,7 @@
         "start": "07:30",
         "end": "09:30",
         "name": "Historia de un Idolo",
-        "desc": "José Vélez, EP24. Reposición única el lunes 23 de noviembre, desde las 07:30 CDMX. Fuente de Productora MG del 21 de noviembre, una pasada completa con tandas. La ventana hasta las 09:30 no es audio continuo. La recurrencia anterior se conserva desde el 29 y requiere revisión.",
+        "desc": "José Vélez, episodio 24. Reposición especial del lunes 23 de noviembre, dentro de la franja 07:30–09:30 CDMX, con comerciales.",
         "tag": "Ventana CDMX",
         "label": "07:30–09:30 · ventana de selección"
       },
@@ -735,7 +735,7 @@
         "start": "10:00",
         "end": "12:00",
         "name": "Buenas Noticias",
-        "desc": "Ventana de Buenas Noticias. El Himno conserva su entrada fija al mediodía; no se certifica aquí que el programa termine antes.",
+        "desc": "Noticias positivas de México y el mundo, desde las 10:00. Himno Nacional al mediodía. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "10:00–12:00 · ventana de selección"
       },
@@ -743,7 +743,7 @@
         "start": "12:00",
         "end": "12:05",
         "name": "Himno Nacional",
-        "desc": "Himno Nacional, una pasada. Hora CDMX.",
+        "desc": "Himno Nacional Mexicano. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "12:00–12:05 · ventana de selección"
       },
@@ -751,7 +751,7 @@
         "start": "13:00",
         "end": "16:00",
         "name": "Nuestros Artistas y Runaradio Noticias",
-        "desc": "Sólo lunes 23 de noviembre: Nuestros Artistas seguido de Runaradio Noticias, edición corta aprobada de 22:53, con corte informativo de las 10:30 CDMX. Hoy se omiten los seis flashes de Noticias News del 20 de noviembre porque no hay edición del 23, con autorización de Luis. Ventana de selección 13:00–16:00 CDMX, no tres horas continuas: el inicio espera pista o tanda anterior y se conservan las tandas completas. Sin hora exacta individual. Monstruo y Popcorn aún no están activados.",
+        "desc": "Sólo lunes 23 de noviembre: Runaradio Noticias después de Nuestros Artistas. Edición especial de 22:53, con información al corte de las 10:30 CDMX. Dentro de la franja 13:00–16:00, con comerciales; el inicio de cada programa depende de la pista o tanda anterior. Hoy no habrá flashes de Noticias News.",
         "tag": "Ventana CDMX",
         "label": "13:00–16:00 · ventana de selección"
       },
@@ -759,7 +759,7 @@
         "start": "16:00",
         "end": "17:00",
         "name": "Literatura Runaradio - Lunes Don Quijote",
-        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "desc": "Dentro de esta franja, con comerciales. El inicio puede variar según la pista o tanda anterior. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "16:00–17:00 · ventana de selección"
       },
@@ -767,7 +767,7 @@
         "start": "19:00",
         "end": "20:00",
         "name": "Turismo Cero",
-        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "desc": "Dentro de esta franja, con comerciales. El inicio puede variar según la pista o tanda anterior. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "19:00–20:00 · ventana de selección"
       },
@@ -775,7 +775,7 @@
         "start": "20:00",
         "end": "21:00",
         "name": "Leyendas del Rock",
-        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "desc": "Dentro de esta franja, con comerciales. El inicio puede variar según la pista o tanda anterior. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "20:00–21:00 · ventana de selección"
       },
@@ -783,7 +783,7 @@
         "start": "21:00",
         "end": "22:00",
         "name": "Ecos del Alma",
-        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "desc": "Dentro de esta franja, con comerciales. El inicio puede variar según la pista o tanda anterior. Hora del centro de México.",
         "tag": "Ventana CDMX",
         "label": "21:00–22:00 · ventana de selección"
       }
