@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
   "days": {
     "lun": [
@@ -784,6 +784,72 @@
         "end": "22:00",
         "name": "Ecos del Alma",
         "desc": "Dentro de esta franja, con comerciales. El inicio puede variar según la pista o tanda anterior. Hora del centro de México.",
+        "tag": "Ventana CDMX",
+        "label": "21:00–22:00 · ventana de selección"
+      }
+    ],
+    "2026-11-24": [
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Himno Nacional, una pasada. Hora CDMX.",
+        "tag": "Ventana CDMX",
+        "label": "00:00–00:05 · ventana de selección"
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Música y comerciales",
+        "desc": "Sólo24nov: música y tandas habituales. Buenas Noticias no se emitirá hoy. Himno Nacional al mediodía.",
+        "tag": "Programación de hoy",
+        "label": "10:00–12:00"
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Himno Nacional, una pasada. Hora CDMX.",
+        "tag": "Ventana CDMX",
+        "label": "12:00–12:05 · ventana de selección"
+      },
+      {
+        "start": "13:00",
+        "end": "16:00",
+        "name": "News, Nuestros Artistas y Runaradio Noticias",
+        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque. Orden: Noticias News, Nuestros Artistas, Runaradio Noticias según edición disponible. Sin hora exacta individual.",
+        "tag": "Ventana CDMX",
+        "label": "13:00–16:00 · ventana de selección"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio - Martes Leyendas de Becquer",
+        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "tag": "Ventana CDMX",
+        "label": "16:00–17:00 · ventana de selección"
+      },
+      {
+        "start": "19:00",
+        "end": "19:45",
+        "name": "Kilometro Cero",
+        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "tag": "Ventana CDMX",
+        "label": "19:00–19:45 · ventana de selección"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "La Historia del Blues",
+        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
+        "tag": "Ventana CDMX",
+        "label": "20:00–21:00 · ventana de selección"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Cafe, Amigos y Musica",
+        "desc": "Ventana programada, hora CDMX. El inicio real espera el final de la pista o tanda anterior; tandas completas alrededor. No representa emisión continua de todo el bloque.",
         "tag": "Ventana CDMX",
         "label": "21:00–22:00 · ventana de selección"
       }
