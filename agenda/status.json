@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T09:03:19.701583-06:00",
+  "updated_at": "2026-11-24T11:47:03.336375-06:00",
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-23",
   "coverage_through": "2027-01-17",
@@ -7,7 +7,7 @@
   "semantics": "Horarios de selección CDMX, no emisión continua de toda la ventana. Los inicios esperan pista o tanda anterior. No se agregan 20 minutos por defecto. Las emisiones de fecha única no se repiten fuera de esa fecha.",
   "stations": {
     "runa_radio": "Programación CDMX. Sólo24nov10–12: música y comerciales en lugar de Buenas Noticias; Himno12 intacto. Noticias News24 y Nuestros Artistas desde13, con comerciales; Runaradio Noticias según edición disponible.",
-    "kusfm_joven": "Salsa, Historia de un Ídolo y Momentos de Romance programados una vez el23nov. La Hora Nacional22nov22:00 y Fe mantienen sus ventanas. Otros programas siguen pendientes de recuperación.",
+    "kusfm_joven": "Recuperación parcial: Mujer Patagonia053 seleccionada sólo29nov02:10–03:10CDMX, una pasada con tandas completas, revisión de edición antes de la fecha. Fe sábado15:00–15:45. Las ocurrenciasMG23nov ya terminaron; no representan retorno semanal. Otros programas aún pendientes.",
     "radioaventuramx": "Salsa e Historia de un Ídolo programados una vez el23nov, Momentos de Romance una vez el24nov. Mujer Patagonia22nov21:00 y La Hora Nacional22nov22:00. Otros programas siguen pendientes de recuperación."
   }
 }
