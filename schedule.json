@@ -892,7 +892,7 @@
         "start": "10:00",
         "end": "12:00",
         "name": "Buenas Noticias",
-        "desc": "Emisión25nov terminada: EP540, cuatro bloques, cierre natural antes del Himno. La edición nueva del26 requiere renovación y medición antes de fijar su ventana anticipada.",
+        "desc": "Emisión del 25 de noviembre: Buenas Noticias, episodio 540, en cuatro bloques. Finalizó antes del Himno Nacional del mediodía.",
         "tag": "Ventana CDMX",
         "label": "10:00–12:00 · ventana de selección",
         "selection_window": true
@@ -910,7 +910,7 @@
         "start": "13:00",
         "end": "16:00",
         "name": "Noticias News, Nuestros Artistas y Runaradio Noticias",
-        "desc": "Miércoles25 de noviembre: Noticias News (26:36) → Nuestros Artistas (11:41) → Runaradio Noticias25nov (60:20), mezcla aprobada. En ese orden, con tandas completas. Los inicios dependen de la pista o tanda anterior; no son horas exactas.",
+        "desc": "Miércoles 25 de noviembre: Noticias News (26:36), Nuestros Artistas (11:41) y Runaradio Noticias 25 nov (60:20), en ese orden y con tandas completas. Cada programa espera a que termine el audio o la tanda anterior; no son horas exactas de inicio.",
         "tag": "Ventana CDMX",
         "label": "13:00–16:00 · ventana de selección",
         "selection_window": true
