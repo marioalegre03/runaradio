@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
   "days": {
     "lun": [
@@ -109,58 +109,82 @@
         "start": "00:00",
         "end": "00:05",
         "name": "Himno Nacional",
-        "desc": "Interrumpe programacion",
-        "tag": "Oficial"
+        "desc": "Himno Nacional Mexicano. Horario protegido, hora del centro de México.",
+        "tag": "Ventana CDMX",
+        "label": "00:00–00:05 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "10:00",
         "end": "12:00",
         "name": "Buenas Noticias",
-        "desc": "Edicion casi diaria",
-        "tag": "Noticias"
+        "desc": "La ventana de Buenas Noticias se confirma por fecha y edición. Consultar la programación del día.",
+        "tag": "Ventana CDMX",
+        "label": "10:00–12:00 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "12:00",
         "end": "12:05",
         "name": "Himno Nacional",
-        "desc": "Interrumpe programacion",
-        "tag": "Oficial"
+        "desc": "Himno Nacional Mexicano. Horario protegido, hora del centro de México.",
+        "tag": "Ventana CDMX",
+        "label": "12:00–12:05 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "13:00",
         "end": "16:00",
-        "name": "News, Nuestros Artistas y Runaradio Noticias",
-        "desc": "Edición del miércoles 18 de noviembre. Bloque desde las 13:00: Noticias News (27:22), Nuestros Artistas (11:40) y Runaradio Noticias de Irapuato (46:24), en ese orden, con tandas completas. Cada audio comienza tras el anterior y la tanda que corresponda; no es una hora exacta de inicio. Cuidado con el monstruo sigue en preparación y no está programado. Literatura conserva su inicio a las 16:00.",
-        "tag": "Noticias",
-        "label": "Miércoles 18 nov · bloque 13:00–16:00"
+        "name": "Noticias News, Nuestros Artistas y Runaradio Noticias",
+        "desc": "Noticias News y Nuestros Artistas. Runaradio Noticias se incorpora con la edición del día verificada. Con tandas completas; no son horas exactas de inicio.",
+        "tag": "Ventana CDMX",
+        "label": "13:00–16:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "17:20",
-        "end": "19:20",
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio - Miércoles Poe",
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "16:00–17:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "17:00",
+        "end": "19:00",
         "name": "Estación Musical",
-        "desc": "",
-        "tag": "Música"
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "17:00–19:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "19:20",
-        "end": "20:20",
+        "start": "19:00",
+        "end": "20:00",
         "name": "Top 5 Latinoamerica",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "19:00–20:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "20:20",
-        "end": "21:20",
+        "start": "20:00",
+        "end": "21:00",
         "name": "El Sonido Soul",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "20:00–21:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "21:20",
-        "end": "22:20",
+        "start": "21:00",
+        "end": "22:00",
         "name": "Mosaico Musical",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "21:00–22:00 · ventana de selección",
+        "selection_window": true
       }
     ],
     "jue": [
@@ -853,6 +877,89 @@
         "tag": "Ventana CDMX",
         "label": "21:00–22:00 · ventana de selección"
       }
+    ],
+    "2026-11-25": [
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Himno Nacional Mexicano. Horario protegido, hora del centro de México.",
+        "tag": "Ventana CDMX",
+        "label": "00:00–00:05 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "10:00",
+        "end": "12:00",
+        "name": "Buenas Noticias",
+        "desc": "Emisión25nov terminada: EP540, cuatro bloques, cierre natural antes del Himno. La edición nueva del26 requiere renovación y medición antes de fijar su ventana anticipada.",
+        "tag": "Ventana CDMX",
+        "label": "10:00–12:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Himno Nacional Mexicano. Horario protegido, hora del centro de México.",
+        "tag": "Ventana CDMX",
+        "label": "12:00–12:05 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "13:00",
+        "end": "16:00",
+        "name": "Noticias News, Nuestros Artistas y Runaradio Noticias",
+        "desc": "Miércoles25 de noviembre: Noticias News (26:36) → Nuestros Artistas (11:41) → Runaradio Noticias25nov (60:20), mezcla aprobada. En ese orden, con tandas completas. Los inicios dependen de la pista o tanda anterior; no son horas exactas.",
+        "tag": "Ventana CDMX",
+        "label": "13:00–16:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "name": "Literatura Runaradio - Miércoles Poe",
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "16:00–17:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "17:00",
+        "end": "19:00",
+        "name": "Estación Musical",
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "17:00–19:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Top 5 Latinoamerica",
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "19:00–20:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "El Sonido Soul",
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "20:00–21:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Mosaico Musical",
+        "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
+        "tag": "Ventana CDMX",
+        "label": "21:00–22:00 · ventana de selección",
+        "selection_window": true
+      }
     ]
   },
   "shows": {
@@ -1038,9 +1145,6 @@
     },
     "Reconstruyendo Fe": {
       "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro de la ventana de selección de 07:00 a 07:45. Arranque al terminar la pista o tanda anterior; música y tandas completas en el resto del bloque."
-    },
-    "News, Nuestros Artistas y Runaradio Noticias": {
-      "desc": "Edición del miércoles 18 de noviembre. Bloque desde las 13:00: Noticias News (27:22), Nuestros Artistas (11:40) y Runaradio Noticias de Irapuato (46:24), en ese orden, con tandas completas. Cada audio comienza tras el anterior y la tanda que corresponda; no es una hora exacta de inicio. Cuidado con el monstruo sigue en preparación y no está programado. Literatura conserva su inicio a las 16:00."
     },
     "WARM Top 20 en español": {
       "desc": "Primera emisión programada el sábado 21 de noviembre: EP072 (18 nov), 58:54.916, una sola pasada. Bloque con música y tandas completas; arranque al terminar la pista o tanda anterior. Renovación semanal por edición, sin repetir automáticamente una entrega anterior."

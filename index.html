@@ -958,7 +958,7 @@ function renderSchedule(){
     var endLabel = s.end === '24:00' ? '00:00' : s.end;
     el.innerHTML = '<div class="thumb"><i></i></div>' +
       '<div class="slot-body"><div class="slot-top"><span class="time">' + (s.label || (s.start + ' – ' + endLabel)) + '</span>' +
-      '<span class="tag">' + (on ? '● Al aire' : (s.tag || 'Radio')) + '</span></div>' +
+      '<span class="tag">' + (on ? (s.selection_window ? 'Ventana activa' : '● Al aire') : (s.tag || 'Radio')) + '</span></div>' +
       '<div class="show"><b></b><span></span></div></div>';
     el.querySelector('b').textContent = s.name;
     el.querySelector('.show span').textContent = (ov && s.desc) || meta.desc || s.desc || '';
@@ -993,7 +993,7 @@ function initials(name){
   var s = (w[0] ? w[0].charAt(0) : 'R') + (w.length > 1 ? w[1].charAt(0) : '');
   return s.toUpperCase();
 }
-fetch('schedule.json?v=20261121-syndicast', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+fetch('schedule.json?v=20261125-rn25', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
   if (j) window.SCHEDULE_DATA = j;
   renderDayTabs(); renderSchedule();
 }).catch(function(){ renderDayTabs(); renderSchedule(); });
