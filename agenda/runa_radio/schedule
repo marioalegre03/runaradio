@@ -256,8 +256,8 @@
     "title": "Cuidado con el monstruo26nov",
     "start": "2026-11-26T12:18:00-06:00",
     "end": "2026-11-26T13:10:00-06:00",
-    "description": "Solicitud directa26nov12:17. Inicio natural verificado12:34:12 tras tanda completa; señal pública coincide con archivo aprobado30:59. En curso12:40; fin estimado13:05, todavía sin certificar cierre.",
-    "data_updated_at": "2026-11-26T12:41:30.503520-06:00",
+    "description": "Pasada natural26nov: inicio12:34:12, duración nominal30:59; IDs desde13:05:09 y tanda13:05:19. Solape aproximado2s con primerID. Fuera de lista única69 tras emisión, archivo conservado. Ventana mostrada es de selección, no duración al aire.",
+    "data_updated_at": "2026-11-26T13:08:50.690908-06:00",
     "coverage_through": "2027-01-17"
   },
   {

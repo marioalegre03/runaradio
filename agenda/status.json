@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-26T12:41:30.503520-06:00",
+  "updated_at": "2026-11-26T13:08:50.690908-06:00",
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-23",
   "coverage_through": "2027-01-17",
   "refresh": "Actualización de la programación a partir de las emisoras.",
   "semantics": "Horarios de selección CDMX, no emisión continua de toda la ventana. Los inicios esperan pista o tanda anterior. No se agregan 20 minutos por defecto. Las emisiones de fecha única no se repiten fuera de esa fecha.",
   "stations": {
-    "runa_radio": "26 nov: Cuidado con el monstruo30:59 comenzó12:34:12 tras tanda completa por solicitud directa12:17; en curso a12:40, señal pública conciliada con archivo aprobado. Se conserva después Noticias News26, Nuestros Artistas y RN26(60:02.6), aún sin emitir; NN espera siguiente tanda, prevista hasta13:21 aprox. BN26 no recibido al cierre10:41. Himno y tandas sin cambios.",
+    "runa_radio": "26 nov: Cuidado con el monstruo emitido desde12:34:12; transición a IDs13:05:09 y tanda13:05:19. Duración nominal30:59, solape~2s con primerID. Retirado de lista única69 tras pasada, archivo conservado. NN26, Nuestros Artistas y RN26(60:02.6) siguen en orden; a13:08 esperan tanda completa prevista hasta13:21. BN26 no recibido al cierre10:41. Sin cambios de Himno ni tandas.",
     "kusfm_joven": "Recuperación parcial: Mujer Patagonia053 seleccionada sólo29nov02:10–03:10CDMX, una pasada con tandas completas, revisión de edición antes de la fecha. Fe sábado15:00–15:45. Las ocurrenciasMG23nov ya terminaron; no representan retorno semanal. Otros programas aún pendientes. Historia de un Ídolo025 renovada sólo30nov en su ventana completa; Salsa/Momentos pendientes de próxima entrega. Boleros y Algo Más recuperado sólo30nov, original21nov con revisión de renovación previa. Manifiesto del Canto008 recuperado sólo28novJoven22–23:30 y29novAventura07:10–08:40, original21nov con revisión de renovación previa.",
     "radioaventuramx": "Recuperación parcial: Reconstruyendo Fe seleccionado sólo29nov06:10–06:55CDMX, una pasada con tandas completas y revisión de edición antes de la fecha. Reemplaza Encuentro Tropical. Las ocurrenciasMG23/24nov y Mujer22nov ya terminaron; no representan retorno semanal. Otros programas aún pendientes. Historia de un Ídolo025 renovada sólo30nov en su ventana completa; Salsa/Momentos pendientes de próxima entrega. Boleros y Algo Más recuperado sólo30nov, original21nov con revisión de renovación previa. Manifiesto del Canto008 recuperado sólo28novJoven22–23:30 y29novAventura07:10–08:40, original21nov con revisión de renovación previa."
   }
