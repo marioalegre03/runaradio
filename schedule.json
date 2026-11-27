@@ -993,13 +993,13 @@
         "selection_window": true
       },
       {
-        "start": "13:00",
-        "end": "16:00",
+        "start": "13:08",
+        "end": "14:04",
         "name": "Noticias News y Nuestros Artistas",
-        "desc": "Sólo27nov: Noticias News27 emitió seis partes en orden desde13:08 y Nuestros Artistas terminó14:04, según historial. Ventana de selección13–16, no emisión continua. RN27 está enSpotify y biblioteca, sin horario enradio. Buenas Noticias no se activó hoy.",
-        "tag": "Ventana CDMX",
-        "label": "13:00–16:00 · ventana de selección",
-        "selection_window": true
+        "desc": "Historial del 27 de noviembre: las seis partes de Noticias News y después Nuestros Artistas, con tandas completas. El último programa terminó a las 14:04. No continúa hasta las 16:00. Runaradio Noticias está disponible en Spotify, sin horario activado en radio. Buenas Noticias no se activó hoy.",
+        "tag": "Emitido hoy",
+        "label": "13:08–14:04 · emisión registrada hoy",
+        "selection_window": false
       },
       {
         "start": "15:00",
