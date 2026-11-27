@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-25",
-  "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio.",
+  "updated": "2026-11-27",
+  "note": "Parrilla semanal de Runaradio (Estacion Kus Medios). Formato 24h, hora del centro de Mexico (CDMX). Si end <= start, el bloque cruza medianoche. \"shows\" ficha imagen y descripcion de cada espacio. Viernes actualizado contra Zeno27nov15:10; horarios son ventanas de selección sin desfase fijo de20min. Otros días conservan su última revisión, no quedan certificados por este cambio.",
   "days": {
     "lun": [
       {
@@ -243,79 +243,91 @@
         "start": "00:00",
         "end": "00:05",
         "name": "Himno Nacional",
-        "desc": "Interrumpe programacion",
-        "tag": "Oficial"
-      },
-      {
-        "start": "10:00",
-        "end": "12:00",
-        "name": "Buenas Noticias",
-        "desc": "Edicion casi diaria",
-        "tag": "Noticias"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "00:00–00:05 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "12:00",
         "end": "12:05",
         "name": "Himno Nacional",
-        "desc": "Interrumpe programacion",
-        "tag": "Oficial"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "12:00–12:05 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "13:00",
-        "end": "13:30",
-        "name": "Noticias News",
-        "desc": "Flash informativo",
-        "tag": "Noticias"
+        "end": "16:00",
+        "name": "Noticias News y Nuestros Artistas",
+        "desc": "Seis partes de Noticias News y después Nuestros Artistas, con tandas completas. Runaradio Noticias no tiene horario activado. Buenas Noticias no figura mientras no tenga edición incorporada.",
+        "tag": "Ventana CDMX",
+        "label": "13:00–16:00 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "15:00",
         "end": "16:15",
         "name": "La Hora Infantil",
-        "desc": "Cuentos, canciones y aprendizaje para los más pequeños.",
-        "tag": "Programa"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "15:00–16:15 · ventana de selección",
+        "selection_window": true
       },
       {
         "start": "16:15",
-        "end": "17:15",
-        "name": "Literatura Runaradio",
-        "desc": "",
-        "tag": "Programa",
-        "label": "Al terminar La Hora Infantil"
+        "end": "18:30",
+        "name": "Literatura Runaradio - Viernes Lazarillo y Cuentos Fantasticos",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "16:15–18:30 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "19:20",
-        "end": "20:20",
+        "start": "19:00",
+        "end": "20:00",
         "name": "Flashback",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "19:00–20:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "20:20",
-        "end": "21:20",
+        "start": "20:00",
+        "end": "21:00",
         "name": "Versiones",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "20:00–21:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "21:20",
-        "end": "22:20",
+        "start": "21:00",
+        "end": "22:00",
         "name": "Retro Music",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "21:00–22:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "22:20",
-        "end": "23:20",
+        "start": "22:00",
+        "end": "23:00",
         "name": "Noche de Jazz",
-        "desc": "Contenido: Frecuencia Smooth Jazz",
-        "tag": "Programa"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "22:00–23:00 · ventana de selección",
+        "selection_window": true
       },
       {
-        "start": "23:20",
-        "end": "00:20",
+        "start": "23:00",
+        "end": "23:59",
         "name": "Tribal",
-        "desc": "",
-        "tag": "Programa"
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "23:00–23:59 · ventana de selección",
+        "selection_window": true
       }
     ],
     "sab": [
@@ -958,6 +970,98 @@
         "desc": "Ventana de selección. El inicio espera la pista o tanda anterior, con comerciales completos.",
         "tag": "Ventana CDMX",
         "label": "21:00–22:00 · ventana de selección",
+        "selection_window": true
+      }
+    ],
+    "2026-11-27": [
+      {
+        "start": "00:00",
+        "end": "00:05",
+        "name": "Himno Nacional",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "00:00–00:05 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "12:00",
+        "end": "12:05",
+        "name": "Himno Nacional",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "12:00–12:05 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "13:00",
+        "end": "16:00",
+        "name": "Noticias News y Nuestros Artistas",
+        "desc": "Sólo27nov: Noticias News27 emitió seis partes en orden desde13:08 y Nuestros Artistas terminó14:04, según historial. Ventana de selección13–16, no emisión continua. RN27 está enSpotify y biblioteca, sin horario enradio. Buenas Noticias no se activó hoy.",
+        "tag": "Ventana CDMX",
+        "label": "13:00–16:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "15:00",
+        "end": "16:15",
+        "name": "La Hora Infantil",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "15:00–16:15 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "16:15",
+        "end": "18:30",
+        "name": "Literatura Runaradio - Viernes Lazarillo y Cuentos Fantasticos",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "16:15–18:30 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "name": "Flashback",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "19:00–20:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "name": "Versiones",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "20:00–21:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "name": "Retro Music",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "21:00–22:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "name": "Noche de Jazz",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "22:00–23:00 · ventana de selección",
+        "selection_window": true
+      },
+      {
+        "start": "23:00",
+        "end": "23:59",
+        "name": "Tribal",
+        "desc": "Ventana de selección CDMX. El inicio espera pista o tanda anterior; comerciales completos. No indica duración continua ni hora exacta de comienzo.",
+        "tag": "Ventana CDMX",
+        "label": "23:00–23:59 · ventana de selección",
         "selection_window": true
       }
     ]
