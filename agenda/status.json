@@ -3,15 +3,15 @@
   "timezone": "America/Mexico_City",
   "coverage_from": "2026-11-23",
   "coverage_through": "2027-01-17",
-  "refresh": "Actualización parcial: sólo Runaradio Zeno verificado27nov03h. Azure conserva última captura26nov15:20:57, sin lectura nueva durante reparación a cargo deJulio. updated_at global conserva esa antigüedad; no acredita estado actual del audio.",
+  "refresh": "Actualización parcial: sólo Runaradio Zeno verificado27nov15h. Azure conserva última captura26nov15:20:57, sin lectura nueva durante reparación a cargo deJulio. updated_at global conserva esa antigüedad; no acredita estado actual del audio.",
   "semantics": "Horarios de selección CDMX, no emisión continua de toda la ventana. Los inicios esperan pista o tanda anterior. No se agregan 20 minutos por defecto. Las emisiones de fecha única no se repiten fuera de esa fecha.",
   "stations": {
-    "runa_radio": "27nov03h: Noticias News renovado con seis partes27nov, IDs3285–3290 en orden y después Nuestros Artistas3157. NN26 desvinculado y archivos conservados. BN27 paquete26/27 recibido, dos ediciones544/545; selección/encaje aún en validación, no activado. RN26 y CM26 ya emitidos/retirados. Himno y tandas sin cambios.",
+    "runa_radio": "27nov15h: Noticias News27 emitió sus seis partes en orden13:08–13:52 y después Nuestros Artistas hasta14:04, comprobado en historialZeno. RN27 publicado enSpotify y guardado sóloenbibliotecaZeno, sinasociación/horario. BN27 sinactivar; intento matutino cerrado. RN26/CM26 anteriores retirados. Himno, tandas y programasvigentes sin cambios por estecontrol.",
     "kusfm_joven": "Recuperación parcial: Mujer Patagonia053 seleccionada sólo29nov02:10–03:10CDMX, una pasada con tandas completas, revisión de edición antes de la fecha. Fe sábado15:00–15:45. Las ocurrenciasMG23nov ya terminaron; no representan retorno semanal. Otros programas aún pendientes. Historia de un Ídolo025 renovada sólo30nov en su ventana completa; Salsa/Momentos pendientes de próxima entrega. Boleros y Algo Más recuperado sólo30nov, original21nov con revisión de renovación previa. Manifiesto del Canto008 recuperado sólo28novJoven22–23:30 y29novAventura07:10–08:40, original21nov con revisión de renovación previa.",
     "radioaventuramx": "Recuperación parcial: Reconstruyendo Fe seleccionado sólo29nov06:10–06:55CDMX, una pasada con tandas completas y revisión de edición antes de la fecha. Reemplaza Encuentro Tropical. Las ocurrenciasMG23/24nov y Mujer22nov ya terminaron; no representan retorno semanal. Otros programas aún pendientes. Historia de un Ídolo025 renovada sólo30nov en su ventana completa; Salsa/Momentos pendientes de próxima entrega. Boleros y Algo Más recuperado sólo30nov, original21nov con revisión de renovación previa. Manifiesto del Canto008 recuperado sólo28novJoven22–23:30 y29novAventura07:10–08:40, original21nov con revisión de renovación previa."
   },
   "source_updated_at": {
-    "runa_radio": "2026-11-27T03:16:28.687289-06:00",
+    "runa_radio": "2026-11-27T15:10:39.150153-06:00",
     "azure": "2026-11-26T15:20:57.045890-06:00"
   }
 }
