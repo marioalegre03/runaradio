@@ -357,9 +357,10 @@
         "start": "08:00",
         "end": "09:45",
         "name": "WARM Top 20 en español",
-        "desc": "Primera emisión programada el sábado 21 de noviembre: EP072 (18 nov), 58:54.916, una sola pasada. Bloque con música y tandas completas; arranque al terminar la pista o tanda anterior. Renovación semanal por edición, sin repetir automáticamente una entrega anterior.",
+        "desc": "Emisión única28nov2026, EP073 publicada25nov. Una pasada original, con tandas completas. Ventana de selección; arranque tras pista o tanda anterior. Renovación semanal sólo con nueva edición verificada.",
         "tag": "Syndicast",
-        "label": "Sábado desde 08:00 · EP072 · 21 nov"
+        "label": "Sábado desde08:00 · EP073 · 28nov",
+        "selection_window": true
       },
       {
         "start": "10:20",
@@ -451,9 +452,10 @@
         "start": "07:00",
         "end": "08:45",
         "name": "Stereo Productions con DJ Chus",
-        "desc": "Primera emisión programada el domingo 22 de noviembre: EP690 (20 nov), con Silvano del Gado, 60:00.013, una sola pasada. Bloque con música y tandas completas; arranque al terminar la pista o tanda anterior. Renovación semanal por edición, sin repetir automáticamente una entrega anterior.",
+        "desc": "Emisión única29nov2026, EP691 publicada27nov. Sesión CHUS & CEBALLOS B2B MARK KNIGHT. Una pasada original, con tandas completas. Ventana de selección; arranque tras pista o tanda anterior. Renovación semanal sólo con nueva edición verificada.",
         "tag": "Syndicast",
-        "label": "Domingo desde 07:00 · EP690 · 22 nov"
+        "label": "Domingo desde07:00 · EP691 · 29nov",
+        "selection_window": true
       },
       {
         "start": "09:20",
@@ -1251,10 +1253,10 @@
       "desc": "Desde el sábado 21 de noviembre. Micro semanal de 12:59, una sola pasada, dentro de la ventana de selección de 07:00 a 07:45. Arranque al terminar la pista o tanda anterior; música y tandas completas en el resto del bloque."
     },
     "WARM Top 20 en español": {
-      "desc": "Primera emisión programada el sábado 21 de noviembre: EP072 (18 nov), 58:54.916, una sola pasada. Bloque con música y tandas completas; arranque al terminar la pista o tanda anterior. Renovación semanal por edición, sin repetir automáticamente una entrega anterior."
+      "desc": "Emisión única28nov2026, EP073 publicada25nov. Una pasada original, con tandas completas. Ventana de selección; arranque tras pista o tanda anterior. Renovación semanal sólo con nueva edición verificada."
     },
     "Stereo Productions con DJ Chus": {
-      "desc": "Primera emisión programada el domingo 22 de noviembre: EP690 (20 nov), con Silvano del Gado, 60:00.013, una sola pasada. Bloque con música y tandas completas; arranque al terminar la pista o tanda anterior. Renovación semanal por edición, sin repetir automáticamente una entrega anterior."
+      "desc": "Emisión única29nov2026, EP691 publicada27nov. Sesión CHUS & CEBALLOS B2B MARK KNIGHT. Una pasada original, con tandas completas. Ventana de selección; arranque tras pista o tanda anterior. Renovación semanal sólo con nueva edición verificada."
     }
   }
 }
